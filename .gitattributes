@@ -1,0 +1,13 @@
+.gitattributes export-ignore
+.gitignore export-ignore
+assets export-ignore
+readme.md export-ignore
+Gruntfile.js export-ignore
+package.json export-ignore
+.gitmodules export-ignore
+.jscsrc export-ignore
+.jshintrc export-ignore
+.jshintignore export-ignore
+.travis.yml export-ignore
+dev-lib export-ignore
+
