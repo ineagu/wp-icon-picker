@@ -10,7 +10,7 @@
  *
  * Plugin Name: Icon Picker
  * Plugin URI: http://kucrut.org/
- * Description: Pick and icon of your choice.
+ * Description: Pick an icon of your choice.
  * Version: 0.1.0
  * Author: Dzikri Aziz
  * Author URI: http://kucrut.org/
