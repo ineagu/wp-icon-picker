@@ -24,7 +24,7 @@ final class Icon_Picker {
 	const VERSION = '0.1.0';
 
 	/**
-	 * Instance
+	 * Icon_Picker singleton
 	 *
 	 * @access protected
 	 * @since  0.1.0
@@ -33,25 +33,46 @@ final class Icon_Picker {
 	protected static $instance;
 
 	/**
-	 * Holds plugin data
+	 * Plugin directory path
 	 *
 	 * @access protected
 	 * @since  0.1.0
 	 * @var    array
 	 */
-	protected $data;
+	protected $dir;
+
+	/**
+	 * Plugin directory url path
+	 *
+	 * @access protected
+	 * @since  0.1.0
+	 * @var    array
+	 */
+	protected $url;
 
 
 	/**
-	 * Get plugin data
+	 * __isset() magic method
 	 *
 	 * @since  0.1.0
 	 * @param  string $name Property name.
-	 * @return mixed
+	 * @return bool
+	 */
+	public function __isset( $name ) {
+		return isset( $this->$name );
+	}
+
+
+	/**
+	 * __get() magic method
+	 *
+	 * @since  0.1.0
+	 * @param  string $name Property name.
+	 * @return mixed  NULL if attribute doesn't exist.
 	 */
 	public function __get( $name ) {
-		if ( isset( $this->data[ $name ] ) ) {
-			return $this->data[ $name ];
+		if ( isset( $this->$name ) ) {
+			return $this->$name;
 		}
 
 		return null;
@@ -62,12 +83,12 @@ final class Icon_Picker {
 	 * Get instance
 	 *
 	 * @since  0.1.0
-	 * @param  array $args {Arguments {@see Icon_Picker::__construct()}.
+	 * @param  array $args Arguments {@see Icon_Picker::__construct()}.
 	 * @return Icon_Picker
 	 */
 	public static function instance( $args = array() ) {
 		if ( is_null( self::$instance ) ) {
-			self::$instance = new Icon_Picker( $args );
+			self::$instance = new self( $args );
 		}
 
 		return self::$instance;
@@ -78,8 +99,9 @@ final class Icon_Picker {
 	 * Constructor
 	 *
 	 * @since  0.1.0
+	 * @access protected
 	 * @param  array $args {
-	 *     Optional arguments.
+	 *     Optional. Arguments to override class property defaults.
 	 *
 	 *     @type string $dir Plugin directory path (without trailing slash).
 	 *     @type string $url Plugin directory url path (without trailing slash).
@@ -92,9 +114,14 @@ final class Icon_Picker {
 			'url' => untrailingslashit( plugin_dir_url( __FILE__ ) ),
 		);
 
-		$this->data = wp_parse_args( $args, $defaults );
+		$args = wp_parse_args( $args, $defaults );
+		$keys = array_keys( get_object_vars( $this ) );
 
-		return $this;
+		foreach ( $keys as $key ) {
+			if ( isset( $args[ $key ] ) ) {
+				$this->$key = $args[ $key ];
+			}
+		}
 	}
 }
 add_action( 'plugins_loaded', array( 'Icon_Picker', 'instance' ), 7 );
