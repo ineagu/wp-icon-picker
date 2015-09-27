@@ -50,6 +50,15 @@ final class Icon_Picker {
 	 */
 	protected $url;
 
+	/**
+	 * Icon types registry
+	 *
+	 * @access protected
+	 * @since  0.1.0
+	 * @var    Icon_Picker_Types_Registry
+	 */
+	protected $registry;
+
 
 	/**
 	 * __isset() magic method
@@ -122,6 +131,30 @@ final class Icon_Picker {
 				$this->$key = $args[ $key ];
 			}
 		}
+
+		add_action( 'wp_loaded', array( $this, 'init' ) );
+	}
+
+
+	/**
+	 * Register icon types
+	 *
+	 * @since  0.1.0
+	 * @action wp_loaded
+	 * @return void
+	 */
+	public function init() {
+		require_once "{$this->dir}/includes/registry.php";
+
+		$this->registry = Icon_Picker_Types_Registry::instance();
+
+		/**
+		 * Fires when Icon Picker types registry is ready
+		 *
+		 * @since 0.1.0
+		 * @param Icon_Picker $this Icon_Picker instance.
+		 */
+		do_action( 'icon_picker_types_registry_init', $this );
 	}
 }
 add_action( 'plugins_loaded', array( 'Icon_Picker', 'instance' ), 7 );

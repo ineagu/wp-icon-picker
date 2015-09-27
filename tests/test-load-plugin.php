@@ -11,4 +11,11 @@ class LoadPluginTest extends WP_UnitTestCase {
 		$this->assertEquals( WP_PLUGIN_DIR . '/icon-picker', $instance->dir );
 		$this->assertEquals( WP_PLUGIN_URL . '/icon-picker', $instance->url );
 	}
+
+	public function test_registry() {
+		$instance = Icon_Picker::instance();
+
+		$this->assertInstanceOf( 'Icon_Picker_Types_Registry', $instance->registry );
+		$this->assertGreaterThan( 0, did_action( 'icon_picker_types_registry_init' ) );
+	}
 }
