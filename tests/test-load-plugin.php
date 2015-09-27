@@ -17,5 +17,6 @@ class LoadPluginTest extends WP_UnitTestCase {
 
 		$this->assertInstanceOf( 'Icon_Picker_Types_Registry', $instance->registry );
 		$this->assertGreaterThan( 0, did_action( 'icon_picker_types_registry_init' ) );
+		$this->assertNotEmpty( $instance->registry->types );
 	}
 }

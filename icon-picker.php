@@ -155,6 +155,23 @@ final class Icon_Picker {
 		 * @param Icon_Picker $this Icon_Picker instance.
 		 */
 		do_action( 'icon_picker_types_registry_init', $this );
+
+		if ( empty( $registry->types ) ) {
+			$this->register_default_types();
+		}
+	}
+
+
+	/**
+	 * Register default icon types
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 * @return void
+	 */
+	protected function register_default_types() {
+		require_once "{$this->dir}/includes/types/dashicons.php";
+		$this->registry->add( new Icon_Picker_Type_Dashicons() );
 	}
 }
 add_action( 'plugins_loaded', array( 'Icon_Picker', 'instance' ), 7 );
