@@ -89,8 +89,14 @@ class Icon_Picker_Type {
 	 * @return mixed  NULL if attribute doesn't exist.
 	 */
 	public function __get( $name ) {
-		if ( isset( $this->$name ) ) {
-			return $this->$name;
+		$vars = get_object_vars( $this );
+		if ( isset( $vars[ $name ] ) ) {
+			return $vars[ $name ];
+		}
+
+		$method = "get_{$name}";
+		if ( method_exists( $this, $method ) ) {
+			return call_user_func( array( $this, $method ) );
 		}
 
 		return null;
@@ -104,6 +110,6 @@ class Icon_Picker_Type {
 	 * @return bool
 	 */
 	public function __isset( $name ) {
-		return isset( $this->$name );
+		return ( isset( $this->$name ) || method_exists( $this, "get_{$name}" ) );
 	}
 }
