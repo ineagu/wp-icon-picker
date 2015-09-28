@@ -39,24 +39,6 @@ class Icon_Picker_Type {
 	 */
 	protected $version = '';
 
-	/**
-	 * Icon type stylesheet ID
-	 *
-	 * @since  0.1.0
-	 * @access protected
-	 * @var    string
-	 */
-	protected $stylesheet_id = '';
-
-	/**
-	 * JS Controller
-	 *
-	 * @since  0.1.0
-	 * @access protected
-	 * @var    string
-	 */
-	protected $controller = '';
-
 
 	/**
 	 * Constructor
@@ -73,10 +55,6 @@ class Icon_Picker_Type {
 			if ( isset( $args[ $key ] ) ) {
 				$this->$key = $args[ $key ];
 			}
-		}
-
-		if ( empty( $this->stylesheet_id ) ) {
-			$this->stylesheet_id = $this->id;
 		}
 	}
 
