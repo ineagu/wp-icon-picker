@@ -159,6 +159,14 @@ final class Icon_Picker {
 		if ( empty( $registry->types ) ) {
 			$this->register_default_types();
 		}
+
+		/**
+		 * Fires when Icon Picker is fully loaded
+		 *
+		 * @since 0.1.0
+		 * @param Icon_Picker $this Icon_Picker instance.
+		 */
+		do_action( 'icon_picker_loaded', $this );
 	}
 
 
