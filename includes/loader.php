@@ -88,6 +88,14 @@ final class Icon_Picker_Loader {
 	 */
 	protected function __construct() {
 		$this->register_assets();
+
+		/**
+		 * Fires when Icon Picker loader is ready
+		 *
+		 * @since 0.1.0
+		 * @param Icon_Picker $this Icon_Picker_loader instance.
+		 */
+		do_action( 'icon_picker_loader_init', $this );
 	}
 
 
