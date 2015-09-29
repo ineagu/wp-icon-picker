@@ -91,7 +91,7 @@ final class Icon_Picker_Types_Registry {
 		 * Fires when Icon Picker types registry is ready
 		 *
 		 * @since 0.1.0
-		 * @param Icon_Picker $this Icon_Picker_Types_Registry instance.
+		 * @param Icon_Picker_Types_Registry $this Icon_Picker_Types_Registry instance.
 		 */
 		do_action( 'icon_picker_types_registry_init', $this );
 	}
