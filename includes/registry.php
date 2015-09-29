@@ -86,7 +86,15 @@ final class Icon_Picker_Types_Registry {
 	 * @access protected
 	 * @return Icon_Picker_Types_Registry
 	 */
-	protected function __construct() {}
+	protected function __construct() {
+		/**
+		 * Fires when Icon Picker types registry is ready
+		 *
+		 * @since 0.1.0
+		 * @param Icon_Picker $this Icon_Picker instance.
+		 */
+		do_action( 'icon_picker_types_registry_init', $this );
+	}
 
 
 	/**
