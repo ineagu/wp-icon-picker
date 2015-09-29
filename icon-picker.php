@@ -59,6 +59,15 @@ final class Icon_Picker {
 	 */
 	protected $registry;
 
+	/**
+	 * Loader
+	 *
+	 * @access protected
+	 * @since  0.1.0
+	 * @var    Icon_Picker_Loader
+	 */
+	protected $loader;
+
 
 	/**
 	 * __isset() magic method
@@ -126,6 +135,10 @@ final class Icon_Picker {
 		$args = wp_parse_args( $args, $defaults );
 		$keys = array_keys( get_object_vars( $this ) );
 
+		// Disallow
+		unset( $args['registry'] );
+		unset( $args['loader'] );
+
 		foreach ( $keys as $key ) {
 			if ( isset( $args[ $key ] ) ) {
 				$this->$key = $args[ $key ];
@@ -144,8 +157,8 @@ final class Icon_Picker {
 	 * @return void
 	 */
 	public function init() {
+		// Setup icon types registry
 		require_once "{$this->dir}/includes/registry.php";
-
 		$this->registry = Icon_Picker_Types_Registry::instance();
 
 		/**
@@ -159,6 +172,10 @@ final class Icon_Picker {
 		if ( empty( $registry->types ) ) {
 			$this->register_default_types();
 		}
+
+		// Setup loader
+		require_once "{$this->dir}/includes/loader.php";
+		$this->loader = Icon_Picker_Loader::instance();
 
 		/**
 		 * Fires when Icon Picker is ready
