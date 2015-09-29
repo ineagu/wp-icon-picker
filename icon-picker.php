@@ -68,6 +68,15 @@ final class Icon_Picker {
 	 */
 	protected $loader;
 
+	/**
+	 * Whether the functionality is loaded on admin
+	 *
+	 * @access protected
+	 * @since  0.1.0
+	 * @var    bool
+	 */
+	protected $is_admin_loaded = false;
+
 
 	/**
 	 * __isset() magic method
@@ -138,6 +147,7 @@ final class Icon_Picker {
 		// Disallow
 		unset( $args['registry'] );
 		unset( $args['loader'] );
+		unset( $args['is_admin_loaded'] );
 
 		foreach ( $keys as $key ) {
 			if ( isset( $args[ $key ] ) ) {
@@ -189,6 +199,45 @@ final class Icon_Picker {
 	protected function register_default_types() {
 		require_once "{$this->dir}/includes/types/dashicons.php";
 		$this->registry->add( new Icon_Picker_Type_Dashicons() );
+	}
+
+
+	/**
+	 * Load icon picker functionality on an admin page
+	 *
+	 * @since  0.1.0
+	 * @return void
+	 */
+	public function load() {
+		if ( true === $this->is_admin_loaded ) {
+			return;
+		}
+
+		if ( ! is_admin() ) {
+			_doing_it_wrong(
+				__METHOD__,
+				'It should only be called on admin pages.',
+				esc_html( self::VERSION )
+			);
+
+			return;
+		}
+
+		if ( ! did_action( 'icon_picker_loader_init' ) ) {
+			_doing_it_wrong(
+				__METHOD__,
+				sprintf(
+					'It should not be called until the %s hook.',
+					'<code>icon_picker_loader_init</code>'
+				),
+				esc_html( self::VERSION )
+			);
+
+			return;
+		}
+
+		$this->loader->load();
+		$this->is_admin_loaded = true;
 	}
 }
 add_action( 'plugins_loaded', array( 'Icon_Picker', 'instance' ), 7 );

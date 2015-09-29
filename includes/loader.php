@@ -177,4 +177,64 @@ final class Icon_Picker_Loader {
 			$this->add_script( $script_id );
 		}
 	}
+
+
+	/**
+	 * Load admin functionalities
+	 *
+	 * @since  0.1.0
+	 * @return void
+	 */
+	public function load() {
+		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, '_enqueue_assets' ) );
+	}
+
+
+	/**
+	 * Filter media view strings
+	 *
+	 * @since  0.1.0
+	 * @filter media_view_strings
+	 * @param  array $strings Media view strings.
+	 * @return array
+	 */
+	public function _media_view_strings( $strings ) {
+		$strings['iconPicker'] = array(
+			'frameTitle' => __( 'Icon Picker', 'icon-picker' ),
+		);
+
+		return $strings;
+	}
+
+
+	/**
+	 * Enqueue scripts & styles
+	 *
+	 * @since  0.1.0
+	 * @action admin_enqueue_scripts
+	 * @return void
+	 */
+	public function _enqueue_assets() {
+		$icon_picker = Icon_Picker::instance();
+
+		// Some pages don't call this by default, so let's make sure.
+		wp_enqueue_media();
+
+		foreach ( $this->script_ids as $script_id ) {
+			wp_enqueue_script( $script_id );
+		}
+
+		foreach ( $this->style_ids as $style_id ) {
+			wp_enqueue_style( $style_id );
+		}
+
+		/**
+		 * Fires when admin functionality is loaded
+		 *
+		 * @since 0.1.0
+		 * @param Icon_Picker $icon_picker Icon_Picker instance.
+		 */
+		do_action( 'icon_picker_admin_loaded', $icon_picker );
+	}
 }
