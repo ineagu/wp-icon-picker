@@ -154,7 +154,8 @@ final class Icon_Picker_Loader {
 					$script_id,
 					"{$icon_picker->url}/js/media/{$part}.js",
 					array( 'media-views' ),
-					$icon_picker->VERSION
+					$icon_picker->VERSION,
+					true
 				);
 				$this->add_script( $script_id );
 			}
@@ -163,7 +164,8 @@ final class Icon_Picker_Loader {
 				'icon-picker',
 				"{$icon_picker->url}/js/utils.js",
 				array( 'media-views' ),
-				$icon_picker->VERSION
+				$icon_picker->VERSION,
+				true
 			);
 			$this->add_script( 'icon-picker' );
 		} else {
@@ -173,7 +175,8 @@ final class Icon_Picker_Loader {
 				'icon-picker',
 				"{$icon_picker->url}/js/icon-picker{$suffix}.js",
 				array( 'media-views' ),
-				$icon_picker->VERSION
+				$icon_picker->VERSION,
+				true
 			);
 			$this->add_script( $script_id );
 		}
