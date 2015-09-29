@@ -161,14 +161,6 @@ final class Icon_Picker {
 		require_once "{$this->dir}/includes/registry.php";
 		$this->registry = Icon_Picker_Types_Registry::instance();
 
-		/**
-		 * Fires when Icon Picker types registry is ready
-		 *
-		 * @since 0.1.0
-		 * @param Icon_Picker $this Icon_Picker instance.
-		 */
-		do_action( 'icon_picker_types_registry_init', $this );
-
 		if ( empty( $registry->types ) ) {
 			$this->register_default_types();
 		}
