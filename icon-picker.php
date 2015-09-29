@@ -161,12 +161,12 @@ final class Icon_Picker {
 		}
 
 		/**
-		 * Fires when Icon Picker is fully loaded
+		 * Fires when Icon Picker is ready
 		 *
 		 * @since 0.1.0
 		 * @param Icon_Picker $this Icon_Picker instance.
 		 */
-		do_action( 'icon_picker_loaded', $this );
+		do_action( 'icon_picker_init', $this );
 	}
 
 
