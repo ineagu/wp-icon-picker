@@ -26,8 +26,9 @@ final class Icon_Picker {
 	/**
 	 * Icon_Picker singleton
 	 *
-	 * @access protected
+	 * @static
 	 * @since  0.1.0
+	 * @access protected
 	 * @var    Icon_Picker
 	 */
 	protected static $instance;
@@ -44,8 +45,8 @@ final class Icon_Picker {
 	/**
 	 * Plugin directory url path
 	 *
-	 * @access protected
 	 * @since  0.1.0
+	 * @access protected
 	 * @var    array
 	 */
 	protected $url;
@@ -53,8 +54,8 @@ final class Icon_Picker {
 	/**
 	 * Icon types registry
 	 *
-	 * @access protected
 	 * @since  0.1.0
+	 * @access protected
 	 * @var    Icon_Picker_Types_Registry
 	 */
 	protected $registry;
@@ -62,8 +63,8 @@ final class Icon_Picker {
 	/**
 	 * Loader
 	 *
-	 * @access protected
 	 * @since  0.1.0
+	 * @access protected
 	 * @var    Icon_Picker_Loader
 	 */
 	protected $loader;
@@ -71,15 +72,15 @@ final class Icon_Picker {
 	/**
 	 * Whether the functionality is loaded on admin
 	 *
-	 * @access protected
 	 * @since  0.1.0
+	 * @access protected
 	 * @var    bool
 	 */
 	protected $is_admin_loaded = false;
 
 
 	/**
-	 * __isset() magic method
+	 * Setter magic
 	 *
 	 * @since  0.1.0
 	 * @param  string $name Property name.
@@ -91,7 +92,7 @@ final class Icon_Picker {
 
 
 	/**
-	 * __get() magic method
+	 * Getter magic
 	 *
 	 * @since  0.1.0
 	 * @param  string $name Property name.

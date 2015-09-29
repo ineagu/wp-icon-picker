@@ -12,8 +12,9 @@ final class Icon_Picker_Loader {
 	/**
 	 * Icon_Picker_Loader singleton
 	 *
-	 * @access protected
+	 * @static
 	 * @since  0.1.0
+	 * @access protected
 	 * @var    Icon_Picker_Loader
 	 */
 	protected static $instance;
@@ -38,7 +39,7 @@ final class Icon_Picker_Loader {
 
 
 	/**
-	 * __isset() magic method
+	 * Setter magic
 	 *
 	 * @since  0.1.0
 	 * @param  string $name Property name.
@@ -50,7 +51,7 @@ final class Icon_Picker_Loader {
 
 
 	/**
-	 * __get() magic method
+	 * Getter magic
 	 *
 	 * @since  0.1.0
 	 * @param  string $name Property name.
@@ -196,7 +197,7 @@ final class Icon_Picker_Loader {
 	 *
 	 * @since  0.1.0
 	 * @filter media_view_strings
-	 * @param  array $strings Media view strings.
+	 * @param  array              $strings Media view strings.
 	 * @return array
 	 */
 	public function _media_view_strings( $strings ) {

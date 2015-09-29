@@ -11,6 +11,7 @@ final class Icon_Picker_Types_Registry {
 	/**
 	 * Icon_Picker_Types_Registry singleton
 	 *
+	 * @static
 	 * @since  0.1.0
 	 * @access protected
 	 * @var    Icon_Picker_Types_Registry
@@ -40,7 +41,7 @@ final class Icon_Picker_Types_Registry {
 	 * Get instance
 	 *
 	 * @since  0.1.0
-	 * @param  array $args Arguments.
+	 * @param  array                      $args Arguments.
 	 * @return Icon_Picker_Types_Registry
 	 */
 	public static function instance( $args = array() ) {
@@ -53,7 +54,7 @@ final class Icon_Picker_Types_Registry {
 
 
 	/**
-	 * Get class property
+	 * Getter magic
 	 *
 	 * @since  0.1.0
 	 * @param  string $name Property name.
@@ -69,7 +70,7 @@ final class Icon_Picker_Types_Registry {
 
 
 	/**
-	 * __isset() magic method
+	 * Setter magic
 	 *
 	 * @since  0.1.0
 	 * @return bool
