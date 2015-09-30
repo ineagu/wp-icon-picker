@@ -153,4 +153,54 @@ final class Icon_Picker_Types_Registry {
 
 		return true;
 	}
+
+
+	/**
+	 * Get icon type properties
+	 *
+	 * @since  0.1.0
+	 * @param  string $id Icon type ID.
+	 * @return array
+	 */
+	public function get_type_props( $id ) {
+		$type = $this->get( $id );
+
+		if ( empty( $type ) ) {
+			return array();
+		}
+
+		$props = array(
+			'id'         => $type->id,
+			'name'       => $type->name,
+			'controller' => $type->controller,
+			'items'      => $type->items,
+		);
+
+		/**
+		 * Filter icon type properties
+		 *
+		 * @since 0.1.0
+		 * @param array $props Icon type properties.
+		 */
+		$props = apply_filters( "icon_picker_{$type->id}_props", $props );
+
+		return $props;
+	}
+
+
+	/**
+	 * Get all icon types' properties
+	 *
+	 * @since  0.1.0
+	 * @return array
+	 */
+	public function get_all_props() {
+		$props = array();
+
+		foreach ( $this->types as $type ) {
+			$props[] = $this->get_type_props( $type->id );
+		}
+
+		return $props;
+	}
 }

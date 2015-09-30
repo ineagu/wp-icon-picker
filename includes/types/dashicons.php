@@ -50,7 +50,7 @@ class Icon_Picker_Type_Dashicons extends Icon_Picker_Type_Font {
 	 * @since  0.1.0
 	 * @return array
 	 */
-	public function get_names() {
+	public function get_items() {
 		return array(
 			array(
 				'key'   => 'admin',

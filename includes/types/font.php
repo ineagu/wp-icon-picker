@@ -25,10 +25,31 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 
 
 	/**
-	 * Get icon names
+	 * Get icons
 	 *
 	 * @since  0.1.0
 	 * @return array
 	 */
-	abstract function get_names();
+	abstract function get_items();
+
+
+	/**
+	 * Register assets
+	 *
+	 * @since  0.1.0
+	 * @action icon_picker_loaded
+	 * @return void
+	 */
+	public function register_assets() {}
+
+
+	/**
+	 * Constructor
+	 *
+	 * @since 0.1.0
+	 */
+	public function __construct() {
+		add_action( 'icon_picker_loaded', array( $this, 'register_assets' ) );
+		parent::__construct();
+	}
 }

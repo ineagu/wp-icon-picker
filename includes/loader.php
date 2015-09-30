@@ -180,6 +180,14 @@ final class Icon_Picker_Loader {
 			);
 			$this->add_script( $script_id );
 		}
+
+		wp_localize_script(
+			'icon-picker',
+			'iconPicker',
+			array(
+				'types' => $icon_picker->registry->get_all_props(),
+			)
+		);
 	}
 
 
