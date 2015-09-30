@@ -39,6 +39,15 @@ class Icon_Picker_Type {
 	 */
 	protected $version = '';
 
+	/**
+	 * JS Controller
+	 *
+	 * @since 0.1.0
+	 * @access protected
+	 * @var    string
+	 */
+	protected $controller = '';
+
 
 	/**
 	 * Constructor
@@ -60,7 +69,7 @@ class Icon_Picker_Type {
 
 
 	/**
-	 * __get() magic method
+	 * Getter magic
 	 *
 	 * @since  0.1.0
 	 * @param  string $name Property name
@@ -82,7 +91,7 @@ class Icon_Picker_Type {
 
 
 	/**
-	 * __isset() magic method
+	 * Setter magic
 	 *
 	 * @since  0.1.0
 	 * @return bool
