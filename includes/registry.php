@@ -173,6 +173,7 @@ final class Icon_Picker_Types_Registry {
 			'id'         => $type->id,
 			'name'       => $type->name,
 			'controller' => $type->controller,
+			'groups'     => $type->groups,
 			'items'      => $type->items,
 		);
 
@@ -198,7 +199,7 @@ final class Icon_Picker_Types_Registry {
 		$props = array();
 
 		foreach ( $this->types as $type ) {
-			$props[] = $this->get_type_props( $type->id );
+			$props[ $type->id ] = $this->get_type_props( $type->id );
 		}
 
 		return $props;

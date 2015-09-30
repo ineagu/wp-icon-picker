@@ -25,12 +25,21 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 
 
 	/**
-	 * Get icons
+	 * Get icon groups
 	 *
 	 * @since  0.1.0
 	 * @return array
 	 */
-	abstract function get_items();
+	abstract public function get_groups();
+
+
+	/**
+	 * Get icon names
+	 *
+	 * @since  0.1.0
+	 * @return array
+	 */
+	abstract public function get_items();
 
 
 	/**
