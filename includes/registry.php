@@ -19,7 +19,7 @@ final class Icon_Picker_Types_Registry {
 	protected static $instance;
 
 	/**
-	 * Base type class name
+	 * Base icon type class name
 	 *
 	 * @access protected
 	 * @since  0.1.0
@@ -40,6 +40,7 @@ final class Icon_Picker_Types_Registry {
 	/**
 	 * Get instance
 	 *
+	 * @static
 	 * @since  0.1.0
 	 * @param  array                      $args Arguments.
 	 * @return Icon_Picker_Types_Registry
@@ -102,22 +103,22 @@ final class Icon_Picker_Types_Registry {
 	 * Register icon type
 	 *
 	 * @since  0.1.0
-	 * @param  Icon_Picker_Type $instance Icon type instance.
+	 * @param  Icon_Picker_Type $type Icon type.
 	 * @return void
 	 */
-	public function add( Icon_Picker_Type $instance ) {
-		if ( $this->is_valid_type( $instance ) ) {
-			$this->types[ $instance->id ] = $instance;
+	public function add( Icon_Picker_Type $type ) {
+		if ( $this->is_valid_type( $type ) ) {
+			$this->types[ $type->id ] = $type;
 		}
 	}
 
 
 	/**
-	 * Get icon type instance
+	 * Get icon type
 	 *
 	 * @since  0.1.0
 	 * @param  string $id Icon type ID.
-	 * @return mixed  Icon type instance or NULL if it's not registered.
+	 * @return mixed  Icon type or NULL if it's not registered.
 	 */
 	public function get( $id ) {
 		if ( isset( $this->types[ $id ] ) ) {
@@ -129,15 +130,15 @@ final class Icon_Picker_Types_Registry {
 
 
 	/**
-	 * Check if icon type instance is valid
+	 * Check if icon type is valid
 	 *
 	 * @since  0.1.0
-	 * @param  Icon_Picker_Type $instance Icon type instance.
+	 * @param  Icon_Picker_Type $type Icon type.
 	 * @return bool
 	 */
-	protected function is_valid_type( Icon_Picker_Type $instance ) {
+	protected function is_valid_type( Icon_Picker_Type $type ) {
 		foreach ( array( 'id', 'controller' ) as $var ) {
-			$value = $instance->$var;
+			$value = $type->$var;
 
 			if ( empty( $value ) ) {
 				trigger_error( esc_html( sprintf( 'Icon Picker: "%s" cannot be empty.', $var ) ) );
@@ -145,8 +146,8 @@ final class Icon_Picker_Types_Registry {
 			}
 		}
 
-		if ( isset( $this->types[ $instance->id ] ) ) {
-			trigger_error( esc_html( sprintf( 'Icon Picker: Icon type %s is already registered. Please use a different ID.', $instance->id ) ) );
+		if ( isset( $this->types[ $type->id ] ) ) {
+			trigger_error( esc_html( sprintf( 'Icon Picker: Icon type %s is already registered. Please use a different ID.', $type->id ) ) );
 			return false;
 		}
 
