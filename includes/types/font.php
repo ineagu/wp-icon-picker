@@ -55,10 +55,11 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 * Register assets
 	 *
 	 * @since  0.1.0
-	 * @action icon_picker_loaded
+	 * @action icon_picker_loader_init
+	 * @param  Icon_Picker_Loader      $loader Icon_Picker_Loader instance.
 	 * @return void
 	 */
-	public function register_assets() {}
+	public function register_assets( Icon_Picker_Loader $loader ) {}
 
 
 	/**
@@ -67,7 +68,7 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 * @since 0.1.0
 	 */
 	public function __construct() {
-		add_action( 'icon_picker_loaded', array( $this, 'register_assets' ) );
+		add_action( 'icon_picker_loader_init', array( $this, 'register_assets' ) );
 		parent::__construct();
 	}
 
@@ -77,7 +78,7 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 			'item' => sprintf(
 				'<div class="attachment-preview js--select-attachment">
 					<div class="thumbnail">
-						<span class="_icon"><i class="{{ data.id }}"></i></span>
+						<span class="_icon"><i class="{{data.type}} {{ data.id }}"></i></span>
 						<div class="filename"><div>{{ data.name }}</div></div>
 					</div>
 				</div>
