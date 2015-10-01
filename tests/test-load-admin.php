@@ -16,6 +16,7 @@ class Icon_Picker_Test_Loader_Admin extends WP_UnitTestCase {
 		$this->assertTrue( $this->icon_picker->is_admin_loaded );
 		$this->assertEquals( 10, has_filter( 'media_view_strings', array( $this->icon_picker->loader, '_media_view_strings' ) ) );
 		$this->assertEquals( 10, has_action( 'admin_enqueue_scripts', array( $this->icon_picker->loader, '_enqueue_assets' ) ) );
+		$this->assertEquals( 10, has_action( 'print_media_templates', array( $this->icon_picker->loader, '_media_templates' ) ) );
 	}
 
 	/**
