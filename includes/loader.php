@@ -154,6 +154,7 @@ final class Icon_Picker_Loader {
 	 */
 	protected function register_assets() {
 		$icon_picker = Icon_Picker::instance();
+		$suffix      = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 		if ( defined( 'ICON_PICKER_SCRIPT_DEBUG' ) && ICON_PICKER_SCRIPT_DEBUG ) {
 			foreach ( array( 'model', 'view', 'controller', 'frame' ) as $part ) {
@@ -178,8 +179,6 @@ final class Icon_Picker_Loader {
 			);
 			$this->add_script( 'icon-picker' );
 		} else {
-			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-
 			wp_register_script(
 				'icon-picker',
 				"{$icon_picker->url}/js/icon-picker{$suffix}.js",
@@ -187,7 +186,7 @@ final class Icon_Picker_Loader {
 				$icon_picker->VERSION,
 				true
 			);
-			$this->add_script( $script_id );
+			$this->add_script( 'icon-picker' );
 		}
 
 		wp_localize_script(
@@ -197,6 +196,14 @@ final class Icon_Picker_Loader {
 				'types' => $icon_picker->registry->get_all_props(),
 			)
 		);
+
+		wp_register_style(
+			'icon-picker',
+			"{$icon_picker->url}/css/icon-picker{$suffix}.css",
+			false,
+			$icon_picker->VERSION
+		);
+		$this->add_style( 'icon-picker' );
 	}
 
 
