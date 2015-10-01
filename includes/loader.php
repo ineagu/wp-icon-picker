@@ -37,6 +37,15 @@ final class Icon_Picker_Loader {
 	 */
 	protected $style_ids = array();
 
+	/**
+	 * Printed media templates
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 * @var    array
+	 */
+	protected $printed_templates = array();
+
 
 	/**
 	 * Setter magic
@@ -200,6 +209,7 @@ final class Icon_Picker_Loader {
 	public function load() {
 		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, '_enqueue_assets' ) );
+		add_action( 'print_media_templates', array( $this, '_media_templates' ) );
 	}
 
 
@@ -248,5 +258,59 @@ final class Icon_Picker_Loader {
 		 * @param Icon_Picker $icon_picker Icon_Picker instance.
 		 */
 		do_action( 'icon_picker_admin_loaded', $icon_picker );
+	}
+
+
+	/**
+	 * Media templates
+	 *
+	 * @since  0.1.0
+	 * @action print_media_templates
+	 * @return void
+	 */
+	public function _media_templates() {
+		$icon_picker = Icon_Picker::instance();
+
+		foreach ( $icon_picker->registry->types as $type ) {
+			if ( empty( $type->templates ) ) {
+				continue;
+			}
+
+			$template_id_prefix = "tmpl-icon-picker-{$type->template_id}";
+			if ( in_array( $template_id_prefix, $this->printed_templates ) ) {
+				continue;
+			}
+
+			foreach ( $type->templates as $template_id_suffix => $template ) {
+				$this->_print_template( "{$template_id_prefix}-{$template_id_suffix}", $template );
+			}
+
+			$this->printed_templates[] = $template_id_prefix;
+		}
+
+		/**
+		 * Fires after all media templates have been printed
+		 *
+		 * @since 0.1.0
+		 * @param Icon_Picker $icon_picker Icon Picker instance.
+		 */
+		do_action( 'icon_picker_print_media_templates', $icon_picker );
+	}
+
+
+	/**
+	 * Print media template
+	 *
+	 * @since  0.1.0
+	 * @param  string $id       Template ID.
+	 * @param  string $template Media template HTML.
+	 * @return void
+	 */
+	protected function _print_template( $id, $template ) {
+		?>
+			<script type="text/html" id="<?php echo esc_attr( $id ) ?>">
+				<?php echo $template; // xss ok ?>
+			</script>
+		<?php
 	}
 }
