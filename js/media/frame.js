@@ -58,13 +58,15 @@ IconPicker = Select.extend({
 
 	/**
 	 * Set state based on the target's icon type
-	 *
-	 * TODO: Check target's icon type before defaulting to the first available state.
 	 */
 	_ipSetState: function() {
-		var state = this.states.at( 0 ).id;
+		var stateId = this.target.get( 'type' );
 
-		this.setState( state );
+		if ( ! stateId || ! this.states.findWhere( { id: stateId } ) ) {
+			stateId = this.states.at( 0 ).id;
+		}
+
+		this.setState( stateId );
 	},
 
 	ipRenderContent: function() {
