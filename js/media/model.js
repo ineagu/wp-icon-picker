@@ -13,10 +13,10 @@ var Target, Fonts;
  */
 Target = Backbone.Model.extend({
 	defaults: {
-		id:    '',
-		type:  '',
-		group: 'all',
-		icon:  ''
+		baseType: '',
+		type:     '',
+		group:    'all',
+		icon:     ''
 	}
 });
 
