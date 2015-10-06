@@ -54,6 +54,7 @@ IconPicker = Select.extend({
 	bindHandlers: function() {
 		this.on( 'toolbar:create:select', this.createSelectToolbar, this );
 		this.on( 'open', this._ipSetState, this );
+		this.on( 'select', this._ipUpdateTarget, this );
 	},
 
 	/**
@@ -67,6 +68,20 @@ IconPicker = Select.extend({
 		}
 
 		this.setState( stateId );
+	},
+
+	/**
+	 * Update target's attributes after selecting an icon
+	 */
+	_ipUpdateTarget: function() {
+		var state = this.state(),
+		    selection = this.state().get( 'selection' ).single();
+
+		this.target.set({
+			type:  state.id,
+			icon:  selection.get( 'id' ),
+			group: selection.get( 'group' )
+		});
 	},
 
 	ipRenderContent: function() {
