@@ -27,7 +27,7 @@ Font = State.extend({
 
 	activate: function() {
 		this.frame.on( 'open', this.refresh, this );
-		this.updateSelection();
+		this.refresh();
 	},
 
 	deactivate: function() {

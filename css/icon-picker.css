@@ -1,3 +1,6 @@
+.icon-picker-fonts-browser .media-toolbar-secondary {
+	min-width: 40%;
+}
 .media-frame-content .icon-picker-item,
 .media-frame-content[data-columns] .icon-picker-item {
 	width: 126px;

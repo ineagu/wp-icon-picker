@@ -231,6 +231,7 @@ final class Icon_Picker_Loader {
 	public function _media_view_strings( $strings ) {
 		$strings['iconPicker'] = array(
 			'frameTitle' => __( 'Icon Picker', 'icon-picker' ),
+			'allFilter'  => __( 'All', 'icon-picker' ),
 		);
 
 		return $strings;

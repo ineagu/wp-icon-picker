@@ -3,7 +3,11 @@
 (function( $, _ ) {
 var View = wp.media.View,
     Attachment = wp.media.view.Attachment,
-    FontItem, FontLibrary, FontBrowser;
+    Toolbar = wp.media.view.Toolbar,
+    AttachmentFilters = wp.media.view.AttachmentFilters,
+    Search = wp.media.view.Search,
+    ipL10n = wp.media.view.l10n.iconPicker,
+    FontItem, FontLibrary, FontFilter, FontBrowser;
 
 /**
  * wp.media.view.IconPickerFontItem
@@ -120,14 +124,49 @@ FontLibrary = View.extend({
 wp.media.view.IconPickerFontLibrary = FontLibrary;
 
 /**
+ * wp.media.view.IconPickerFontFilter
+ */
+FontFilter = AttachmentFilters.extend({
+	createFilters: function() {
+		var groups  = this.controller.state().get( 'groups' ),
+		    filters = {};
+
+		filters.all = {
+			text:  ipL10n.allFilter,
+			props: { group: 'all' }
+		};
+
+		groups.each( function( group ) {
+			filters[ group.id ] = {
+				text:  group.get( 'name' ),
+				props: { group: group.id }
+			};
+		});
+
+		this.filters = filters;
+	},
+
+	change: function() {
+		var filter = this.filters[ this.el.value ];
+
+		if ( filter ) {
+			this.model.set( 'group', filter.props.group );
+		}
+	}
+});
+
+wp.media.view.IconPickerFontFilter = FontFilter;
+
+/**
  * wp.media.view.IconPickerFontBrowser
  */
 FontBrowser = View.extend({
-	className: 'attachments-browser icon-picker-items-wrap',
+	className: 'attachments-browser icon-picker-fonts-browser',
 
 	initialize: function() {
 		this.groups = this.options.groups;
 
+		this.createToolbar();
 		this.createLibrary();
 	},
 
@@ -141,6 +180,28 @@ FontBrowser = View.extend({
 		});
 
 		this.views.add( this.items );
+	},
+
+	createToolbar: function() {
+		this.toolbar = new Toolbar({
+			controller: this.controller
+		});
+
+		this.views.add( this.toolbar );
+
+		// Dropdown filter
+		this.toolbar.set( 'filters', new FontFilter({
+			controller: this.controller,
+			model:      this.collection.props,
+			priority:   -80
+		}).render() );
+
+		// Search field
+		this.toolbar.set( 'search', new Search({
+			controller: this.controller,
+			model:      this.collection.props,
+			priority:   60
+		}).render() );
 	}
 });
 
