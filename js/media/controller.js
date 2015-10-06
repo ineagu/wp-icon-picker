@@ -41,7 +41,20 @@ Font = State.extend({
 
 	resetFilter: function() {},
 
-	updateSelection: function() {},
+	updateSelection: function() {
+		var selection = this.get( 'selection' ),
+		    library   = this.get( 'library' ),
+		    target    = this.frame.target,
+		    icon      = target.get( 'icon' ),
+		    type      = target.get( 'type' ),
+		    selected;
+
+		if ( this.id === type ) {
+			selected = library.findWhere({ id: icon });
+		}
+
+		selection.reset( selected ? selected : null );
+	},
 
 	getContentView: function() {
 		return new wp.media.view.IconPickerFontBrowser({
