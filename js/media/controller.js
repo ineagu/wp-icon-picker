@@ -39,7 +39,19 @@ Font = State.extend({
 		this.updateSelection();
 	},
 
-	resetFilter: function() {},
+	resetFilter: function() {
+		var library = this.get( 'library' ),
+		    groups  = this.get( 'groups' ),
+		    target  = this.frame.target,
+		    groupId = target.get( 'group' ),
+		    group   = groups.findWhere({ id: groupId });
+
+		if ( ! group ) {
+			groupId = target.defaults.group;
+		}
+
+		library.props.set( 'group', groupId );
+	},
 
 	updateSelection: function() {
 		var selection = this.get( 'selection' ),
