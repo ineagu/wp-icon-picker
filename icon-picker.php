@@ -168,17 +168,11 @@ final class Icon_Picker {
 	 * @return void
 	 */
 	public function init() {
-		// Setup icon types registry
-		require_once "{$this->dir}/includes/registry.php";
-		$this->registry = Icon_Picker_Types_Registry::instance();
+		// Initialize icon types registry.
+		$this->init_registry();
 
-		if ( empty( $registry->types ) ) {
-			$this->register_default_types();
-		}
-
-		// Setup loader
-		require_once "{$this->dir}/includes/loader.php";
-		$this->loader = Icon_Picker_Loader::instance();
+		// Initialize loader.
+		$this->init_loader();
 
 		/**
 		 * Fires when Icon Picker is ready
@@ -191,15 +185,47 @@ final class Icon_Picker {
 
 
 	/**
-	 * Register default icon types
+	 * Initialize icon types registry
 	 *
 	 * @since  0.1.0
 	 * @access protected
 	 * @return void
 	 */
-	protected function register_default_types() {
+	protected function init_registry() {
+		require_once "{$this->dir}/includes/registry.php";
+		$this->registry = Icon_Picker_Types_Registry::instance();
+
 		require_once "{$this->dir}/includes/types/dashicons.php";
 		$this->registry->add( new Icon_Picker_Type_Dashicons() );
+
+		/**
+		 * Fires when Icon Picker's Registry is ready and the default types are registered.
+		 *
+		 * @since 0.1.0
+		 * @param Icon_Picker $this Icon_Picker instance.
+		 */
+		do_action( 'icon_picker_types_registry_ready', $this );
+	}
+
+
+	/**
+	 * Initialize loader
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 * @return void
+	 */
+	protected function init_loader() {
+		require_once "{$this->dir}/includes/loader.php";
+		$this->loader = Icon_Picker_Loader::instance();
+
+		/**
+		 * Fires when Icon Picker's Registry is ready and the default types are registered.
+		 *
+		 * @since 0.1.0
+		 * @param Icon_Picker $this Icon_Picker instance.
+		 */
+		do_action( 'icon_picker_loader_ready', $this );
 	}
 
 
