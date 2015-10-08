@@ -161,9 +161,21 @@ wp.media.view.IconPickerFontFilter = FontFilter;
  * wp.media.view.IconPickerFontBrowser
  */
 FontBrowser = View.extend({
-	className: 'attachments-browser icon-picker-fonts-browser',
+	className: function() {
+		var className = 'attachments-browser icon-picker-fonts-browser';
+
+		if ( ! this.options.sidebar ) {
+			className += ' no-sidebar';
+		}
+
+		return className;
+	},
 
 	initialize: function() {
+		_.defaults( this.options, {
+			sidebar: false
+		});
+
 		this.groups = this.options.groups;
 
 		this.createToolbar();

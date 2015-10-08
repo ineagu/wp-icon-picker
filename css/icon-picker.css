@@ -1,3 +1,7 @@
+.no-sidebar .media-toolbar,
+.no-sidebar .attachments {
+	right: 0;
+}
 .icon-picker-fonts-browser .media-toolbar-secondary {
 	min-width: 40%;
 }
