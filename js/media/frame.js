@@ -25,10 +25,13 @@ IconPicker = Select.extend({
 		_.defaults( this.options, {
 			title:    l10n.iconPicker.frameTitle,
 			multiple: false,
-			ipTypes:  iconPicker.types
+			ipTypes:  iconPicker.types,
+			target:   null
 		});
 
-		if ( ! ( this.options.target instanceof wp.media.model.IconPickerTarget ) ) {
+		if ( this.options.target instanceof wp.media.model.IconPickerTarget ) {
+			this.target = this.options.target;
+		} else {
 			this.target = new wp.media.model.IconPickerTarget();
 		}
 
