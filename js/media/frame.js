@@ -16,12 +16,21 @@
  * @mixes wp.media.controller.StateMachine
  */
 
-var Select = wp.media.view.MediaFrame.Select,
+var l10n = wp.media.view.l10n,
+    Select = wp.media.view.MediaFrame.Select,
 	IconPicker;
 
 IconPicker = Select.extend({
 	initialize: function() {
-		this.target = new wp.media.model.IconPickerTarget();
+		_.defaults( this.options, {
+			title:    l10n.iconPicker.frameTitle,
+			multiple: false,
+			ipTypes:  iconPicker.types
+		});
+
+		if ( ! ( this.options.target instanceof wp.media.model.IconPickerTarget ) ) {
+			this.target = new wp.media.model.IconPickerTarget();
+		}
 
 		Select.prototype.initialize.apply( this, arguments );
 	},

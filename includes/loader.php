@@ -157,7 +157,7 @@ final class Icon_Picker_Loader {
 		$suffix      = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 		if ( defined( 'ICON_PICKER_SCRIPT_DEBUG' ) && ICON_PICKER_SCRIPT_DEBUG ) {
-			foreach ( array( 'model', 'view', 'controller', 'frame' ) as $part ) {
+			foreach ( array( 'model', 'view', 'controller' ) as $part ) {
 				$script_id = "icon-picker-{$part}";
 
 				wp_register_script(
@@ -172,7 +172,7 @@ final class Icon_Picker_Loader {
 
 			wp_register_script(
 				'icon-picker',
-				"{$icon_picker->url}/js/utils.js",
+				"{$icon_picker->url}/js/media/frame.js",
 				array( 'media-views' ),
 				$icon_picker->VERSION,
 				true
