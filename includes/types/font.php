@@ -66,10 +66,11 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 * Constructor
 	 *
 	 * @since 0.1.0
+	 * @param array $args Optional arguments passed to parent class.
 	 */
-	public function __construct() {
+	public function __construct( array $args = array() ) {
 		add_action( 'icon_picker_loader_init', array( $this, 'register_assets' ) );
-		parent::__construct();
+		parent::__construct( $args );
 	}
 
 
