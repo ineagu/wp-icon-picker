@@ -72,25 +72,6 @@ class Icon_Picker_Type_Fontello extends Icon_Picker_Type_Font {
 	protected $items;
 
 
-	/**
-	 * Set class properties
-	 *
-	 * @since 0.1.0
-	 * @access protected
-	 */
-	protected function set_properties() {
-		$this->type       = sprintf( 'pack-%s', $this->config['name'] );
-		$this->label      = sprintf( __( 'Pack: %s', 'icon-picker' ), $this->config['name'] );
-		$this->stylesheet = sprintf( '%s/css/%s.css', $this->url, $this->config['name'] );
-
-		if ( ! empty( $this->config['version'] ) ) {
-			$this->version = $this->config['version'];
-		} else {
-			$this->version = filemtime( sprintf( '%s/css/%s.css', $this->dir, $this->config['name'] ) );
-		}
-	}
-
-
 	public function get_groups() {
 		return array();
 	}
