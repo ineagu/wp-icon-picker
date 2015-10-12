@@ -39,7 +39,7 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 * @since  0.1.0
 	 * @return array
 	 */
-	abstract public function get_groups();
+	public function get_groups() {}
 
 
 	/**
@@ -48,7 +48,7 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 * @since  0.1.0
 	 * @return array
 	 */
-	abstract public function get_items();
+	public function get_items() {}
 
 
 	/**
