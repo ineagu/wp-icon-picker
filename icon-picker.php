@@ -198,6 +198,9 @@ final class Icon_Picker {
 		require_once "{$this->dir}/includes/types/dashicons.php";
 		$this->registry->add( new Icon_Picker_Type_Dashicons() );
 
+		require_once "{$this->dir}/includes/fontpack.php";
+		Icon_Picker_Fontpack::instance();
+
 		/**
 		 * Fires when Icon Picker's Registry is ready and the default types are registered.
 		 *
