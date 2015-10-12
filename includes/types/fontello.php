@@ -63,6 +63,15 @@ class Icon_Picker_Type_Fontello extends Icon_Picker_Type_Font {
 	protected $url;
 
 	/**
+	 * Groups
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 * @var    array
+	 */
+	protected $groups;
+
+	/**
 	 * Items
 	 *
 	 * @since  0.1.0
@@ -70,16 +79,6 @@ class Icon_Picker_Type_Fontello extends Icon_Picker_Type_Font {
 	 * @var    array
 	 */
 	protected $items;
-
-
-	public function get_groups() {
-		return array();
-	}
-
-
-	public function get_items() {
-		return $this->items;
-	}
 
 
 	/**
