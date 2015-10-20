@@ -193,7 +193,7 @@ final class Icon_Picker_Loader {
 			'icon-picker',
 			'iconPicker',
 			array(
-				'types' => $icon_picker->registry->get_all_props(),
+				'types' => $icon_picker->registry->get_types_for_js(),
 			)
 		);
 

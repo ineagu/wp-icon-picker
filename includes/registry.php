@@ -156,18 +156,20 @@ final class Icon_Picker_Types_Registry {
 
 
 	/**
-	 * Get all icon types' properties
+	 * Get all icon types for JS
 	 *
 	 * @since  0.1.0
 	 * @return array
 	 */
-	public function get_all_props() {
-		$props = array();
+	public function get_types_for_js() {
+		$types = array();
 
 		foreach ( $this->types as $type ) {
-			$props[ $type->id ] = $type->get_props();
+			$types[ $type->id ] = $type->get_props();
 		}
 
-		return $props;
+		asort( $types );
+
+		return $types;
 	}
 }
