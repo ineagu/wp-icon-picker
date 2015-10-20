@@ -129,9 +129,10 @@ final class Icon_Picker_Fontpack {
 		$this->url = apply_filters( 'icon_picker_fontpacks_dir_url', WP_CONTENT_URL . '/fontpacks' );
 
 		$this->messages = array(
-			'no_config' => __( 'Icon Picker: %1$s was not found in %2$s.', 'icon-picker' ),
-			'invalid'   => __( 'Icon Picker: %1$s is not set or invalid in %2$s.', 'icon-picker' ),
-			'duplicate' => __( 'Icon Picker: %1$s is already registered. Please check your font pack config file: %2$s.', 'icon-picker' ),
+			'no_config'    => __( 'Icon Picker: %1$s was not found in %2$s.', 'icon-picker' ),
+			'config_error' => __( 'Icon Picker: %s contains an error or more.', 'icon-picker' ),
+			'invalid'      => __( 'Icon Picker: %1$s is not set or invalid in %2$s.', 'icon-picker' ),
+			'duplicate'    => __( 'Icon Picker: %1$s is already registered. Please check your font pack config file: %2$s.', 'icon-picker' ),
 		);
 
 		$this->collect_packs();
@@ -154,8 +155,8 @@ final class Icon_Picker_Fontpack {
 				continue;
 			}
 
-			$pack_dirname   = $pack_dir->getFilename();
-			$pack_data = $this->get_pack_data( $pack_dir );
+			$pack_dirname = $pack_dir->getFilename();
+			$pack_data    = $this->get_pack_data( $pack_dir );
 
 			if ( ! empty( $pack_data ) ) {
 				$this->packs[ $pack_dirname ] = $pack_data;
@@ -211,8 +212,8 @@ final class Icon_Picker_Fontpack {
 			trigger_error(
 				sprintf(
 					esc_html( $this->messages['no_config'] ),
-					'<code><em>config.json</em></code>',
-					sprintf( '<code>%s</code>', esc_html( $this->dir ) )
+					'<code>config.json</code>',
+					sprintf( '<code>%s</code>', esc_html( $pack_path ) )
 				)
 			);
 
@@ -223,6 +224,13 @@ final class Icon_Picker_Fontpack {
 		$errors = json_last_error();
 
 		if ( ! empty( $errors ) ) {
+			trigger_error(
+				sprintf(
+					esc_html( $this->messages['config_error'] ),
+					sprintf( '<code>%s/config.json</code>', esc_html( $pack_path ) )
+				)
+			);
+
 			return false;
 		}
 
