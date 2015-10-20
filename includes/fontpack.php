@@ -220,6 +220,12 @@ final class Icon_Picker_Fontpack {
 		}
 
 		$config = json_decode( file_get_contents( $config_file ), true );
+		$errors = json_last_error();
+
+		if ( ! empty( $errors ) ) {
+			return false;
+		}
+
 		$keys   = array( 'name', 'glyphs', 'css_prefix_text' );
 		$items  = array();
 
