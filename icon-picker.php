@@ -201,6 +201,9 @@ final class Icon_Picker {
 		require_once "{$this->dir}/includes/fontpack.php";
 		Icon_Picker_Fontpack::instance();
 
+		require_once "{$this->dir}/includes/types/image.php";
+		$this->registry->add( new Icon_Picker_Type_Image() );
+
 		/**
 		 * Fires when Icon Picker's Registry is ready and the default types are registered.
 		 *

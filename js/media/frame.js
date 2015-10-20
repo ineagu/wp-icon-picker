@@ -54,8 +54,6 @@ IconPicker = Select.extend({
 				title:   props.name,
 				data:    props.data
 			}) );
-
-			this.on( 'content:render:' + props.id, this.ipRenderContent, this );
 		}, this );
 	},
 
@@ -63,6 +61,9 @@ IconPicker = Select.extend({
 	 * Bind region mode event callbacks.
 	 */
 	bindHandlers: function() {
+		this.on( 'router:create:browse', this.createRouter, this );
+		this.on( 'router:render:browse', this.browseRouter, this );
+		this.on( 'content:render', this.ipRenderContent, this );
 		this.on( 'toolbar:create:select', this.createSelectToolbar, this );
 		this.on( 'open', this._ipSetState, this );
 		this.on( 'select', this._ipUpdateTarget, this );
@@ -95,9 +96,18 @@ IconPicker = Select.extend({
 		});
 	},
 
+	browseRouter: function( routerView ) {
+		var routers = this.state().routers;
+
+		if ( routers ) {
+			routerView.set( routers );
+		}
+	},
+
 	ipRenderContent: function() {
 		var state   = this.state(),
-		    content = state.getContentView();
+		    mode    = this.content.mode(),
+		    content = state.getContentView( mode );
 
 		this.content.set( content );
 	}
