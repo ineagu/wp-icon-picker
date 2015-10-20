@@ -78,6 +78,18 @@ final class Icon_Picker {
 	 */
 	protected $is_admin_loaded = false;
 
+	/**
+	 * Default icon types
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 * @var    array
+	 */
+	protected $default_types = array(
+		'dashicons',
+		'image',
+	);
+
 
 	/**
 	 * Setter magic
@@ -195,14 +207,7 @@ final class Icon_Picker {
 		require_once "{$this->dir}/includes/registry.php";
 		$this->registry = Icon_Picker_Types_Registry::instance();
 
-		require_once "{$this->dir}/includes/types/dashicons.php";
-		$this->registry->add( new Icon_Picker_Type_Dashicons() );
-
-		require_once "{$this->dir}/includes/fontpack.php";
-		Icon_Picker_Fontpack::instance();
-
-		require_once "{$this->dir}/includes/types/image.php";
-		$this->registry->add( new Icon_Picker_Type_Image() );
+		$this->register_default_types();
 
 		/**
 		 * Fires when Icon Picker's Registry is ready and the default types are registered.
@@ -211,6 +216,42 @@ final class Icon_Picker {
 		 * @param Icon_Picker $this Icon_Picker instance.
 		 */
 		do_action( 'icon_picker_types_registry_ready', $this );
+	}
+
+
+	/**
+	 * Register default icon types
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 */
+	protected function register_default_types() {
+		require_once "{$this->dir}/includes/fontpack.php";
+		Icon_Picker_Fontpack::instance();
+
+		/**
+		 * Allow themes/plugins to disable one or more default types
+		 *
+		 * @since 0.1.0
+		 * @param array $default_types Default icon types.
+		 */
+		$default_types = array_filter( (array) apply_filters( 'icon_picker_default_types', $this->default_types ) );
+
+		/**
+		 * Validate filtered default types
+		 */
+		$default_types = array_intersect( $this->default_types, $default_types );
+
+		if ( empty( $default_types ) ) {
+			return;
+		}
+
+		foreach ( $default_types as $type ) {
+			$class_name = sprintf( 'Icon_Picker_Type_%s', ucfirst( $type ) );
+
+			require_once "{$this->dir}/includes/types/{$type}.php";
+			$this->registry->add( new $class_name() );
+		}
 	}
 
 
