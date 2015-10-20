@@ -6,7 +6,8 @@ var State = wp.media.controller.State,
     Library = wp.media.controller.Library,
     l10n = wp.media.view.l10n,
     models = wp.media.model,
-    Font, Img;
+    views = wp.media.view,
+    Font, Img, Svg;
 
 /**
  * wp.media.controller.IconPickerFont
@@ -168,10 +169,10 @@ Img = Library.extend({
 			idealColumnWidth: state.get( 'idealColumnWidth' ),
 			suggestedWidth:   state.get( 'suggestedWidth' ),
 			suggestedHeight:  state.get( 'suggestedHeight' ),
-			AttachmentView:   state.get( 'AttachmentView' )
+			AttachmentView:   ( 'svg' === this.id ) ? views.IconPickerSvgItem : undefined
 		};
 
-		return new wp.media.view.AttachmentsBrowser( options );
+		return new views.AttachmentsBrowser( options );
 	},
 
 	/**

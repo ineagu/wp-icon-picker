@@ -49,7 +49,9 @@ class Icon_Picker_Type_Image extends Icon_Picker_Type {
 	 * @param array $args Misc. arguments.
 	 */
 	public function __construct( $args = array() ) {
-		$this->name = __( 'Image', 'icon-picker' );
+		if ( empty( $this->name ) ) {
+			$this->name = __( 'Image', 'icon-picker' );
+		}
 
 		parent::__construct( $args );
 	}

@@ -29,3 +29,8 @@
 	height: 100%;
 	vertical-align: middle;
 }
+
+.attachment .svg-icon img {
+	min-width: 80%;
+	max-width: 100%;
+}

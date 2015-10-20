@@ -88,6 +88,7 @@ final class Icon_Picker {
 	protected $default_types = array(
 		'dashicons',
 		'image',
+		'svg',
 	);
 
 

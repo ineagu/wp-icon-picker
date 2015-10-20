@@ -2,12 +2,12 @@
 
 (function( $, _ ) {
 var View = wp.media.View,
-    Attachment = wp.media.view.Attachment,
+    Attachment = wp.media.view.Attachment.Library,
     Toolbar = wp.media.view.Toolbar,
     AttachmentFilters = wp.media.view.AttachmentFilters,
     Search = wp.media.view.Search,
     ipL10n = wp.media.view.l10n.iconPicker,
-    FontItem, FontLibrary, FontFilter, FontBrowser;
+    FontItem, FontLibrary, FontFilter, FontBrowser, SvgItem;
 
 /**
  * wp.media.view.IconPickerFontItem
@@ -218,5 +218,19 @@ FontBrowser = View.extend({
 });
 
 wp.media.view.IconPickerFontBrowser = FontBrowser;
+
+/**
+ * wp.media.view.IconPickerSvgItem
+ */
+SvgItem = Attachment.extend({
+	initialize: function() {
+		Attachment.prototype.initialize.apply( this, arguments );
+		console.log( this.template );
+	},
+
+	template: wp.template( 'icon-picker-svg-item' )
+});
+
+wp.media.view.IconPickerSvgItem = SvgItem;
 
 }( jQuery, _ ) );
