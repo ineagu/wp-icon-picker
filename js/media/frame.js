@@ -52,8 +52,7 @@ IconPicker = Select.extend({
 				id:      props.id,
 				content: props.id,
 				title:   props.name,
-				groups:  props.groups,
-				library: props.items
+				data:    props.data
 			}) );
 
 			this.on( 'content:render:' + props.id, this.ipRenderContent, this );

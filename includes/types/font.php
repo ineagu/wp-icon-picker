@@ -84,9 +84,11 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 		$props = array(
 			'id'         => $this->id,
 			'name'       => $this->name,
-			'groups'     => $this->groups,
-			'items'      => $this->items,
 			'controller' => $this->controller,
+			'data'       => array(
+				'groups'     => $this->groups,
+				'items'      => $this->items,
+			),
 		);
 
 		/**

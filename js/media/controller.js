@@ -18,8 +18,10 @@ Font = State.extend({
 	},
 
 	initialize: function() {
-		this.set( 'groups', new Backbone.Collection( this.get( 'groups' ) ) );
-		this.set( 'library', new models.IconPickerFonts( this.get( 'library' ) ) );
+		var data = this.get( 'data' );
+
+		this.set( 'groups', new Backbone.Collection( data.groups ) );
+		this.set( 'library', new models.IconPickerFonts( data.items ) );
 		this.set( 'selection', new models.Selection( null, {
 			multiple: this.get( 'multiple' )
 		}) );
