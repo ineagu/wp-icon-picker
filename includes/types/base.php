@@ -99,4 +99,15 @@ class Icon_Picker_Type {
 	public function __isset( $name ) {
 		return ( isset( $this->$name ) || method_exists( $this, "get_{$name}" ) );
 	}
+
+
+	/**
+	 * Get properties
+	 *
+	 * @since  0.1.0
+	 * @return array
+	 */
+	public function get_props() {
+		return array();
+	}
 }

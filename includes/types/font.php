@@ -69,8 +69,35 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 * @param array $args Optional arguments passed to parent class.
 	 */
 	public function __construct( array $args = array() ) {
-		add_action( 'icon_picker_loader_init', array( $this, 'register_assets' ) );
 		parent::__construct( $args );
+		add_action( 'icon_picker_loader_init', array( $this, 'register_assets' ) );
+	}
+
+
+	/**
+	 * Get properties
+	 *
+	 * @since  0.1.0
+	 * @return array
+	 */
+	public function get_props() {
+		$props = array(
+			'id'         => $this->id,
+			'name'       => $this->name,
+			'groups'     => $this->groups,
+			'items'      => $this->items,
+			'controller' => $this->controller,
+		);
+
+		/**
+		 * Filter icon type properties
+		 *
+		 * @since 0.1.0
+		 * @param array $props Icon type properties.
+		 */
+		$props = apply_filters( "icon_picker_{$this->id}_props", $props );
+
+		return $props;
 	}
 
 
