@@ -101,6 +101,12 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	}
 
 
+	/**
+	 * Get media templates
+	 *
+	 * @since  0.1.0
+	 * @return array
+	 */
 	public function get_templates() {
 		$templates = array(
 			'item' => sprintf(
