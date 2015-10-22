@@ -20,6 +20,7 @@ class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
 		$this->assertGreaterThan( 0, did_action( 'icon_picker_types_registry_init' ) );
 		$this->assertNotEmpty( $this->icon_picker->registry->types );
 		$this->assertContainsOnlyInstancesOf( 'Icon_Picker_Type', $this->icon_picker->registry->types );
+		$this->assertGreaterThan( 0, did_action( 'icon_picker_types_registry_ready' ) );
 	}
 
 	public function test_loader() {
@@ -34,4 +35,9 @@ class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
 			$this->assertTrue( wp_style_is( $style_id, 'registered' ) );
 		}
 	}
+
+	/**
+	 * @covers Icon_Picker::register_default_types()
+	 */
+	public function test_default_types() {}
 }
