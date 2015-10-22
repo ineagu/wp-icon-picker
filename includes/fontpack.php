@@ -178,12 +178,10 @@ final class Icon_Picker_Fontpack {
 		}
 
 		$icon_picker = Icon_Picker::instance();
-		$class_name  = 'Icon_Picker_Type_Fontello';
-
 		require_once "{$icon_picker->dir}/includes/types/fontello.php";
 
 		foreach ( $this->packs as $pack_data ) {
-			$icon_picker->registry->add( new $class_name( $pack_data ) );
+			$icon_picker->registry->add( new Icon_Picker_Type_Fontello( $pack_data ) );
 		}
 	}
 
