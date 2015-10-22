@@ -63,4 +63,13 @@ class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
 		$this->assertSame( $registered_default_type_ids, $this->icon_picker->default_types );
 		$this->assertFalse( isset( $registered_default_type_ids['random'] ) );
 	}
+
+	/**
+	 * @covers Icon_Picker_Type_Svg::__construct()
+	 */
+	public function test_type_svg() {
+		$allowed_mime_types = get_allowed_mime_types();
+
+		$this->assertArrayhasKey( 'svg', $allowed_mime_types );
+	}
 }
