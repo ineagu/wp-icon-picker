@@ -3,7 +3,24 @@
 class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
 	function setUp() {
 		$this->icon_picker = Icon_Picker::instance();
+
+		add_filter( 'icon_picker_default_types', array( $this, '_filter_default_types' ) );
+
 		parent::setUp();
+	}
+
+	/**
+	 * Filter default icon types
+	 *
+	 * This adds an unrecognized type
+	 *
+	 * @param  array $default_types Default icon types.
+	 * @return array
+	 */
+	public function _filter_default_types( $default_types ) {
+		$default_types[] = 'random';
+
+		return $default_types;
 	}
 
 	/**
@@ -44,5 +61,6 @@ class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
 		$registered_default_type_ids = array_values( array_intersect( $registered_type_ids, $this->icon_picker->default_types ) );
 
 		$this->assertSame( $registered_default_type_ids, $this->icon_picker->default_types );
+		$this->assertFalse( isset( $registered_default_type_ids['random'] ) );
 	}
 }
