@@ -152,27 +152,22 @@ Img = Library.extend({
 	 * TODO: sidebar view
 	 */
 	browseContent: function() {
-		var state = this,
-		    options;
-
-		options = {
-			controller:       state.frame,
-			collection:       state.get( 'library' ),
-			selection:        state.get( 'selection' ),
-			model:            state,
-			sortable:         state.get( 'sortable' ),
-			search:           state.get( 'searchable' ),
-			filters:          state.get( 'filterable' ),
+		return new views.AttachmentsBrowser({
+			controller:       this.frame,
+			collection:       this.get( 'library' ),
+			selection:        this.get( 'selection' ),
+			model:            this,
+			sortable:         this.get( 'sortable' ),
+			search:           this.get( 'searchable' ),
+			filters:          this.get( 'filterable' ),
 			sidebar:          false,
 			display:          false,
-			dragInfo:         state.get( 'dragInfo' ),
-			idealColumnWidth: state.get( 'idealColumnWidth' ),
-			suggestedWidth:   state.get( 'suggestedWidth' ),
-			suggestedHeight:  state.get( 'suggestedHeight' ),
+			dragInfo:         this.get( 'dragInfo' ),
+			idealColumnWidth: this.get( 'idealColumnWidth' ),
+			suggestedWidth:   this.get( 'suggestedWidth' ),
+			suggestedHeight:  this.get( 'suggestedHeight' ),
 			AttachmentView:   ( 'svg' === this.id ) ? views.IconPickerSvgItem : undefined
-		};
-
-		return new views.AttachmentsBrowser( options );
+		});
 	},
 
 	/**
