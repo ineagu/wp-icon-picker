@@ -1,0 +1,843 @@
+# Copyright (C) 2015 Dzikri Aziz
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Icon Picker 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/icon-picker\n"
+"POT-Creation-Date: 2015-10-23 09:03:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
+
+#: includes/fontpack.php:132
+msgid "Icon Picker: %1$s was not found in %2$s."
+msgstr ""
+
+#: includes/fontpack.php:133
+msgid "Icon Picker: %s contains an error or more."
+msgstr ""
+
+#: includes/fontpack.php:134
+msgid "Icon Picker: %1$s is not set or invalid in %2$s."
+msgstr ""
+
+#: includes/fontpack.php:135
+msgid ""
+"Icon Picker: %1$s is already registered. Please check your font pack config "
+"file: %2$s."
+msgstr ""
+
+#: includes/fontpack.php:273
+msgid "Pack: %s"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Icon Picker"
+msgstr ""
+
+#: includes/loader.php:234
+msgid "All"
+msgstr ""
+
+#: includes/types/dashicons.php:57
+msgid "Admin"
+msgstr ""
+
+#: includes/types/dashicons.php:61
+msgid "Post Formats"
+msgstr ""
+
+#: includes/types/dashicons.php:65
+msgid "Welcome Screen"
+msgstr ""
+
+#: includes/types/dashicons.php:69
+msgid "Image Editor"
+msgstr ""
+
+#: includes/types/dashicons.php:73
+msgid "Text Editor"
+msgstr ""
+
+#: includes/types/dashicons.php:77
+msgid "Post"
+msgstr ""
+
+#: includes/types/dashicons.php:81
+msgid "Sorting"
+msgstr ""
+
+#: includes/types/dashicons.php:85
+msgid "Social"
+msgstr ""
+
+#: includes/types/dashicons.php:89
+msgid "Jobs"
+msgstr ""
+
+#: includes/types/dashicons.php:93
+msgid "Internal/Products"
+msgstr ""
+
+#: includes/types/dashicons.php:97
+msgid "Taxonomies"
+msgstr ""
+
+#: includes/types/dashicons.php:101
+msgid "Alerts/Notifications"
+msgstr ""
+
+#: includes/types/dashicons.php:105 includes/types/dashicons.php:176
+msgid "Media"
+msgstr ""
+
+#: includes/types/dashicons.php:109
+msgid "Misc./Post Types"
+msgstr ""
+
+#: includes/types/dashicons.php:136
+msgid "Appearance"
+msgstr ""
+
+#: includes/types/dashicons.php:141
+msgid "Collapse"
+msgstr ""
+
+#: includes/types/dashicons.php:146 includes/types/dashicons.php:281
+msgid "Comments"
+msgstr ""
+
+#: includes/types/dashicons.php:151
+msgid "Customizer"
+msgstr ""
+
+#: includes/types/dashicons.php:156
+msgid "Dashboard"
+msgstr ""
+
+#: includes/types/dashicons.php:161
+msgid "Generic"
+msgstr ""
+
+#: includes/types/dashicons.php:166 includes/types/dashicons.php:316
+msgid "Filter"
+msgstr ""
+
+#: includes/types/dashicons.php:171
+msgid "Home"
+msgstr ""
+
+#: includes/types/dashicons.php:181
+msgid "Menu"
+msgstr ""
+
+#: includes/types/dashicons.php:186
+msgid "Multisite"
+msgstr ""
+
+#: includes/types/dashicons.php:191
+msgid "Network"
+msgstr ""
+
+#: includes/types/dashicons.php:196
+msgid "Page"
+msgstr ""
+
+#: includes/types/dashicons.php:201
+msgid "Plugins"
+msgstr ""
+
+#: includes/types/dashicons.php:206
+msgid "Settings"
+msgstr ""
+
+#: includes/types/dashicons.php:211
+msgid "Site"
+msgstr ""
+
+#: includes/types/dashicons.php:216
+msgid "Tools"
+msgstr ""
+
+#: includes/types/dashicons.php:221
+msgid "Users"
+msgstr ""
+
+#: includes/types/dashicons.php:226
+msgid "Standard"
+msgstr ""
+
+#: includes/types/dashicons.php:231
+msgid "Aside"
+msgstr ""
+
+#: includes/types/dashicons.php:236 includes/types/image.php:53
+msgid "Image"
+msgstr ""
+
+#: includes/types/dashicons.php:241 includes/types/dashicons.php:446
+#: includes/types/dashicons.php:911 includes/types/dashicons.php:1176
+#: includes/types/dashicons.php:1181 includes/types/dashicons.php:1186
+msgid "Video"
+msgstr ""
+
+#: includes/types/dashicons.php:246 includes/types/dashicons.php:876
+msgid "Audio"
+msgstr ""
+
+#: includes/types/dashicons.php:251 includes/types/dashicons.php:376
+msgid "Quote"
+msgstr ""
+
+#: includes/types/dashicons.php:256
+msgid "Gallery"
+msgstr ""
+
+#: includes/types/dashicons.php:261
+msgid "Links"
+msgstr ""
+
+#: includes/types/dashicons.php:266
+msgid "Status"
+msgstr ""
+
+#: includes/types/dashicons.php:271
+msgid "Chat"
+msgstr ""
+
+#: includes/types/dashicons.php:276
+msgid "Add page"
+msgstr ""
+
+#: includes/types/dashicons.php:286
+msgid "Edit page"
+msgstr ""
+
+#: includes/types/dashicons.php:291
+msgid "Learn More"
+msgstr ""
+
+#: includes/types/dashicons.php:296
+msgid "View Site"
+msgstr ""
+
+#: includes/types/dashicons.php:301
+msgid "Widgets"
+msgstr ""
+
+#: includes/types/dashicons.php:306
+msgid "Write Blog"
+msgstr ""
+
+#: includes/types/dashicons.php:311
+msgid "Crop"
+msgstr ""
+
+#: includes/types/dashicons.php:321
+msgid "Rotate"
+msgstr ""
+
+#: includes/types/dashicons.php:326
+msgid "Rotate Left"
+msgstr ""
+
+#: includes/types/dashicons.php:331
+msgid "Rotate Right"
+msgstr ""
+
+#: includes/types/dashicons.php:336
+msgid "Flip Vertical"
+msgstr ""
+
+#: includes/types/dashicons.php:341
+msgid "Flip Horizontal"
+msgstr ""
+
+#: includes/types/dashicons.php:346
+msgid "Undo"
+msgstr ""
+
+#: includes/types/dashicons.php:351
+msgid "Redo"
+msgstr ""
+
+#: includes/types/dashicons.php:356
+msgid "Bold"
+msgstr ""
+
+#: includes/types/dashicons.php:361
+msgid "Italic"
+msgstr ""
+
+#: includes/types/dashicons.php:366
+msgid "Unordered List"
+msgstr ""
+
+#: includes/types/dashicons.php:371
+msgid "Ordered List"
+msgstr ""
+
+#: includes/types/dashicons.php:381 includes/types/dashicons.php:486
+msgid "Align Left"
+msgstr ""
+
+#: includes/types/dashicons.php:386 includes/types/dashicons.php:496
+msgid "Align Center"
+msgstr ""
+
+#: includes/types/dashicons.php:391 includes/types/dashicons.php:491
+msgid "Align Right"
+msgstr ""
+
+#: includes/types/dashicons.php:396
+msgid "Insert More"
+msgstr ""
+
+#: includes/types/dashicons.php:401
+msgid "Spell Check"
+msgstr ""
+
+#: includes/types/dashicons.php:406
+msgid "Distraction-free"
+msgstr ""
+
+#: includes/types/dashicons.php:411
+msgid "Kitchensink"
+msgstr ""
+
+#: includes/types/dashicons.php:416
+msgid "Underline"
+msgstr ""
+
+#: includes/types/dashicons.php:421
+msgid "Justify"
+msgstr ""
+
+#: includes/types/dashicons.php:426
+msgid "Text Color"
+msgstr ""
+
+#: includes/types/dashicons.php:431
+msgid "Paste Word"
+msgstr ""
+
+#: includes/types/dashicons.php:436
+msgid "Paste Text"
+msgstr ""
+
+#: includes/types/dashicons.php:441
+msgid "Clear Formatting"
+msgstr ""
+
+#: includes/types/dashicons.php:451
+msgid "Custom Characters"
+msgstr ""
+
+#: includes/types/dashicons.php:456
+msgid "Indent"
+msgstr ""
+
+#: includes/types/dashicons.php:461
+msgid "Outdent"
+msgstr ""
+
+#: includes/types/dashicons.php:466
+msgid "Help"
+msgstr ""
+
+#: includes/types/dashicons.php:471
+msgid "Strikethrough"
+msgstr ""
+
+#: includes/types/dashicons.php:476
+msgid "Unlink"
+msgstr ""
+
+#: includes/types/dashicons.php:481
+msgid "RTL"
+msgstr ""
+
+#: includes/types/dashicons.php:501
+msgid "Align None"
+msgstr ""
+
+#: includes/types/dashicons.php:506
+msgid "Lock"
+msgstr ""
+
+#: includes/types/dashicons.php:511 includes/types/dashicons.php:516
+msgid "Calendar"
+msgstr ""
+
+#: includes/types/dashicons.php:521
+msgid "Hidden"
+msgstr ""
+
+#: includes/types/dashicons.php:526
+msgid "Visibility"
+msgstr ""
+
+#: includes/types/dashicons.php:531
+msgid "Post Status"
+msgstr ""
+
+#: includes/types/dashicons.php:536
+msgid "Post Trash"
+msgstr ""
+
+#: includes/types/dashicons.php:541
+msgid "Edit"
+msgstr ""
+
+#: includes/types/dashicons.php:546
+msgid "Trash"
+msgstr ""
+
+#: includes/types/dashicons.php:551 includes/types/dashicons.php:571
+#: includes/types/dashicons.php:591
+msgid "Arrow: Up"
+msgstr ""
+
+#: includes/types/dashicons.php:556 includes/types/dashicons.php:576
+#: includes/types/dashicons.php:596
+msgid "Arrow: Down"
+msgstr ""
+
+#: includes/types/dashicons.php:561 includes/types/dashicons.php:581
+#: includes/types/dashicons.php:601
+msgid "Arrow: Left"
+msgstr ""
+
+#: includes/types/dashicons.php:566 includes/types/dashicons.php:586
+#: includes/types/dashicons.php:606
+msgid "Arrow: Right"
+msgstr ""
+
+#: includes/types/dashicons.php:611
+msgid "Left-Right"
+msgstr ""
+
+#: includes/types/dashicons.php:616
+msgid "Sort"
+msgstr ""
+
+#: includes/types/dashicons.php:621
+msgid "List View"
+msgstr ""
+
+#: includes/types/dashicons.php:626
+msgid "Excerpt View"
+msgstr ""
+
+#: includes/types/dashicons.php:631
+msgid "Grid View"
+msgstr ""
+
+#: includes/types/dashicons.php:636 includes/types/dashicons.php:641
+#: includes/types/dashicons.php:646
+msgid "Share"
+msgstr ""
+
+#: includes/types/dashicons.php:651
+msgid "Twitter"
+msgstr ""
+
+#: includes/types/dashicons.php:656
+msgid "RSS"
+msgstr ""
+
+#: includes/types/dashicons.php:661 includes/types/dashicons.php:666
+msgid "Email"
+msgstr ""
+
+#: includes/types/dashicons.php:671 includes/types/dashicons.php:676
+msgid "Facebook"
+msgstr ""
+
+#: includes/types/dashicons.php:681
+msgid "Google+"
+msgstr ""
+
+#: includes/types/dashicons.php:686
+msgid "Networking"
+msgstr ""
+
+#: includes/types/dashicons.php:691
+msgid "Art"
+msgstr ""
+
+#: includes/types/dashicons.php:696
+msgid "Hammer"
+msgstr ""
+
+#: includes/types/dashicons.php:701
+msgid "Migrate"
+msgstr ""
+
+#: includes/types/dashicons.php:706
+msgid "Performance"
+msgstr ""
+
+#: includes/types/dashicons.php:711 includes/types/dashicons.php:716
+msgid "WordPress"
+msgstr ""
+
+#: includes/types/dashicons.php:721
+msgid "PressThis"
+msgstr ""
+
+#: includes/types/dashicons.php:726
+msgid "Update"
+msgstr ""
+
+#: includes/types/dashicons.php:731
+msgid "Screen Options"
+msgstr ""
+
+#: includes/types/dashicons.php:736
+msgid "Info"
+msgstr ""
+
+#: includes/types/dashicons.php:741
+msgid "Cart"
+msgstr ""
+
+#: includes/types/dashicons.php:746
+msgid "Feedback"
+msgstr ""
+
+#: includes/types/dashicons.php:751
+msgid "Cloud"
+msgstr ""
+
+#: includes/types/dashicons.php:756
+msgid "Translation"
+msgstr ""
+
+#: includes/types/dashicons.php:761
+msgid "Tag"
+msgstr ""
+
+#: includes/types/dashicons.php:766
+msgid "Category"
+msgstr ""
+
+#: includes/types/dashicons.php:771
+msgid "Yes"
+msgstr ""
+
+#: includes/types/dashicons.php:776 includes/types/dashicons.php:781
+msgid "No"
+msgstr ""
+
+#: includes/types/dashicons.php:786
+msgid "Plus"
+msgstr ""
+
+#: includes/types/dashicons.php:791
+msgid "Minus"
+msgstr ""
+
+#: includes/types/dashicons.php:796
+msgid "Dismiss"
+msgstr ""
+
+#: includes/types/dashicons.php:801
+msgid "Marker"
+msgstr ""
+
+#: includes/types/dashicons.php:806
+msgid "Star: Filled"
+msgstr ""
+
+#: includes/types/dashicons.php:811
+msgid "Star: Half"
+msgstr ""
+
+#: includes/types/dashicons.php:816
+msgid "Star: Empty"
+msgstr ""
+
+#: includes/types/dashicons.php:821
+msgid "Flag"
+msgstr ""
+
+#: includes/types/dashicons.php:826
+msgid "Skip Back"
+msgstr ""
+
+#: includes/types/dashicons.php:831
+msgid "Back"
+msgstr ""
+
+#: includes/types/dashicons.php:836
+msgid "Play"
+msgstr ""
+
+#: includes/types/dashicons.php:841
+msgid "Pause"
+msgstr ""
+
+#: includes/types/dashicons.php:846
+msgid "Forward"
+msgstr ""
+
+#: includes/types/dashicons.php:851
+msgid "Skip Forward"
+msgstr ""
+
+#: includes/types/dashicons.php:856
+msgid "Repeat"
+msgstr ""
+
+#: includes/types/dashicons.php:861
+msgid "Volume: On"
+msgstr ""
+
+#: includes/types/dashicons.php:866
+msgid "Volume: Off"
+msgstr ""
+
+#: includes/types/dashicons.php:871
+msgid "Archive"
+msgstr ""
+
+#: includes/types/dashicons.php:881
+msgid "Code"
+msgstr ""
+
+#: includes/types/dashicons.php:886
+msgid "Default"
+msgstr ""
+
+#: includes/types/dashicons.php:891
+msgid "Document"
+msgstr ""
+
+#: includes/types/dashicons.php:896
+msgid "Interactive"
+msgstr ""
+
+#: includes/types/dashicons.php:901
+msgid "Spreadsheet"
+msgstr ""
+
+#: includes/types/dashicons.php:906
+msgid "Text"
+msgstr ""
+
+#: includes/types/dashicons.php:916
+msgid "Audio Playlist"
+msgstr ""
+
+#: includes/types/dashicons.php:921
+msgid "Video Playlist"
+msgstr ""
+
+#: includes/types/dashicons.php:926
+msgid "Album"
+msgstr ""
+
+#: includes/types/dashicons.php:931
+msgid "Analytics"
+msgstr ""
+
+#: includes/types/dashicons.php:936
+msgid "Awards"
+msgstr ""
+
+#: includes/types/dashicons.php:941
+msgid "Backup"
+msgstr ""
+
+#: includes/types/dashicons.php:946
+msgid "Building"
+msgstr ""
+
+#: includes/types/dashicons.php:951
+msgid "Businessman"
+msgstr ""
+
+#: includes/types/dashicons.php:956
+msgid "Camera"
+msgstr ""
+
+#: includes/types/dashicons.php:961
+msgid "Carrot"
+msgstr ""
+
+#: includes/types/dashicons.php:966
+msgid "Chart: Pie"
+msgstr ""
+
+#: includes/types/dashicons.php:971
+msgid "Chart: Bar"
+msgstr ""
+
+#: includes/types/dashicons.php:976
+msgid "Chart: Line"
+msgstr ""
+
+#: includes/types/dashicons.php:981
+msgid "Chart: Area"
+msgstr ""
+
+#: includes/types/dashicons.php:986
+msgid "Desktop"
+msgstr ""
+
+#: includes/types/dashicons.php:991
+msgid "Forms"
+msgstr ""
+
+#: includes/types/dashicons.php:996
+msgid "Groups"
+msgstr ""
+
+#: includes/types/dashicons.php:1001 includes/types/dashicons.php:1006
+msgid "ID"
+msgstr ""
+
+#: includes/types/dashicons.php:1011 includes/types/dashicons.php:1016
+msgid "Images"
+msgstr ""
+
+#: includes/types/dashicons.php:1021
+msgid "Index Card"
+msgstr ""
+
+#: includes/types/dashicons.php:1026
+msgid "Layout"
+msgstr ""
+
+#: includes/types/dashicons.php:1031 includes/types/dashicons.php:1036
+msgid "Location"
+msgstr ""
+
+#: includes/types/dashicons.php:1041
+msgid "Products"
+msgstr ""
+
+#: includes/types/dashicons.php:1046
+msgid "Portfolio"
+msgstr ""
+
+#: includes/types/dashicons.php:1051 includes/types/dashicons.php:1056
+msgid "Book"
+msgstr ""
+
+#: includes/types/dashicons.php:1061
+msgid "Download"
+msgstr ""
+
+#: includes/types/dashicons.php:1066
+msgid "Upload"
+msgstr ""
+
+#: includes/types/dashicons.php:1071
+msgid "Clock"
+msgstr ""
+
+#: includes/types/dashicons.php:1076
+msgid "Lightbulb"
+msgstr ""
+
+#: includes/types/dashicons.php:1081
+msgid "Money"
+msgstr ""
+
+#: includes/types/dashicons.php:1086
+msgid "Palm Tree"
+msgstr ""
+
+#: includes/types/dashicons.php:1091
+msgid "Phone"
+msgstr ""
+
+#: includes/types/dashicons.php:1096
+msgid "Search"
+msgstr ""
+
+#: includes/types/dashicons.php:1101 includes/types/dashicons.php:1106
+msgid "Shield"
+msgstr ""
+
+#: includes/types/dashicons.php:1111
+msgid "Slides"
+msgstr ""
+
+#: includes/types/dashicons.php:1116
+msgid "Smartphone"
+msgstr ""
+
+#: includes/types/dashicons.php:1121
+msgid "Smiley"
+msgstr ""
+
+#: includes/types/dashicons.php:1126
+msgid "S.O.S."
+msgstr ""
+
+#: includes/types/dashicons.php:1131
+msgid "Sticky"
+msgstr ""
+
+#: includes/types/dashicons.php:1136
+msgid "Store"
+msgstr ""
+
+#: includes/types/dashicons.php:1141
+msgid "Tablet"
+msgstr ""
+
+#: includes/types/dashicons.php:1146
+msgid "Testimonial"
+msgstr ""
+
+#: includes/types/dashicons.php:1151
+msgid "Tickets"
+msgstr ""
+
+#: includes/types/dashicons.php:1156
+msgid "Thumbs Up"
+msgstr ""
+
+#: includes/types/dashicons.php:1161
+msgid "Thumbs Down"
+msgstr ""
+
+#: includes/types/dashicons.php:1166
+msgid "Unlock"
+msgstr ""
+
+#: includes/types/dashicons.php:1171
+msgid "Vault"
+msgstr ""
+
+#: includes/types/dashicons.php:1191
+msgid "Warning"
+msgstr ""
+
+#: includes/types/font.php:122 includes/types/svg.php:124
+msgid "Deselect"
+msgstr ""
+
+#: includes/types/svg.php:52
+msgid "SVG"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://kucrut.org/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Pick an icon of your choice."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Dzikri Aziz"
+msgstr ""
