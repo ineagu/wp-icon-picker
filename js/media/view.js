@@ -159,6 +159,10 @@ wp.media.view.IconPickerFontFilter = FontFilter;
  * wp.media.view.IconPickerFontBrowser
  */
 FontBrowser = View.extend({
+	defaults: _.defaults({
+		sidebar: false
+	}, View.prototype.defaults ),
+
 	className: function() {
 		var className = 'attachments-browser icon-picker-fonts-browser';
 
@@ -170,10 +174,6 @@ FontBrowser = View.extend({
 	},
 
 	initialize: function() {
-		_.defaults( this.options, {
-			sidebar: false
-		});
-
 		this.groups = this.options.groups;
 
 		this.createToolbar();
