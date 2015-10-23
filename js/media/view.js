@@ -223,11 +223,6 @@ wp.media.view.IconPickerFontBrowser = FontBrowser;
  * wp.media.view.IconPickerSvgItem
  */
 SvgItem = Attachment.extend({
-	initialize: function() {
-		Attachment.prototype.initialize.apply( this, arguments );
-		console.log( this.template );
-	},
-
 	template: wp.template( 'icon-picker-svg-item' )
 });
 
