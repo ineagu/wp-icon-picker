@@ -1,5 +1,3 @@
-/* globals wp: false */
-
 (function( $, _ ) {
 /**
  * wp.media.view.MediaFrame.IconPicker

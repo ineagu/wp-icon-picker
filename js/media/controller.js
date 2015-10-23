@@ -1,5 +1,3 @@
-/* globals wp: false */
-
 (function( $, _ ) {
 
 var State = wp.media.controller.State,

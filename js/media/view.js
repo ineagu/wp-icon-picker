@@ -1,5 +1,3 @@
-/* globals wp: false */
-
 (function( $, _ ) {
 var View = wp.media.View,
     Attachment = wp.media.view.Attachment.Library,

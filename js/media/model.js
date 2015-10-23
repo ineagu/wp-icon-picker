@@ -1,5 +1,3 @@
-/* globals wp: false */
-
 (function( $, _, Backbone ) {
 
 var Target, Fonts;
