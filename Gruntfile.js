@@ -7,9 +7,7 @@ module.exports = function( grunt ) {
 		jshint: {
 			all: [
 				'Gruntfile.js',
-				'js/*.js',
-				'js/media/.js',
-				'!js/*.min.js'
+				'js/media/*.js'
 			],
 			options: {
 				curly:   true,
@@ -72,10 +70,9 @@ module.exports = function( grunt ) {
 			},
 			scripts: {
 				files: [
-					'js/*.js',
 					'js/media/*.js'
 				],
-				tasks: [ 'jshint' ],
+				tasks: [ 'jshint', 'concat' ],
 				options: {
 					debounceDelay: 500
 				}
@@ -90,8 +87,10 @@ module.exports = function( grunt ) {
 			main: {
 				src:  [
 					'**',
+					'!dev-lib/**',
 					'!node_modules/**',
 					'!release/**',
+					'!tests/**',
 					'!.git/**',
 					'!.sass-cache/**',
 					'!Gruntfile.js',
@@ -130,21 +129,17 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
-
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 
-	// Default task.
 	grunt.registerTask( 'css', [ 'cssmin' ] );
-	grunt.registerTask( 'js', [ 'concat', 'jshint', 'uglify' ] );
+	grunt.registerTask( 'js', [ 'jshint', 'concat', 'uglify' ] );
 	grunt.registerTask( 'i18n', [ 'makepot' ] );
 	grunt.registerTask( 'default', [ 'css', 'js', 'i18n' ] );
-
 	grunt.registerTask( 'build', [ 'default', 'clean', 'copy', 'compress' ] );
 
 	grunt.util.linefeed = '\n';
