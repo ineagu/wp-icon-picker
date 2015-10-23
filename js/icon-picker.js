@@ -261,7 +261,7 @@ FontBrowser = View.extend({
 		var className = 'attachments-browser icon-picker-fonts-browser';
 
 		if ( ! this.options.sidebar ) {
-			className += ' no-sidebar';
+			className += ' hide-sidebar';
 		}
 
 		return className;
