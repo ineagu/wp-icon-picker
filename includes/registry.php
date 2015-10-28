@@ -163,12 +163,14 @@ final class Icon_Picker_Types_Registry {
 	 */
 	public function get_types_for_js() {
 		$types = array();
+		$names = array();
 
 		foreach ( $this->types as $type ) {
 			$types[ $type->id ] = $type->get_props();
+			$names[ $type->id ] = $type->name;
 		}
 
-		asort( $types );
+		array_multisort( $names, SORT_ASC, $types );
 
 		return $types;
 	}
