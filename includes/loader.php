@@ -131,12 +131,12 @@ final class Icon_Picker_Loader {
 	 * Add stylesheet
 	 *
 	 * @since  0.1.0
-	 * @param  string $script_id Script ID.
+	 * @param  string $stylesheet_id Stylesheet ID.
 	 * @return bool
 	 */
-	public function add_style( $style_id ) {
-		if ( wp_style_is( $style_id, 'registered' ) ) {
-			$this->style_ids[] = $style_id;
+	public function add_style( $stylesheet_id ) {
+		if ( wp_style_is( $stylesheet_id, 'registered' ) ) {
+			$this->style_ids[] = $stylesheet_id;
 
 			return true;
 		}
