@@ -15,6 +15,15 @@ require_once dirname( __FILE__ ) . '/base.php';
 abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 
 	/**
+	 * Stylesheet ID
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 * @var    string
+	 */
+	protected $stylesheet_id = '';
+
+	/**
 	 * JS Controller
 	 *
 	 * @since  0.1.0
@@ -59,7 +68,32 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 * @param  Icon_Picker_Loader      $loader Icon_Picker_Loader instance.
 	 * @return void
 	 */
-	public function register_assets( Icon_Picker_Loader $loader ) {}
+	public function register_assets( Icon_Picker_Loader $loader ) {
+		if ( empty( $this->stylesheet_uri ) ) {
+			return;
+		}
+
+		$register = true;
+		$deps     = false;
+		$styles   = wp_styles();
+
+		if ( $styles->query( $this->stylesheet_id, 'registered' ) ) {
+			$object = $styles->registered[ $this->stylesheet_id ];
+
+			if ( version_compare( $object->ver, $this->version, '<' ) ) {
+				$deps = $object->deps;
+				wp_deregister_style( $this->stylesheet_id );
+			} else {
+				$register = false;
+			}
+		}
+
+		if ( $register ) {
+			wp_register_style( $this->stylesheet_id, $this->stylesheet_uri, $deps, $this->version );
+		}
+
+		$loader->add_style( $this->stylesheet_id );
+	}
 
 
 	/**
@@ -70,6 +104,11 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 */
 	public function __construct( array $args = array() ) {
 		parent::__construct( $args );
+
+		if ( empty( $this->stylesheet_id ) ) {
+			$this->stylesheet_id = $this->id;
+		}
+
 		add_action( 'icon_picker_loader_init', array( $this, 'register_assets' ) );
 	}
 
