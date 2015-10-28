@@ -156,38 +156,14 @@ final class Icon_Picker_Loader {
 		$icon_picker = Icon_Picker::instance();
 		$suffix      = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-		if ( defined( 'ICON_PICKER_SCRIPT_DEBUG' ) && ICON_PICKER_SCRIPT_DEBUG ) {
-			foreach ( array( 'model', 'view', 'controller' ) as $part ) {
-				$script_id = "icon-picker-{$part}";
-
-				wp_register_script(
-					$script_id,
-					"{$icon_picker->url}/js/media/{$part}.js",
-					array( 'media-views' ),
-					$icon_picker->VERSION,
-					true
-				);
-				$this->add_script( $script_id );
-			}
-
-			wp_register_script(
-				'icon-picker',
-				"{$icon_picker->url}/js/media/frame.js",
-				array( 'media-views' ),
-				$icon_picker->VERSION,
-				true
-			);
-			$this->add_script( 'icon-picker' );
-		} else {
-			wp_register_script(
-				'icon-picker',
-				"{$icon_picker->url}/js/icon-picker{$suffix}.js",
-				array( 'media-views' ),
-				$icon_picker->VERSION,
-				true
-			);
-			$this->add_script( 'icon-picker' );
-		}
+		wp_register_script(
+			'icon-picker',
+			"{$icon_picker->url}/js/icon-picker{$suffix}.js",
+			array( 'media-views' ),
+			$icon_picker->VERSION,
+			true
+		);
+		$this->add_script( 'icon-picker' );
 
 		wp_localize_script(
 			'icon-picker',

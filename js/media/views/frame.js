@@ -1,4 +1,3 @@
-(function( $, _ ) {
 /**
  * wp.media.view.MediaFrame.IconPicker
  *
@@ -111,6 +110,4 @@ IconPicker = Select.extend({
 	}
 });
 
-wp.media.view.MediaFrame.IconPicker = IconPicker;
-
-}( jQuery, _ ) );
+module.exports = IconPicker;

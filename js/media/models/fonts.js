@@ -1,28 +1,7 @@
-(function( $, _, Backbone ) {
-
-var Target, Fonts;
-
-/**
- * wp.media.model.IconPickerTarget
- *
- * A target where the picked icon should be sent to
- *
- * @augments Backbone.Model
- */
-Target = Backbone.Model.extend({
-	defaults: {
-		type:  '',
-		group: 'all',
-		icon:  ''
-	}
-});
-
-wp.media.model.IconPickerTarget = Target;
-
 /**
  * wp.media.model.IconPickerFonts
  */
-Fonts = Backbone.Collection.extend({
+var IconPickerFonts = Backbone.Collection.extend({
 	initialize: function( models ) {
 		this.items = new Backbone.Collection( models );
 		this.props = new Backbone.Model({
@@ -92,6 +71,4 @@ Fonts = Backbone.Collection.extend({
 	}
 });
 
-wp.media.model.IconPickerFonts = Fonts;
-
-}( jQuery, _, Backbone ) );
+module.exports = IconPickerFonts;
