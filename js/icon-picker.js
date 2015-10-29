@@ -455,12 +455,24 @@ IconPickerFontLibrary = Attachments.extend({
 		$( this.options.scrollElement ).off( 'scroll', this.scroll );
 	},
 
+	_addItem: function( model ) {
+		this.views.add( this.createAttachmentView( model ), {
+			at: this.collection.indexOf( model )
+		} );
+	},
+
+	_removeItem: function( model ) {
+		var view = this._viewsByCid[ model.cid ];
+		delete this._viewsByCid[ model.cid ];
+
+		if ( view ) {
+			view.remove();
+		}
+	},
+
 	render: function() {
-		this.collection.each( function( model ) {
-			this.views.add( this.createAttachmentView( model ), {
-				at: this.collection.indexOf( model )
-			} );
-		}, this );
+		_.each( this._viewsByCid, this._removeItem, this );
+		this.collection.each( this._addItem, this );
 
 		return this;
 	},
