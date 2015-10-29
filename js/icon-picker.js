@@ -204,7 +204,7 @@ wp.media.view.IconPickerFontItem = require( './views/font-item.js' );
 wp.media.view.IconPickerFontLibrary = require( './views/font-library.js' );
 wp.media.view.IconPickerFontFilter = require( './views/font-filter.js' );
 wp.media.view.IconPickerFontBrowser = require( './views/font-browser.js' );
-wp.media.view.IconPickerFontSvgItem = require( './views/svg-item.js' );
+wp.media.view.IconPickerSvgItem = require( './views/svg-item.js' );
 wp.media.view.MediaFrame.IconPicker = require( './views/frame.js' );
 
 },{"./controllers/font.js":1,"./controllers/img.js":2,"./models/fonts.js":4,"./models/target.js":5,"./views/font-browser.js":6,"./views/font-filter.js":7,"./views/font-item.js":8,"./views/font-library.js":9,"./views/frame.js":10,"./views/svg-item.js":11}],4:[function(require,module,exports){
