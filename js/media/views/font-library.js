@@ -52,16 +52,24 @@ var IconPickerFontLibrary = wp.media.View.extend({
 	},
 
 	scrollToSelected: function() {
-		var single = this.options.selection.single(),
-		    singleView;
+		var selected = this.options.selection.single(),
+		    singleView, distance;
 
-		if ( ! single ) {
+		if ( ! selected ) {
 			return;
 		}
 
-		singleView = this.getView( single );
+		singleView = this.getView( selected );
+
 		if ( singleView && ! this.isInView( singleView.$el ) ) {
-			this.$el.scrollTop( singleView.$el.offset().top - this.$el.offset().top + this.$el.scrollTop() - parseInt( this.$el.css( 'paddingTop' ), 10 ) );
+			distance = (
+				singleView.$el.offset().top -
+				this.$el.offset().top +
+				this.$el.scrollTop() -
+				parseInt( this.$el.css( 'paddingTop' ), 10 )
+			);
+
+			this.$el.scrollTop( distance );
 		}
 	},
 
