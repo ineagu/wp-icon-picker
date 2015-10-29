@@ -336,6 +336,10 @@ var IconPickerFontBrowser = wp.media.View.extend({
 			type:       this.options.type
 		});
 
+		// Add keydown listener to the instance of the library view
+		this.items.listenTo( this.controller, 'attachment:keydown:arrow',     this.items.arrowEvent );
+		this.items.listenTo( this.controller, 'attachment:details:shift-tab', this.items.restoreFocus );
+
 		this.views.add( this.items );
 	},
 
@@ -408,10 +412,6 @@ var Attachment = wp.media.view.Attachment.Library,
  */
 IconPickerFontItem = Attachment.extend({
 	className: 'attachment icon-picker-item',
-	events:    {
-		'click .attachment-preview': 'toggleSelectionHandler',
-		'click a':                   'preventDefault'
-	},
 
 	initialize: function() {
 		this.template = wp.media.template( 'icon-picker-' + this.options.baseType + '-item' );
@@ -424,8 +424,10 @@ IconPickerFontItem = Attachment.extend({
 			type:     this.options.type
 		});
 
+		this.views.detach();
 		this.$el.html( this.template( options ) );
 		this.updateSelect();
+		this.views.render();
 
 		return this;
 	}
@@ -434,23 +436,28 @@ IconPickerFontItem = Attachment.extend({
 module.exports = IconPickerFontItem;
 
 },{}],9:[function(require,module,exports){
+var $ = jQuery,
+    Attachments = wp.media.view.Attachments,
+    IconPickerFontLibrary;
+
 /**
  * wp.media.view.IconPickerFontLibrary
  */
-var IconPickerFontLibrary = wp.media.View.extend({
-	tagName:   'ul',
+IconPickerFontLibrary = Attachments.extend({
 	className: 'attachments icon-picker-items clearfix',
 
 	initialize: function() {
-		this._viewsByCid = {};
+		Attachments.prototype.initialize.apply( this, arguments );
 
-		this.collection.on( 'reset', this.refresh, this );
+		_.bindAll( this, 'scrollToSelected' );
+		_.defer( this.scrollToSelected, this );
 		this.controller.on( 'open', this.scrollToSelected, this );
+		$( this.options.scrollElement ).off( 'scroll', this.scroll );
 	},
 
 	render: function() {
 		this.collection.each( function( model ) {
-			this.views.add( this.renderItem( model ), {
+			this.views.add( this.createAttachmentView( model ), {
 				at: this.collection.indexOf( model )
 			} );
 		}, this );
@@ -458,7 +465,7 @@ var IconPickerFontLibrary = wp.media.View.extend({
 		return this;
 	},
 
-	renderItem: function( model ) {
+	createAttachmentView: function( model ) {
 		var view = new wp.media.view.IconPickerFontItem({
 			controller: this.controller,
 			model:      model,
@@ -471,22 +478,9 @@ var IconPickerFontLibrary = wp.media.View.extend({
 		return this._viewsByCid[ view.cid ] = view;
 	},
 
-	clearItems: function() {
-		_.each( this._viewsByCid, function( view ) {
-			delete this._viewsByCid[ view.cid ];
-			view.remove();
-		}, this );
-	},
-
-	refresh: function() {
-		this.clearItems();
-		this.render();
-	},
-
-	ready: function() {
-		this.scrollToSelected();
-	},
-
+	/**
+	 * Scroll to selected item
+	 */
 	scrollToSelected: function() {
 		var selected = this.options.selection.single(),
 		    singleView, distance;
@@ -500,6 +494,7 @@ var IconPickerFontLibrary = wp.media.View.extend({
 		if ( singleView && ! this.isInView( singleView.$el ) ) {
 			distance = (
 				singleView.$el.offset().top -
+				parseInt( singleView.$el.css( 'paddingTop' ), 10 ) -
 				this.$el.offset().top +
 				this.$el.scrollTop() -
 				parseInt( this.$el.css( 'paddingTop' ), 10 )
@@ -514,14 +509,18 @@ var IconPickerFontLibrary = wp.media.View.extend({
 	},
 
 	isInView: function( $elem ) {
-		var $window       = jQuery( window ),
-		    docViewTop    = $window.scrollTop(),
-		    docViewBottom = docViewTop + $window.height(),
+		var docViewTop    = this.$window.scrollTop(),
+		    docViewBottom = docViewTop + this.$window.height(),
 		    elemTop       = $elem.offset().top,
 		    elemBottom    = elemTop + $elem.height();
 
 		return ( ( elemBottom <= docViewBottom ) && ( elemTop >= docViewTop ) );
-	}
+	},
+
+	prepare: function() {},
+	ready: function() {},
+	initSortable: function() {},
+	scroll: function() {}
 });
 
 module.exports = IconPickerFontLibrary;

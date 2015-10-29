@@ -6,10 +6,6 @@ var Attachment = wp.media.view.Attachment.Library,
  */
 IconPickerFontItem = Attachment.extend({
 	className: 'attachment icon-picker-item',
-	events:    {
-		'click .attachment-preview': 'toggleSelectionHandler',
-		'click a':                   'preventDefault'
-	},
 
 	initialize: function() {
 		this.template = wp.media.template( 'icon-picker-' + this.options.baseType + '-item' );
@@ -22,8 +18,10 @@ IconPickerFontItem = Attachment.extend({
 			type:     this.options.type
 		});
 
+		this.views.detach();
 		this.$el.html( this.template( options ) );
 		this.updateSelect();
+		this.views.render();
 
 		return this;
 	}
