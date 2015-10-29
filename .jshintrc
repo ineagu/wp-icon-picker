@@ -20,6 +20,7 @@
 		"Backbone": false,
 		"jQuery": false,
 		"wp": false,
+		"console": false,
 		"iconPicker": false
 	}
 }
