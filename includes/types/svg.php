@@ -59,8 +59,7 @@ class Icon_Picker_Type_Svg extends Icon_Picker_Type_Image {
 	/**
 	 * Add SVG support
 	 *
-	 * @since   0.8.0
-	 * @access  protected
+	 * @since   0.1.0
 	 * @filter  upload_mimes
 	 * @link    https://codex.wordpress.org/Plugin_API/Filter_Reference/upload_mimes
 	 * @by      Ethan Clevenger (GitHub: ethanclevenger91; email: ethan.c.clevenger@gmail.com)
