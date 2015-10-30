@@ -269,12 +269,13 @@ final class Icon_Picker_Fontpack {
 		}
 
 		$pack_data = array(
-			'id'      => $config['name'],
-			'name'    => sprintf( __( 'Pack: %s', 'icon-picker' ), $config['name'] ),
-			'dir'     => "{$this->dir}/{$pack_dirname}",
-			'url'     => "{$this->url}/{$pack_dirname}",
-			'version' => $pack_dir->getMTime(),
-			'items'   => $items,
+			'id'             => "pack-{$config['name']}",
+			'name'           => sprintf( __( 'Pack: %s', 'icon-picker' ), $config['name'] ),
+			'version'        => $pack_dir->getMTime(),
+			'items'          => $items,
+			'stylesheet_uri' => "{$this->url}/{$pack_dirname}/css/{$config['name']}.css",
+			'dir'            => "{$this->dir}/{$pack_dirname}",
+			'url'            => "{$this->url}/{$pack_dirname}",
 		);
 
 		set_transient( $cache_id, $pack_data, DAY_IN_SECONDS );
