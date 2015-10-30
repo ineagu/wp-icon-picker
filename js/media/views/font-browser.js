@@ -2,10 +2,6 @@
  * wp.media.view.IconPickerFontBrowser
  */
 var IconPickerFontBrowser = wp.media.View.extend( _.extend({
-	defaults: {
-		sidebar: false
-	},
-
 	className: function() {
 		var className = 'attachments-browser icon-picker-fonts-browser';
 

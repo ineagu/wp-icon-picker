@@ -13,6 +13,8 @@ var IconPickerState = {
 		if ( frameOptions.SidebarView && frameOptions.SidebarView.prototype instanceof wp.media.view.IconPickerSidebar ) {
 			options.sidebar     = true;
 			options.SidebarView = frameOptions.SidebarView;
+		} else {
+			options.sidebar = false;
 		}
 
 		return options;
