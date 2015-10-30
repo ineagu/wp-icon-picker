@@ -110,17 +110,16 @@ class Icon_Picker_Type_Svg extends Icon_Picker_Type_Image {
 	 * @return array
 	 */
 	public function get_templates() {
-		$icon      = '<img src="{{ data.url }}" alt="{{ data.alt }}" class="_icon _{{data.type}}"%s />';
-		$icon_item = sprintf( $icon, '' );
 		$templates = array(
 			'item' => sprintf(
 				'<div class="attachment-preview js--select-attachment svg-icon">
 					<div class="thumbnail">
-						<div class="centered">%s</div>
+						<div class="centered">
+							<img src="{{ data.url }}" alt="{{ data.alt }}" class="_icon _{{data.type}}" />
+						</div>
 					</div>
 				</div>
 				<a class="check" href="#" title="%s"><div class="media-modal-icon"></div></a>',
-				$icon_item,
 				esc_attr__( 'Deselect', 'menu-icons' )
 			),
 		);
