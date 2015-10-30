@@ -2,7 +2,7 @@
 /**
  * wp.media.controller.IconPickerFont
  */
-var IconPickerFont = wp.media.controller.State.extend({
+var IconPickerFont = wp.media.controller.State.extend( _.extend({
 	defaults: {
 		multiple: false,
 		menu:     'default',
@@ -64,7 +64,7 @@ var IconPickerFont = wp.media.controller.State.extend({
 	},
 
 	getContentView: function() {
-		return new wp.media.view.IconPickerFontBrowser({
+		return new wp.media.view.IconPickerFontBrowser( _.extend({
 			controller: this.frame,
 			model:      this,
 			groups:     this.get( 'groups' ),
@@ -72,9 +72,9 @@ var IconPickerFont = wp.media.controller.State.extend({
 			selection:  this.get( 'selection' ),
 			baseType:   this.get( 'baseType' ),
 			type:       this.get( 'id' )
-		});
+		}, this.ipGetSidebarOptions() ) );
 	}
-});
+}, wp.media.controller.IconPickerState ) );
 
 module.exports = IconPickerFont;
 
@@ -88,7 +88,7 @@ var Library = wp.media.controller.Library,
 /**
  * wp.media.controller.IconPickerImg
  */
-IconPickerImg = Library.extend({
+IconPickerImg = Library.extend( _.extend({
 	defaults: _.defaults({
 		id:            'image',
 		syncSelection: false
@@ -148,22 +148,25 @@ IconPickerImg = Library.extend({
 	 * TODO: sidebar view
 	 */
 	browseContent: function() {
-		return new views.AttachmentsBrowser({
+		var options = _.extend({
+			model:            this,
 			controller:       this.frame,
 			collection:       this.get( 'library' ),
 			selection:        this.get( 'selection' ),
-			model:            this,
 			sortable:         this.get( 'sortable' ),
 			search:           this.get( 'searchable' ),
 			filters:          this.get( 'filterable' ),
-			sidebar:          false,
-			display:          false,
 			dragInfo:         this.get( 'dragInfo' ),
 			idealColumnWidth: this.get( 'idealColumnWidth' ),
 			suggestedWidth:   this.get( 'suggestedWidth' ),
-			suggestedHeight:  this.get( 'suggestedHeight' ),
-			AttachmentView:   ( 'svg' === this.id ) ? views.IconPickerSvgItem : undefined
-		});
+			suggestedHeight:  this.get( 'suggestedHeight' )
+		}, this.ipGetSidebarOptions() );
+
+		if ( 'svg' === this.id ) {
+			options.AttachmentView = views.IconPickerSvgItem;
+		}
+
+		return new views.IconPickerImgBrowser( options );
 	},
 
 	/**
@@ -189,25 +192,53 @@ IconPickerImg = Library.extend({
 
 		selection.reset( selected ? selected : null );
 	}
-});
+}, wp.media.controller.IconPickerState ) );
 
 module.exports = IconPickerImg;
 
 },{}],3:[function(require,module,exports){
+/**
+ * Methods for the state
+ */
+var IconPickerState = {
+
+	/**
+	 * @returns {object}
+	 */
+	ipGetSidebarOptions: function() {
+		var frameOptions = this.frame.options,
+		    options = {};
+
+		if ( frameOptions.SidebarView && frameOptions.SidebarView.prototype instanceof wp.media.view.IconPickerSidebar ) {
+			options.sidebar     = true;
+			options.SidebarView = frameOptions.SidebarView;
+		}
+
+		return options;
+	}
+};
+
+module.exports = IconPickerState;
+
+},{}],4:[function(require,module,exports){
 wp.media.model.IconPickerTarget = require( './models/target.js' );
-wp.media.model.IconPickerFonts = require( './models/fonts.js' );
+wp.media.model.IconPickerFonts  = require( './models/fonts.js' );
 
-wp.media.controller.IconPickerFont = require( './controllers/font.js' );
-wp.media.controller.IconPickerImg = require( './controllers/img.js' );
+wp.media.controller.IconPickerState = require( './controllers/state.js' );
+wp.media.controller.IconPickerFont  = require( './controllers/font.js' );
+wp.media.controller.IconPickerImg   = require( './controllers/img.js' );
 
-wp.media.view.IconPickerFontItem = require( './views/font-item.js' );
+wp.media.view.IconPickerBrowser     = require( './views/browser.js' );
+wp.media.view.IconPickerSidebar     = require( './views/sidebar.js' );
+wp.media.view.IconPickerFontItem    = require( './views/font-item.js' );
 wp.media.view.IconPickerFontLibrary = require( './views/font-library.js' );
-wp.media.view.IconPickerFontFilter = require( './views/font-filter.js' );
+wp.media.view.IconPickerFontFilter  = require( './views/font-filter.js' );
 wp.media.view.IconPickerFontBrowser = require( './views/font-browser.js' );
-wp.media.view.IconPickerSvgItem = require( './views/svg-item.js' );
+wp.media.view.IconPickerImgBrowser  = require( './views/img-browser.js' );
+wp.media.view.IconPickerSvgItem     = require( './views/svg-item.js' );
 wp.media.view.MediaFrame.IconPicker = require( './views/frame.js' );
 
-},{"./controllers/font.js":1,"./controllers/img.js":2,"./models/fonts.js":4,"./models/target.js":5,"./views/font-browser.js":6,"./views/font-filter.js":7,"./views/font-item.js":8,"./views/font-library.js":9,"./views/frame.js":10,"./views/svg-item.js":11}],4:[function(require,module,exports){
+},{"./controllers/font.js":1,"./controllers/img.js":2,"./controllers/state.js":3,"./models/fonts.js":5,"./models/target.js":6,"./views/browser.js":7,"./views/font-browser.js":8,"./views/font-filter.js":9,"./views/font-item.js":10,"./views/font-library.js":11,"./views/frame.js":12,"./views/img-browser.js":13,"./views/sidebar.js":14,"./views/svg-item.js":15}],5:[function(require,module,exports){
 /**
  * wp.media.model.IconPickerFonts
  */
@@ -283,7 +314,7 @@ var IconPickerFonts = Backbone.Collection.extend({
 
 module.exports = IconPickerFonts;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /**
  * wp.media.model.IconPickerTarget
  *
@@ -301,11 +332,28 @@ var IconPickerTarget = Backbone.Model.extend({
 
 module.exports = IconPickerTarget;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
+/**
+ * Methods for the browser views
+ */
+var IconPickerBrowser = {
+	createSidebar: function() {
+		this.sidebar = new this.options.SidebarView({
+			controller: this.controller,
+			selection:  this.options.selection
+		});
+
+		this.views.add( this.sidebar );
+	}
+};
+
+module.exports = IconPickerBrowser;
+
+},{}],8:[function(require,module,exports){
 /**
  * wp.media.view.IconPickerFontBrowser
  */
-var IconPickerFontBrowser = wp.media.View.extend({
+var IconPickerFontBrowser = wp.media.View.extend( _.extend({
 	defaults: {
 		sidebar: false
 	},
@@ -325,6 +373,10 @@ var IconPickerFontBrowser = wp.media.View.extend({
 
 		this.createToolbar();
 		this.createLibrary();
+
+		if ( this.options.sidebar ) {
+			this.createSidebar();
+		}
 	},
 
 	createLibrary: function() {
@@ -364,11 +416,11 @@ var IconPickerFontBrowser = wp.media.View.extend({
 			priority:   60
 		}).render() );
 	}
-});
+}, wp.media.view.IconPickerBrowser ) );
 
 module.exports = IconPickerFontBrowser;
 
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * wp.media.view.IconPickerFontFilter
  */
@@ -403,7 +455,7 @@ var IconPickerFontFilter = wp.media.view.AttachmentFilters.extend({
 
 module.exports = IconPickerFontFilter;
 
-},{}],8:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 var Attachment = wp.media.view.Attachment.Library,
     IconPickerFontItem;
 
@@ -435,7 +487,7 @@ IconPickerFontItem = Attachment.extend({
 
 module.exports = IconPickerFontItem;
 
-},{}],9:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 var $ = jQuery,
     Attachments = wp.media.view.Attachments,
     IconPickerFontLibrary;
@@ -537,7 +589,7 @@ IconPickerFontLibrary = Attachments.extend({
 
 module.exports = IconPickerFontLibrary;
 
-},{}],10:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /**
  * wp.media.view.MediaFrame.IconPicker
  *
@@ -560,10 +612,11 @@ var l10n = wp.media.view.l10n,
 IconPicker = Select.extend({
 	initialize: function() {
 		_.defaults( this.options, {
-			title:    l10n.iconPicker.frameTitle,
-			multiple: false,
-			ipTypes:  iconPicker.types,
-			target:   null
+			title:       l10n.iconPicker.frameTitle,
+			multiple:    false,
+			ipTypes:     iconPicker.types,
+			target:      null,
+			SidebarView: null
 		});
 
 		if ( this.options.target instanceof wp.media.model.IconPickerTarget ) {
@@ -652,7 +705,46 @@ IconPicker = Select.extend({
 
 module.exports = IconPicker;
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
+/**
+ * wp.media.view.IconPickerImgBrowser
+ */
+var IconPickerImgBrowser = wp.media.view.AttachmentsBrowser.extend( wp.media.view.IconPickerBrowser );
+
+module.exports = IconPickerImgBrowser;
+
+},{}],14:[function(require,module,exports){
+/**
+ * wp.media.view.IconPickerSidebar
+ */
+var IconPickerSidebar = wp.media.view.Sidebar.extend({
+	initialize: function() {
+		var selection = this.options.selection;
+
+		wp.media.view.Sidebar.prototype.initialize.apply( this, arguments );
+
+		selection.on( 'selection:single', this.createSingle, this );
+		selection.on( 'selection:unsingle', this.disposeSingle, this );
+
+		if ( selection.single() ) {
+			this.createSingle();
+		}
+	},
+
+	/**
+	 * @abstract
+	 */
+	createSingle: function() {},
+
+	/**
+	 * @abstract
+	 */
+	disposeSingle: function() {}
+});
+
+module.exports = IconPickerSidebar;
+
+},{}],15:[function(require,module,exports){
 /**
  * wp.media.view.IconPickerSvgItem
  */
@@ -662,4 +754,4 @@ var IconPickerSvgItem = wp.media.view.Attachment.Library.extend({
 
 module.exports = IconPickerSvgItem;
 
-},{}]},{},[3]);
+},{}]},{},[4]);

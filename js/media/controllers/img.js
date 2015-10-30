@@ -7,7 +7,7 @@ var Library = wp.media.controller.Library,
 /**
  * wp.media.controller.IconPickerImg
  */
-IconPickerImg = Library.extend({
+IconPickerImg = Library.extend( _.extend({
 	defaults: _.defaults({
 		id:            'image',
 		syncSelection: false
@@ -67,22 +67,25 @@ IconPickerImg = Library.extend({
 	 * TODO: sidebar view
 	 */
 	browseContent: function() {
-		return new views.AttachmentsBrowser({
+		var options = _.extend({
+			model:            this,
 			controller:       this.frame,
 			collection:       this.get( 'library' ),
 			selection:        this.get( 'selection' ),
-			model:            this,
 			sortable:         this.get( 'sortable' ),
 			search:           this.get( 'searchable' ),
 			filters:          this.get( 'filterable' ),
-			sidebar:          false,
-			display:          false,
 			dragInfo:         this.get( 'dragInfo' ),
 			idealColumnWidth: this.get( 'idealColumnWidth' ),
 			suggestedWidth:   this.get( 'suggestedWidth' ),
-			suggestedHeight:  this.get( 'suggestedHeight' ),
-			AttachmentView:   ( 'svg' === this.id ) ? views.IconPickerSvgItem : undefined
-		});
+			suggestedHeight:  this.get( 'suggestedHeight' )
+		}, this.ipGetSidebarOptions() );
+
+		if ( 'svg' === this.id ) {
+			options.AttachmentView = views.IconPickerSvgItem;
+		}
+
+		return new views.IconPickerImgBrowser( options );
 	},
 
 	/**
@@ -108,6 +111,6 @@ IconPickerImg = Library.extend({
 
 		selection.reset( selected ? selected : null );
 	}
-});
+}, wp.media.controller.IconPickerState ) );
 
 module.exports = IconPickerImg;

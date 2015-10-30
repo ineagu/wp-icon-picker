@@ -1,7 +1,7 @@
 /**
  * wp.media.view.IconPickerFontBrowser
  */
-var IconPickerFontBrowser = wp.media.View.extend({
+var IconPickerFontBrowser = wp.media.View.extend( _.extend({
 	defaults: {
 		sidebar: false
 	},
@@ -21,6 +21,10 @@ var IconPickerFontBrowser = wp.media.View.extend({
 
 		this.createToolbar();
 		this.createLibrary();
+
+		if ( this.options.sidebar ) {
+			this.createSidebar();
+		}
 	},
 
 	createLibrary: function() {
@@ -60,6 +64,6 @@ var IconPickerFontBrowser = wp.media.View.extend({
 			priority:   60
 		}).render() );
 	}
-});
+}, wp.media.view.IconPickerBrowser ) );
 
 module.exports = IconPickerFontBrowser;

@@ -20,10 +20,11 @@ var l10n = wp.media.view.l10n,
 IconPicker = Select.extend({
 	initialize: function() {
 		_.defaults( this.options, {
-			title:    l10n.iconPicker.frameTitle,
-			multiple: false,
-			ipTypes:  iconPicker.types,
-			target:   null
+			title:       l10n.iconPicker.frameTitle,
+			multiple:    false,
+			ipTypes:     iconPicker.types,
+			target:      null,
+			SidebarView: null
 		});
 
 		if ( this.options.target instanceof wp.media.model.IconPickerTarget ) {

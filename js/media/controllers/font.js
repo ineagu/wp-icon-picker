@@ -1,7 +1,7 @@
 /**
  * wp.media.controller.IconPickerFont
  */
-var IconPickerFont = wp.media.controller.State.extend({
+var IconPickerFont = wp.media.controller.State.extend( _.extend({
 	defaults: {
 		multiple: false,
 		menu:     'default',
@@ -63,7 +63,7 @@ var IconPickerFont = wp.media.controller.State.extend({
 	},
 
 	getContentView: function() {
-		return new wp.media.view.IconPickerFontBrowser({
+		return new wp.media.view.IconPickerFontBrowser( _.extend({
 			controller: this.frame,
 			model:      this,
 			groups:     this.get( 'groups' ),
@@ -71,8 +71,8 @@ var IconPickerFont = wp.media.controller.State.extend({
 			selection:  this.get( 'selection' ),
 			baseType:   this.get( 'baseType' ),
 			type:       this.get( 'id' )
-		});
+		}, this.ipGetSidebarOptions() ) );
 	}
-});
+}, wp.media.controller.IconPickerState ) );
 
 module.exports = IconPickerFont;
