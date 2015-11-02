@@ -68,6 +68,7 @@ class Icon_Picker_Type_Image extends Icon_Picker_Type {
 			'id'         => $this->id,
 			'name'       => $this->name,
 			'controller' => $this->controller,
+			'templateId' => $this->template_id,
 			'data'       => array(
 				'mimeTypes'  => $this->get_image_mime_types(),
 			),

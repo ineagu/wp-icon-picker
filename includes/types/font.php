@@ -124,6 +124,7 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 			'id'         => $this->id,
 			'name'       => $this->name,
 			'controller' => $this->controller,
+			'templateId' => $this->template_id,
 			'data'       => array(
 				'groups'     => $this->groups,
 				'items'      => $this->items,
