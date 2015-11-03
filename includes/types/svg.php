@@ -85,6 +85,7 @@ class Icon_Picker_Type_Svg extends Icon_Picker_Type_Image {
 			'id'         => $this->id,
 			'name'       => $this->name,
 			'controller' => $this->controller,
+			'templateId' => $this->template_id,
 			'data'       => array(
 				'mimeTypes'  => array( $this->mime_type ),
 			),
