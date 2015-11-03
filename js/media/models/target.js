@@ -9,7 +9,9 @@ var IconPickerTarget = Backbone.Model.extend({
 	defaults: {
 		type:  '',
 		group: 'all',
-		icon:  ''
+		icon:  '',
+		url:   '',
+		sizes: []
 	}
 });
 

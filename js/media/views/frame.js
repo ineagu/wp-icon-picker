@@ -85,13 +85,26 @@ IconPicker = Select.extend({
 	 */
 	_ipUpdateTarget: function() {
 		var state = this.state(),
-		    selection = this.state().get( 'selection' ).single();
+		    selection = state.get( 'selection' ).single(),
+		    attributes;
 
-		this.target.set({
+		attributes = {
 			type:  state.id,
-			icon:  selection.get( 'id' ),
-			group: selection.get( 'group' )
-		});
+			icon:  selection.get( 'id' )
+		};
+
+		if ( 'image' === state.get( 'baseType' ) ) {
+			attributes.group = selection.get( 'group' );
+			attributes.sizes = selection.get( 'sizes' );
+			attributes.url   = state.miGetIconUrl( selection );
+		} else {
+			attributes.group = '';
+			attributes.sizes = [];
+			attributes.url   = '';
+		}
+
+
+		this.target.set( attributes );
 	},
 
 	browseRouter: function( routerView ) {

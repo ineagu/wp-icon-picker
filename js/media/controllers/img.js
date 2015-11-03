@@ -10,6 +10,7 @@ var Library = wp.media.controller.Library,
 IconPickerImg = Library.extend( _.extend({
 	defaults: _.defaults({
 		id:            'image',
+		baseType:      'image',
 		syncSelection: false
 	}, Library.prototype.defaults ),
 
@@ -110,6 +111,23 @@ IconPickerImg = Library.extend( _.extend({
 		}
 
 		selection.reset( selected ? selected : null );
+	},
+
+	/**
+	 * Get image icon URL
+	 *
+	 * @param {$object}
+	 * @return {$string}
+	 */
+	miGetIconUrl: function( model ) {
+		var url   = model.get( 'url' ),
+		    sizes = model.get( 'sizes' );
+
+		if ( ! _.isUndefined( sizes.thumbnail ) ) {
+			url = sizes.thumbnail.url;
+		}
+
+		return url;
 	}
 }, wp.media.controller.IconPickerState ) );
 
