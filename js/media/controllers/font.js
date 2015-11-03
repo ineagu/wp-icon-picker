@@ -20,31 +20,12 @@ var IconPickerFont = wp.media.controller.State.extend( _.extend({
 	},
 
 	activate: function() {
-		this.frame.on( 'open', this.refresh, this );
-		this.refresh();
-	},
-
-	deactivate: function() {
-		this.frame.off( 'open', this.refresh, this );
-	},
-
-	refresh: function() {
-		this.resetFilter();
+		this.frame.on( 'open', this.updateSelection, this );
 		this.updateSelection();
 	},
 
-	resetFilter: function() {
-		var library = this.get( 'library' ),
-		    groups  = this.get( 'groups' ),
-		    target  = this.frame.target,
-		    groupId = target.get( 'group' ),
-		    group   = groups.findWhere({ id: groupId });
-
-		if ( ! group ) {
-			groupId = target.defaults.group;
-		}
-
-		library.props.set( 'group', groupId );
+	deactivate: function() {
+		this.frame.off( 'open', this.updateSelection, this );
 	},
 
 	updateSelection: function() {
