@@ -185,7 +185,7 @@ IconPickerImg = Library.extend( _.extend({
 		var url   = model.get( 'url' ),
 		    sizes = model.get( 'sizes' );
 
-		if ( ! _.isUndefined( sizes.thumbnail ) ) {
+		if ( sizes && sizes.thumbnail ) {
 			url = sizes.thumbnail.url;
 		}
 
