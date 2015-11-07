@@ -165,14 +165,6 @@ final class Icon_Picker_Loader {
 		);
 		$this->add_script( 'icon-picker' );
 
-		wp_localize_script(
-			'icon-picker',
-			'iconPicker',
-			array(
-				'types' => $icon_picker->registry->get_types_for_js(),
-			)
-		);
-
 		wp_register_style(
 			'icon-picker',
 			"{$icon_picker->url}/css/icon-picker{$suffix}.css",
@@ -223,6 +215,14 @@ final class Icon_Picker_Loader {
 	 */
 	public function _enqueue_assets() {
 		$icon_picker = Icon_Picker::instance();
+
+		wp_localize_script(
+			'icon-picker',
+			'iconPicker',
+			array(
+				'types' => $icon_picker->registry->get_types_for_js(),
+			)
+		);
 
 		// Some pages don't call this by default, so let's make sure.
 		wp_enqueue_media();
