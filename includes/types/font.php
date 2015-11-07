@@ -114,32 +114,17 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 
 
 	/**
-	 * Get properties
+	 * Get extra properties data
 	 *
 	 * @since  0.1.0
+	 * @access protected
 	 * @return array
 	 */
-	public function get_props() {
-		$props = array(
-			'id'         => $this->id,
-			'name'       => $this->name,
-			'controller' => $this->controller,
-			'templateId' => $this->template_id,
-			'data'       => array(
-				'groups'     => $this->groups,
-				'items'      => $this->items,
-			),
+	protected function get_props_data() {
+		return array(
+			'groups' => $this->groups,
+			'items'  => $this->items,
 		);
-
-		/**
-		 * Filter icon type properties
-		 *
-		 * @since 0.1.0
-		 * @param array $props Icon type properties.
-		 */
-		$props = apply_filters( "icon_picker_{$this->id}_props", $props );
-
-		return $props;
 	}
 
 

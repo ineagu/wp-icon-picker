@@ -102,12 +102,40 @@ class Icon_Picker_Type {
 
 
 	/**
+	 * Get extra properties data
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 * @return array
+	 */
+	protected function get_props_data() {
+		return array();
+	}
+
+
+	/**
 	 * Get properties
 	 *
 	 * @since  0.1.0
 	 * @return array
 	 */
 	public function get_props() {
-		return array();
+		$props = array(
+			'id'         => $this->id,
+			'name'       => $this->name,
+			'controller' => $this->controller,
+			'templateId' => $this->template_id,
+			'data'       => $this->get_props_data(),
+		);
+
+		/**
+		 * Filter icon type properties
+		 *
+		 * @since 0.1.0
+		 * @param array $props Icon type properties.
+		 */
+		$props = apply_filters( "icon_picker_{$this->id}_props", $props );
+
+		return $props;
 	}
 }

@@ -75,31 +75,16 @@ class Icon_Picker_Type_Svg extends Icon_Picker_Type_Image {
 
 
 	/**
-	 * Get properties
+	 * Get extra properties data
 	 *
 	 * @since  0.1.0
+	 * @access protected
 	 * @return array
 	 */
-	public function get_props() {
-		$props = array(
-			'id'         => $this->id,
-			'name'       => $this->name,
-			'controller' => $this->controller,
-			'templateId' => $this->template_id,
-			'data'       => array(
-				'mimeTypes'  => array( $this->mime_type ),
-			),
+	protected function get_props_data() {
+		return array(
+			'mimeTypes' => array( $this->mime_type ),
 		);
-
-		/**
-		 * Filter icon type properties
-		 *
-		 * @since 0.1.0
-		 * @param array $props Icon type properties.
-		 */
-		$props = apply_filters( 'icon_picker_svg_props', $props );
-
-		return $props;
 	}
 
 
