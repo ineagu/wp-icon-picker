@@ -145,7 +145,7 @@ class Icon_Picker_Type {
 		 * @param array            $props Icon type properties.
 		 * @param Icon_Picker_Type $type  Icon_Picker_Type object.
 		 */
-		$props = apply_filters( "icon_picker_{$this->id}_props", $props, $this );
+		$props = apply_filters( "icon_picker_type_props_{$this->id}", $props, $this );
 
 		return $props;
 	}
