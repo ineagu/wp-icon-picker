@@ -21,11 +21,16 @@ var IconPickerFont = wp.media.controller.State.extend( _.extend({
 
 	activate: function() {
 		this.frame.on( 'open', this.updateSelection, this );
+		this.resetFilter();
 		this.updateSelection();
 	},
 
 	deactivate: function() {
 		this.frame.off( 'open', this.updateSelection, this );
+	},
+
+	resetFilter: function() {
+		this.get( 'library' ).props.set( 'group', 'all' );
 	},
 
 	updateSelection: function() {
