@@ -61,6 +61,22 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 
 
 	/**
+	 * Get stylesheet URI
+	 *
+	 * @since  0.1.0
+	 * @return string
+	 */
+	public function get_stylesheet_uri() {
+		return sprintf(
+			'%1$s/css/types/%2$s/%2$s%3$s.css',
+			Icon_Picker::instance()->url,
+			$this->stylesheet_id,
+			( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min'
+		);
+	}
+
+
+	/**
 	 * Register assets
 	 *
 	 * @since  0.1.0

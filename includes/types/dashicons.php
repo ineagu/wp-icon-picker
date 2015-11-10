@@ -43,6 +43,15 @@ class Icon_Picker_Type_Dashicons extends Icon_Picker_Type_Font {
 	 */
 	protected $version = '4.3.1';
 
+	/**
+	 * Stylesheet URI
+	 *
+	 * @since  0.1.0
+	 * @access protected
+	 * @var    string
+	 */
+	protected $stylesheet_uri = '';
+
 
 	/**
 	 * Register assets
