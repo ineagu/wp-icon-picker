@@ -6,8 +6,14 @@ var Library = wp.media.controller.Library,
 
 /**
  * wp.media.controller.IconPickerImg
+ *
+ * @augments wp.media.controller.Library
+ * @augments wp.media.controller.State
+ * @augments Backbone.Model
+ * @mixes    media.selectionSync
+ * @mixes    wp.media.controller.iconPickerMixin
  */
-IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerState, {
+IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.iconPickerMixin, {
 	defaults: _.defaults({
 		id:            'image',
 		baseType:      'image',
@@ -65,7 +71,7 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerStat
 	/**
 	 * Media library content
 	 *
-	 * TODO: sidebar view
+	 * @returns {wp.media.view.IconPickerImgBrowser} "Browse" content view.
 	 */
 	browseContent: function() {
 		var options = _.extend({
@@ -91,6 +97,8 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerStat
 
 	/**
 	 * Render callback for the content region in the `upload` mode.
+	 *
+	 * @returns {wp.media.view.UploaderInline} "Upload" content view.
 	 */
 	uploadContent: function() {
 		return new wp.media.view.UploaderInline({
@@ -118,7 +126,8 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerStat
 	 *
 	 * @param  {object} model - Selected icon model.
 	 * @param  {string} size  - Image size.
-	 * @return {string}
+	 *
+	 * @returns {string} Icon URL.
 	 */
 	ipGetIconUrl: function( model, size ) {
 		var url   = model.get( 'url' ),

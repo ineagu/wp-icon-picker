@@ -1,8 +1,13 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /**
  * wp.media.controller.IconPickerFont
+ *
+ * @class
+ * @augments wp.media.controller.State
+ * @augments Backbone.Model
+ * @mixes    wp.media.controller.iconPickerMixin
  */
-var IconPickerFont = wp.media.controller.State.extend( _.extend( {}, wp.media.controller.IconPickerState, {
+var IconPickerFont = wp.media.controller.State.extend( _.extend( {}, wp.media.controller.iconPickerMixin, {
 	defaults: {
 		multiple: false,
 		menu:     'default',
@@ -73,8 +78,14 @@ var Library = wp.media.controller.Library,
 
 /**
  * wp.media.controller.IconPickerImg
+ *
+ * @augments wp.media.controller.Library
+ * @augments wp.media.controller.State
+ * @augments Backbone.Model
+ * @mixes    media.selectionSync
+ * @mixes    wp.media.controller.iconPickerMixin
  */
-IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerState, {
+IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.iconPickerMixin, {
 	defaults: _.defaults({
 		id:            'image',
 		baseType:      'image',
@@ -132,7 +143,7 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerStat
 	/**
 	 * Media library content
 	 *
-	 * TODO: sidebar view
+	 * @returns {wp.media.view.IconPickerImgBrowser} "Browse" content view.
 	 */
 	browseContent: function() {
 		var options = _.extend({
@@ -158,6 +169,8 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerStat
 
 	/**
 	 * Render callback for the content region in the `upload` mode.
+	 *
+	 * @returns {wp.media.view.UploaderInline} "Upload" content view.
 	 */
 	uploadContent: function() {
 		return new wp.media.view.UploaderInline({
@@ -185,7 +198,8 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerStat
 	 *
 	 * @param  {object} model - Selected icon model.
 	 * @param  {string} size  - Image size.
-	 * @return {string}
+	 *
+	 * @returns {string} Icon URL.
 	 */
 	ipGetIconUrl: function( model, size ) {
 		var url   = model.get( 'url' ),
@@ -208,8 +222,10 @@ module.exports = IconPickerImg;
 },{}],3:[function(require,module,exports){
 /**
  * Methods for the state
+ *
+ * @mixin
  */
-var IconPickerState = {
+var iconPickerMixin = {
 
 	/**
 	 * @returns {object}
@@ -231,20 +247,20 @@ var IconPickerState = {
 	/**
 	 * Get image icon URL
 	 *
-	 * @return {string}
+	 * @returns {string}
 	 */
 	ipGetIconUrl: function() {
 		return '';
 	}
 };
 
-module.exports = IconPickerState;
+module.exports = iconPickerMixin;
 
 },{}],4:[function(require,module,exports){
 wp.media.model.IconPickerTarget = require( './models/target.js' );
 wp.media.model.IconPickerFonts  = require( './models/fonts.js' );
 
-wp.media.controller.IconPickerState = require( './controllers/state.js' );
+wp.media.controller.iconPickerMixin = require( './controllers/mixin.js' );
 wp.media.controller.IconPickerFont  = require( './controllers/font.js' );
 wp.media.controller.IconPickerImg   = require( './controllers/img.js' );
 
@@ -258,7 +274,7 @@ wp.media.view.IconPickerImgBrowser  = require( './views/img-browser.js' );
 wp.media.view.IconPickerSvgItem     = require( './views/svg-item.js' );
 wp.media.view.MediaFrame.IconPicker = require( './views/frame.js' );
 
-},{"./controllers/font.js":1,"./controllers/img.js":2,"./controllers/state.js":3,"./models/fonts.js":5,"./models/target.js":6,"./views/browser.js":7,"./views/font-browser.js":8,"./views/font-filter.js":9,"./views/font-item.js":10,"./views/font-library.js":11,"./views/frame.js":12,"./views/img-browser.js":13,"./views/sidebar.js":14,"./views/svg-item.js":15}],5:[function(require,module,exports){
+},{"./controllers/font.js":1,"./controllers/img.js":2,"./controllers/mixin.js":3,"./models/fonts.js":5,"./models/target.js":6,"./views/browser.js":7,"./views/font-browser.js":8,"./views/font-filter.js":9,"./views/font-item.js":10,"./views/font-library.js":11,"./views/frame.js":12,"./views/img-browser.js":13,"./views/sidebar.js":14,"./views/svg-item.js":15}],5:[function(require,module,exports){
 /**
  * wp.media.model.IconPickerFonts
  */

@@ -1,7 +1,9 @@
 /**
  * Methods for the state
+ *
+ * @mixin
  */
-var IconPickerState = {
+var iconPickerMixin = {
 
 	/**
 	 * @returns {object}
@@ -23,11 +25,11 @@ var IconPickerState = {
 	/**
 	 * Get image icon URL
 	 *
-	 * @return {string}
+	 * @returns {string}
 	 */
 	ipGetIconUrl: function() {
 		return '';
 	}
 };
 
-module.exports = IconPickerState;
+module.exports = iconPickerMixin;

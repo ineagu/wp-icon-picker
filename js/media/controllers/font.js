@@ -1,7 +1,12 @@
 /**
  * wp.media.controller.IconPickerFont
+ *
+ * @class
+ * @augments wp.media.controller.State
+ * @augments Backbone.Model
+ * @mixes    wp.media.controller.iconPickerMixin
  */
-var IconPickerFont = wp.media.controller.State.extend( _.extend( {}, wp.media.controller.IconPickerState, {
+var IconPickerFont = wp.media.controller.State.extend( _.extend( {}, wp.media.controller.iconPickerMixin, {
 	defaults: {
 		multiple: false,
 		menu:     'default',

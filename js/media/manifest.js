@@ -1,7 +1,7 @@
 wp.media.model.IconPickerTarget = require( './models/target.js' );
 wp.media.model.IconPickerFonts  = require( './models/fonts.js' );
 
-wp.media.controller.IconPickerState = require( './controllers/state.js' );
+wp.media.controller.iconPickerMixin = require( './controllers/mixin.js' );
 wp.media.controller.IconPickerFont  = require( './controllers/font.js' );
 wp.media.controller.IconPickerImg   = require( './controllers/img.js' );
 
