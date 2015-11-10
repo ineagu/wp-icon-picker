@@ -89,6 +89,7 @@ final class Icon_Picker {
 		'dashicons'    => 'Dashicons',
 		'elusive'      => 'Elusive',
 		'font-awesome' => 'Font_Awesome',
+		'foundation'   => 'Foundation',
 		'genericons'   => 'Genericons',
 		'image'        => 'Image',
 		'svg'          => 'Svg',
