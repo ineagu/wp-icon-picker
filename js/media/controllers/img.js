@@ -7,7 +7,7 @@ var Library = wp.media.controller.Library,
 /**
  * wp.media.controller.IconPickerImg
  */
-IconPickerImg = Library.extend( _.extend({
+IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerState, {
 	defaults: _.defaults({
 		id:            'image',
 		baseType:      'image',
@@ -116,9 +116,9 @@ IconPickerImg = Library.extend( _.extend({
 	/**
 	 * Get image icon URL
 	 *
-	 * @param {$object}
-	 * @param {$string}
-	 * @return {$string}
+	 * @param  {object} model - Selected icon model.
+	 * @param  {string} size  - Image size.
+	 * @return {string}
 	 */
 	ipGetIconUrl: function( model, size ) {
 		var url   = model.get( 'url' ),
@@ -134,6 +134,6 @@ IconPickerImg = Library.extend( _.extend({
 
 		return url;
 	}
-}, wp.media.controller.IconPickerState ) );
+}) );
 
 module.exports = IconPickerImg;

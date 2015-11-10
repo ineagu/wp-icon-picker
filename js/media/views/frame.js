@@ -84,22 +84,16 @@ IconPicker = Select.extend({
 	 * Update target's attributes after selecting an icon
 	 */
 	_ipUpdateTarget: function() {
-		var state     = this.state(),
-		    selection = state.get( 'selection' ).single(),
-		    props;
+		var state    = this.state(),
+			selected = state.get( 'selection' ).single(),
+			props;
 
 		props = {
 			type:  state.id,
-			icon:  selection.get( 'id' )
+			icon:  selected.get( 'id' ),
+			sizes: selected.get( 'sizes' ),
+			url:   state.ipGetIconUrl( selected )
 		};
-
-		if ( 'image' === state.get( 'baseType' ) ) {
-			props.sizes = selection.get( 'sizes' );
-			props.url   = state.ipGetIconUrl( selection );
-		} else {
-			props.sizes = [];
-			props.url   = '';
-		}
 
 		this.target.set( props );
 	},

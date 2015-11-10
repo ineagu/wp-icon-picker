@@ -2,7 +2,7 @@
 /**
  * wp.media.controller.IconPickerFont
  */
-var IconPickerFont = wp.media.controller.State.extend( _.extend({
+var IconPickerFont = wp.media.controller.State.extend( _.extend( {}, wp.media.controller.IconPickerState, {
 	defaults: {
 		multiple: false,
 		menu:     'default',
@@ -60,7 +60,7 @@ var IconPickerFont = wp.media.controller.State.extend( _.extend({
 			type:       this.get( 'id' )
 		}, this.ipGetSidebarOptions() ) );
 	}
-}, wp.media.controller.IconPickerState ) );
+}) );
 
 module.exports = IconPickerFont;
 
@@ -74,7 +74,7 @@ var Library = wp.media.controller.Library,
 /**
  * wp.media.controller.IconPickerImg
  */
-IconPickerImg = Library.extend( _.extend({
+IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.IconPickerState, {
 	defaults: _.defaults({
 		id:            'image',
 		baseType:      'image',
@@ -183,9 +183,9 @@ IconPickerImg = Library.extend( _.extend({
 	/**
 	 * Get image icon URL
 	 *
-	 * @param {$object}
-	 * @param {$string}
-	 * @return {$string}
+	 * @param  {object} model - Selected icon model.
+	 * @param  {string} size  - Image size.
+	 * @return {string}
 	 */
 	ipGetIconUrl: function( model, size ) {
 		var url   = model.get( 'url' ),
@@ -201,7 +201,7 @@ IconPickerImg = Library.extend( _.extend({
 
 		return url;
 	}
-}, wp.media.controller.IconPickerState ) );
+}) );
 
 module.exports = IconPickerImg;
 
@@ -226,6 +226,15 @@ var IconPickerState = {
 		}
 
 		return options;
+	},
+
+	/**
+	 * Get image icon URL
+	 *
+	 * @return {string}
+	 */
+	ipGetIconUrl: function() {
+		return '';
 	}
 };
 
@@ -685,22 +694,16 @@ IconPicker = Select.extend({
 	 * Update target's attributes after selecting an icon
 	 */
 	_ipUpdateTarget: function() {
-		var state     = this.state(),
-		    selection = state.get( 'selection' ).single(),
-		    props;
+		var state    = this.state(),
+			selected = state.get( 'selection' ).single(),
+			props;
 
 		props = {
 			type:  state.id,
-			icon:  selection.get( 'id' )
+			icon:  selected.get( 'id' ),
+			sizes: selected.get( 'sizes' ),
+			url:   state.ipGetIconUrl( selected )
 		};
-
-		if ( 'image' === state.get( 'baseType' ) ) {
-			props.sizes = selection.get( 'sizes' );
-			props.url   = state.ipGetIconUrl( selection );
-		} else {
-			props.sizes = [];
-			props.url   = '';
-		}
 
 		this.target.set( props );
 	},

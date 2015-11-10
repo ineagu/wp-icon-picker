@@ -18,6 +18,15 @@ var IconPickerState = {
 		}
 
 		return options;
+	},
+
+	/**
+	 * Get image icon URL
+	 *
+	 * @return {string}
+	 */
+	ipGetIconUrl: function() {
+		return '';
 	}
 };
 
