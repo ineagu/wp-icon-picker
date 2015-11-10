@@ -86,9 +86,9 @@ final class Icon_Picker {
 	 * @var    array
 	 */
 	protected $default_types = array(
-		'dashicons',
-		'image',
-		'svg',
+		'dashicons' => 'Dashicons',
+		'image'     => 'Image',
+		'svg'       => 'Svg',
 	);
 
 
@@ -247,10 +247,10 @@ final class Icon_Picker {
 			return;
 		}
 
-		foreach ( $default_types as $type ) {
-			$class_name = sprintf( 'Icon_Picker_Type_%s', ucfirst( $type ) );
+		foreach ( $default_types as $filename => $class_suffix ) {
+			$class_name = "Icon_Picker_Type_{$class_suffix}";
 
-			require_once "{$this->dir}/includes/types/{$type}.php";
+			require_once "{$this->dir}/includes/types/{$filename}.php";
 			$this->registry->add( new $class_name() );
 		}
 	}
