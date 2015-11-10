@@ -87,6 +87,7 @@ final class Icon_Picker {
 	 */
 	protected $default_types = array(
 		'dashicons'    => 'Dashicons',
+		'elusive'      => 'Elusive',
 		'font-awesome' => 'Font_Awesome',
 		'genericons'   => 'Genericons',
 		'image'        => 'Image',
