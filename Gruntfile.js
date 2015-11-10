@@ -30,13 +30,18 @@ module.exports = function( grunt ) {
 			}
 		},
 		cssmin: {
-			minify: {
+			main: {
 				expand: true,
 				cwd: 'css/',
-				src: [
-					'icon-picker.css'
-				],
+				src: [ 'icon-picker.css' ],
 				dest: 'css/',
+				ext: '.min.css'
+			},
+			types: {
+				expand: true,
+				cwd: 'css/types/',
+				src: [ '*.css', '!*.min.css' ],
+				dest: 'css/types/',
 				ext: '.min.css'
 			}
 		},

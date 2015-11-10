@@ -86,9 +86,10 @@ final class Icon_Picker {
 	 * @var    array
 	 */
 	protected $default_types = array(
-		'dashicons' => 'Dashicons',
-		'image'     => 'Image',
-		'svg'       => 'Svg',
+		'dashicons'    => 'Dashicons',
+		'font-awesome' => 'Font_Awesome',
+		'image'        => 'Image',
+		'svg'          => 'Svg',
 	);
 
 
