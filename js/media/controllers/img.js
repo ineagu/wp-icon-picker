@@ -119,7 +119,7 @@ IconPickerImg = Library.extend( _.extend({
 	 * @param {$object}
 	 * @return {$string}
 	 */
-	miGetIconUrl: function( model ) {
+	ipGetIconUrl: function( model ) {
 		var url   = model.get( 'url' ),
 		    sizes = model.get( 'sizes' );
 

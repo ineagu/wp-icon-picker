@@ -95,7 +95,7 @@ IconPicker = Select.extend({
 
 		if ( 'image' === state.get( 'baseType' ) ) {
 			props.sizes = selection.get( 'sizes' );
-			props.url   = state.miGetIconUrl( selection );
+			props.url   = state.ipGetIconUrl( selection );
 		} else {
 			props.sizes = [];
 			props.url   = '';

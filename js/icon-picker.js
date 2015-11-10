@@ -186,7 +186,7 @@ IconPickerImg = Library.extend( _.extend({
 	 * @param {$object}
 	 * @return {$string}
 	 */
-	miGetIconUrl: function( model ) {
+	ipGetIconUrl: function( model ) {
 		var url   = model.get( 'url' ),
 		    sizes = model.get( 'sizes' );
 
@@ -691,7 +691,7 @@ IconPicker = Select.extend({
 
 		if ( 'image' === state.get( 'baseType' ) ) {
 			props.sizes = selection.get( 'sizes' );
-			props.url   = state.miGetIconUrl( selection );
+			props.url   = state.ipGetIconUrl( selection );
 		} else {
 			props.sizes = [];
 			props.url   = '';
