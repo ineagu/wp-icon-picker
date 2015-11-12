@@ -112,7 +112,7 @@ final class Icon_Picker_Fontpack {
 		 * Allow different system path for fontpacks
 		 *
 		 * @since 0.1.0
-		 * @param string $dir Directory path, defaults to /wp-content/fontpacks
+		 * @param string $dir Directory path, defaults to /wp-content/fontpacks.
 		 */
 		$this->dir = apply_filters( 'icon_picker_fontpacks_dir_path', WP_CONTENT_DIR . '/fontpacks' );
 

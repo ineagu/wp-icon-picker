@@ -162,7 +162,7 @@ final class Icon_Picker {
 		$args = wp_parse_args( $args, $defaults );
 		$keys = array_keys( get_object_vars( $this ) );
 
-		// Disallow
+		// Disallow.
 		unset( $args['registry'] );
 		unset( $args['loader'] );
 		unset( $args['is_admin_loaded'] );

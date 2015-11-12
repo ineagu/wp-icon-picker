@@ -42,7 +42,8 @@ final class Icon_Picker_Types_Registry {
 	 *
 	 * @static
 	 * @since  0.1.0
-	 * @param  array                      $args Arguments.
+	 * @param  array $args Arguments.
+	 *
 	 * @return Icon_Picker_Types_Registry
 	 */
 	public static function instance( $args = array() ) {

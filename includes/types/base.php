@@ -54,7 +54,7 @@ class Icon_Picker_Type {
 	 *
 	 * Supplied $args override class property defaults.
 	 *
-	 * @since  0.1.0
+	 * @since 0.1.0
 	 * @param array  $args Optional. Arguments to override class property defaults.
 	 */
 	public function __construct( $args = array() ) {
