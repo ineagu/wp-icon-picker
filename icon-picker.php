@@ -9,12 +9,12 @@
  *
  *
  * Plugin Name: Icon Picker
- * Plugin URI: http://kucrut.org/
+ * Plugin URI:  http://kucrut.org/
  * Description: Pick an icon of your choice.
- * Version: 0.1.0
- * Author: Dzikri Aziz
- * Author URI: http://kucrut.org/
- * License: GPLv2
+ * Version:     0.1.0
+ * Author:      Dzikri Aziz
+ * Author URI:  http://kucrut.org/
+ * License:     GPLv2
  * Text Domain: icon-picker
  * Domain Path: /languages
  */
