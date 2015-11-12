@@ -292,29 +292,6 @@ final class Icon_Picker {
 			return;
 		}
 
-		if ( ! is_admin() ) {
-			_doing_it_wrong(
-				__METHOD__,
-				'It should only be called on admin pages.',
-				esc_html( self::VERSION )
-			);
-
-			return;
-		}
-
-		if ( ! did_action( 'icon_picker_loader_init' ) ) {
-			_doing_it_wrong(
-				__METHOD__,
-				sprintf(
-					'It should not be called until the %s hook.',
-					'<code>icon_picker_loader_init</code>'
-				),
-				esc_html( self::VERSION )
-			);
-
-			return;
-		}
-
 		$this->loader->load();
 		$this->is_admin_loaded = true;
 	}

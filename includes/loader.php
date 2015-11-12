@@ -182,6 +182,29 @@ final class Icon_Picker_Loader {
 	 * @return void
 	 */
 	public function load() {
+		if ( ! is_admin() ) {
+			_doing_it_wrong(
+				__METHOD__,
+				'It should only be called on admin pages.',
+				esc_html( self::VERSION )
+			);
+
+			return;
+		}
+
+		if ( ! did_action( 'icon_picker_loader_init' ) ) {
+			_doing_it_wrong(
+				__METHOD__,
+				sprintf(
+					'It should not be called until the %s hook.',
+					'<code>icon_picker_loader_init</code>'
+				),
+				esc_html( self::VERSION )
+			);
+
+			return;
+		}
+
 		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, '_enqueue_assets' ) );
 		add_action( 'print_media_templates', array( $this, '_media_templates' ) );
