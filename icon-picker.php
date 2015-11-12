@@ -180,9 +180,9 @@ final class Icon_Picker {
 	/**
 	 * Register icon types
 	 *
-	 * @since  0.1.0
-	 * @action wp_loaded
-	 * @return void
+	 * @since   0.1.0
+	 * @wp_hook action wp_loaded
+	 * @return  void
 	 */
 	public function init() {
 		// Initialize icon types registry.

@@ -56,9 +56,11 @@ class Icon_Picker_Type_Dashicons extends Icon_Picker_Type_Font {
 	/**
 	 * Register assets
 	 *
-	 * @since  0.1.0
-	 * @action icon_picker_loader_init
-	 * @param  Icon_Picker_Loader      $loader Icon_Picker_Loader instance.
+	 * @since   0.1.0
+	 * @wp_hook action icon_picker_loader_init
+	 *
+	 * @param  Icon_Picker_Loader  $loader Icon_Picker_Loader instance.
+	 *
 	 * @return void
 	 */
 	public function register_assets( Icon_Picker_Loader $loader ) {

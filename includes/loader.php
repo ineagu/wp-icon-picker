@@ -214,10 +214,12 @@ final class Icon_Picker_Loader {
 	/**
 	 * Filter media view strings
 	 *
-	 * @since  0.1.0
-	 * @filter media_view_strings
-	 * @param  array              $strings Media view strings.
-	 * @return array
+	 * @since   0.1.0
+	 * @wp_hook filter media_view_strings
+	 *
+	 * @param  array  $strings Media view strings.
+	 *
+	 * @return  array
 	 */
 	public function _media_view_strings( $strings ) {
 		$strings['iconPicker'] = array(
@@ -232,9 +234,9 @@ final class Icon_Picker_Loader {
 	/**
 	 * Enqueue scripts & styles
 	 *
-	 * @since  0.1.0
-	 * @action admin_enqueue_scripts
-	 * @return void
+	 * @since   0.1.0
+	 * @wp_hook action admin_enqueue_scripts
+	 * @return  void
 	 */
 	public function _enqueue_assets() {
 		$icon_picker = Icon_Picker::instance();
@@ -271,9 +273,9 @@ final class Icon_Picker_Loader {
 	/**
 	 * Media templates
 	 *
-	 * @since  0.1.0
-	 * @action print_media_templates
-	 * @return void
+	 * @since   0.1.0
+	 * @wp_hook action print_media_templates
+	 * @return  void
 	 */
 	public function _media_templates() {
 		$icon_picker = Icon_Picker::instance();
