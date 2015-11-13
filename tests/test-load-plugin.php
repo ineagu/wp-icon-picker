@@ -57,10 +57,11 @@ class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
 	 * @covers Icon_Picker::register_default_types()
 	 */
 	public function test_register_default_types() {
-		$registered_type_ids = wp_list_pluck( $this->icon_picker->registry->types, 'id' );
-		$registered_default_type_ids = array_values( array_intersect( $registered_type_ids, $this->icon_picker->default_types ) );
+		$default_types_ids           = array_keys( $this->icon_picker->default_types );
+		$registered_type_ids         = wp_list_pluck( $this->icon_picker->registry->types, 'id' );
+		$registered_default_type_ids = array_values( array_intersect( $registered_type_ids, $default_types_ids ) );
 
-		$this->assertSame( $registered_default_type_ids, $this->icon_picker->default_types );
+		$this->assertSame( $registered_default_type_ids, $default_types_ids );
 		$this->assertFalse( isset( $registered_default_type_ids['random'] ) );
 	}
 
