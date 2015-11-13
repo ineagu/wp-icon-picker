@@ -86,13 +86,13 @@ final class Icon_Picker {
 	 * @var    array
 	 */
 	protected $default_types = array(
-		'dashicons'    => 'Dashicons',
-		'elusive'      => 'Elusive',
-		'font-awesome' => 'Font_Awesome',
-		'foundation'   => 'Foundation',
-		'genericons'   => 'Genericons',
-		'image'        => 'Image',
-		'svg'          => 'Svg',
+		'dashicons'        => 'Dashicons',
+		'elusive'          => 'Elusive',
+		'fa'               => 'Font_Awesome',
+		'foundation-icons' => 'Foundation',
+		'genericon'        => 'Genericons',
+		'image'            => 'Image',
+		'svg'              => 'Svg',
 	);
 
 
