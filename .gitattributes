@@ -12,5 +12,5 @@ package.json export-ignore
 dev-lib export-ignore
 tests export-ignore
 js/media export-ignore
-phpunit.xml
-composer.json
+phpunit.xml export-ignore
+composer.json export-ignore
