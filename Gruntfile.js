@@ -107,7 +107,8 @@ module.exports = function( grunt ) {
 			target: {
 				options: {
 					mainFile: 'icon-picker.php',
-					type: 'wp-plugin'
+					type: 'wp-plugin',
+					exclude: [ 'tests' ]
 				}
 			}
 		}
