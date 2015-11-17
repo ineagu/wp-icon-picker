@@ -7,7 +7,7 @@ Pick an icon of your choice.
 **Tags:** [icons](https://wordpress.org/plugins/tags/icons), [image](https://wordpress.org/plugins/tags/image), [svg](https://wordpress.org/plugins/tags/svg)  
 **Requires at least:** 4.3  
 **Tested up to:** 4.3.1  
-**Stable tag:** 0.1.0  
+**Stable tag:** 0.1.1  
 **License:** [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)  
 **Donate Link:** http://kucrut.org/#coffee  
 
@@ -18,6 +18,9 @@ Pick an icon of your choice.
 An icon picker library plugin.
 
 ## Changelog ##
+
+### 0.1.1 ###
+* Load translation, props [Eduardo Larequi](https://wordpress.org/support/profile/elarequi).
 
 ### 0.1.0 ###
 * Initial
