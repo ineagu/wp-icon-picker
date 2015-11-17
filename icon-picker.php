@@ -173,6 +173,8 @@ final class Icon_Picker {
 			}
 		}
 
+		load_plugin_textdomain( 'icon-picker', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
 		add_action( 'wp_loaded', array( $this, 'init' ) );
 	}
 
