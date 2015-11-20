@@ -235,6 +235,7 @@ final class Icon_Picker_Loader {
 		$strings['iconPicker'] = array(
 			'frameTitle' => __( 'Icon Picker', 'icon-picker' ),
 			'allFilter'  => __( 'All', 'icon-picker' ),
+			'selectIcon' => __( 'Select Icon', 'icon-picker' ),
 		);
 
 		return $strings;

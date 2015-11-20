@@ -64,8 +64,8 @@ function icon_picker_field( $args, $echo = true ) {
 			'type' => '',
 			'icon' => '',
 		),
-		'select' => sprintf( '<a class="ipf-select">%s</a>', esc_html__( 'Select', 'icon-picker-field' ) ),
-		'remove' => sprintf( '<a class="ipf-remove hidden">%s</a>', esc_html__( 'Remove', 'icon-picker-field' ) ),
+		'select' => sprintf( '<a class="ipf-select">%s</a>', esc_html__( 'Select Icon', 'icon-picker-field' ) ),
+		'remove' => sprintf( '<a class="ipf-remove button hidden">%s</a>', esc_html__( 'Remove', 'icon-picker-field' ) ),
 	);
 
 	$args          = wp_parse_args( $args, $defaults );
@@ -77,7 +77,7 @@ function icon_picker_field( $args, $echo = true ) {
 
 	foreach ( $args['value'] as $key => $value ) {
 		$field .= sprintf(
-			'<input type="text" id="%s" name="%s" class="%s" value="%s" />',
+			'<input type="hidden" id="%s" name="%s" class="%s" value="%s" />',
 			esc_attr( "{$args['id']}-{$key}" ),
 			esc_attr( "{$args['name']}[{$key}]" ),
 			esc_attr( "ipf-{$key}" ),
@@ -87,7 +87,7 @@ function icon_picker_field( $args, $echo = true ) {
 
 	// This won't be saved. It's here for the preview.
 	$field .= sprintf(
-		'<input type="text" class="url" value="%s" />',
+		'<input type="hidden" class="url" value="%s" />',
 		esc_attr( icon_picker_get_icon_url( $args['value']['type'], $args['value']['icon'] ) )
 	);
 	$field .= '</div>';

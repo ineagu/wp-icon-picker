@@ -97,6 +97,7 @@ class Icon_Picker_Type_Svg extends Icon_Picker_Type_Image {
 	 */
 	public function get_templates() {
 		$templates = array(
+			'icon' => '<img src="{{ data.url }}" class="_icon" />',
 			'item' => sprintf(
 				'<div class="attachment-preview js--select-attachment svg-icon">
 					<div class="thumbnail">

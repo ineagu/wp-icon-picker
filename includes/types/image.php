@@ -72,6 +72,28 @@ class Icon_Picker_Type_Image extends Icon_Picker_Type {
 		return $props;
 	}
 
+	/**
+	 * Get media templates
+	 *
+	 * @since  0.2.0
+	 * @return array
+	 */
+	public function get_templates() {
+		$templates = array(
+			'icon' => '<img src="{{ data.url }}" class="_icon" />',
+		);
+
+		/**
+		 * Filter media templates
+		 *
+		 * @since 0.1.0
+		 * @param array $templates Media templates.
+		 */
+		$templates = apply_filters( 'icon_picker_image_media_templates', $templates );
+
+		return $templates;
+	}
+
 
 	/**
 	 * Get image mime types
