@@ -193,6 +193,9 @@ final class Icon_Picker {
 		// Initialize loader.
 		$this->init_loader();
 
+		// Initialize field.
+		$this->init_field();
+
 		/**
 		 * Fires when Icon Picker is ready
 		 *
@@ -280,6 +283,39 @@ final class Icon_Picker {
 		 * @param Icon_Picker $this Icon_Picker instance.
 		 */
 		do_action( 'icon_picker_loader_ready', $this );
+	}
+
+
+	/**
+	 * Initialize field functionalities
+	 *
+	 * @since  0.2.0
+	 * @access protected
+	 */
+	protected function init_field() {
+		require_once "{$this->dir}/includes/fields/base.php";
+
+		add_filter( 'cmb_field_types', array( $this, 'register_cmb_field' ) );
+	}
+
+
+	/**
+	 * Register the field for Custom Meta Boxes
+	 *
+	 * @since   0.2.0
+	 * @wp_hook filter  cmb_field_types
+	 * @link    https://github.com/humanmade/Custom-Meta-Boxes/ Custom Meta Boxes
+	 *
+	 * @param   array  $field_types Available CMB field types.
+	 *
+	 * @return array
+	 */
+	public function register_cmb_field( $field_types ) {
+		require_once "{$this->dir}/includes/fields/cmb.php";
+
+		$field_types['icon'] = 'Icon_Picker_Field_Cmb';
+
+		return $field_types;
 	}
 
 

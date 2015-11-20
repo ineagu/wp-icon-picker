@@ -21,3 +21,8 @@
 	min-width: 80%;
 	max-width: 100%;
 }
+
+/** Field **/
+.ipf-select {
+	cursor: pointer;
+}

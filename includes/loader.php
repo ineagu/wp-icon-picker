@@ -99,6 +99,8 @@ final class Icon_Picker_Loader {
 	protected function __construct() {
 		$this->register_assets();
 
+		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
+
 		/**
 		 * Fires when Icon Picker loader is ready
 		 *
@@ -165,6 +167,15 @@ final class Icon_Picker_Loader {
 		);
 		$this->add_script( 'icon-picker' );
 
+		wp_register_script(
+			'icon-picker-field',
+			"{$icon_picker->url}/js/field{$suffix}.js",
+			array( 'icon-picker' ),
+			$icon_picker->VERSION,
+			true
+		);
+		$this->add_script( 'icon-picker-field' );
+
 		wp_register_style(
 			'icon-picker',
 			"{$icon_picker->url}/css/icon-picker{$suffix}.css",
@@ -205,7 +216,6 @@ final class Icon_Picker_Loader {
 			return;
 		}
 
-		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, '_enqueue_assets' ) );
 		add_action( 'print_media_templates', array( $this, '_media_templates' ) );
 	}
