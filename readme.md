@@ -19,9 +19,13 @@ An icon picker library plugin.
 
 ## Screenshots ##
 
+### Icon selector.
+
+![Icon selector.](assets/screenshot-1.png)
+
 ### Icon fields in a post meta box using [CMB](https://github.com/humanmade/Custom-Meta-Boxes/).
 
-![Icon fields in a post meta box using [CMB](https://github.com/humanmade/Custom-Meta-Boxes/).](assets/screenshot-1.png)
+![Icon fields in a post meta box using [CMB](https://github.com/humanmade/Custom-Meta-Boxes/).](assets/screenshot-2.png)
 
 ## Changelog ##
 

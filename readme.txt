@@ -15,7 +15,8 @@ Pick an icon of your choice.
 An icon picker library plugin.
 
 == Screenshots ==
-1. Icon fields in a post meta box using [CMB](https://github.com/humanmade/Custom-Meta-Boxes/).
+1. Icon selector.
+2. Icon fields in a post meta box using [CMB](https://github.com/humanmade/Custom-Meta-Boxes/).
 
 == Changelog ==
 = 0.2.0 =
