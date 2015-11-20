@@ -6,7 +6,7 @@ module.exports = function( grunt ) {
 		browserify: {
 			admin: {
 				files: {
-					'js/icon-picker.js': 'js/media/manifest.js'
+					'js/src/media.js': 'js/src/media/manifest.js'
 				}
 			}
 		},
@@ -14,13 +14,25 @@ module.exports = function( grunt ) {
 			grunt: {
 				src: [ 'Gruntfile.js' ]
 			},
-			admin: {
+			media: {
 				options: {
 					browserify: true
 				},
-				src: [ 'js/media/**/*.js' ]
+				src: [ 'js/src/media/**/*.js' ]
+			},
+			field: {
+				src: [ 'js/src/field.js' ]
 			},
 			options: grunt.file.readJSON( '.jshintrc' )
+		},
+		concat: {
+			options: {
+				separator: '\n'
+			},
+			dist: {
+				src: [ 'js/src/media.js', 'js/src/field.js' ],
+				dest: 'js/icon-picker.js'
+			}
 		},
 		uglify: {
 			all: {
@@ -57,7 +69,8 @@ module.exports = function( grunt ) {
 			},
 			scripts: {
 				files: [
-					'js/media/**/*.js'
+					'js/src/media/**/*.js',
+					'js/src/field.js'
 				],
 				tasks: [ 'js' ],
 				options: {
@@ -117,6 +130,7 @@ module.exports = function( grunt ) {
 	// Load other tasks
 	grunt.loadNpmTasks( 'grunt-browserify' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
@@ -142,7 +156,7 @@ module.exports = function( grunt ) {
 	} );
 
 	grunt.registerTask( 'css', [ 'cssmin' ] );
-	grunt.registerTask( 'js', [ 'jshint', 'browserify', 'uglify' ] );
+	grunt.registerTask( 'js', [ 'jshint', 'browserify', 'concat', 'uglify' ] );
 	grunt.registerTask( 'i18n', [ 'makepot' ] );
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
 	grunt.registerTask( 'build', [ 'default', 'clean', 'copy', 'compress' ] );

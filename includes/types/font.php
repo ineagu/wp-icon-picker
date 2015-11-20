@@ -154,6 +154,7 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 */
 	public function get_templates() {
 		$templates = array(
+			'icon' => '<i class="_icon {{data.type}} {{ data.icon }}"></i>',
 			'item' => sprintf(
 				'<div class="attachment-preview js--select-attachment">
 					<div class="thumbnail">

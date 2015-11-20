@@ -4,14 +4,14 @@
  * Icon Picker
  *
  * @package Icon_Picker
- * @version 0.1.1
+ * @version 0.2.0
  * @author Dzikri Aziz <kvcrvt@gmail.com>
  *
  *
  * Plugin Name: Icon Picker
  * Plugin URI:  http://kucrut.org/
  * Description: Pick an icon of your choice.
- * Version:     0.1.1
+ * Version:     0.2.0
  * Author:      Dzikri Aziz
  * Author URI:  http://kucrut.org/
  * License:     GPLv2
@@ -173,6 +173,9 @@ final class Icon_Picker {
 			}
 		}
 
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'icon-picker' );
+
+		load_textdomain( 'icon-picker', WP_LANG_DIR . "/icon-picker/icon-picker-{$locale}.mo" );
 		load_plugin_textdomain( 'icon-picker', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		add_action( 'wp_loaded', array( $this, 'init' ) );
@@ -192,6 +195,9 @@ final class Icon_Picker {
 
 		// Initialize loader.
 		$this->init_loader();
+
+		// Initialize field.
+		$this->init_field();
 
 		/**
 		 * Fires when Icon Picker is ready
@@ -280,6 +286,39 @@ final class Icon_Picker {
 		 * @param Icon_Picker $this Icon_Picker instance.
 		 */
 		do_action( 'icon_picker_loader_ready', $this );
+	}
+
+
+	/**
+	 * Initialize field functionalities
+	 *
+	 * @since  0.2.0
+	 * @access protected
+	 */
+	protected function init_field() {
+		require_once "{$this->dir}/includes/fields/base.php";
+
+		add_filter( 'cmb_field_types', array( $this, 'register_cmb_field' ) );
+	}
+
+
+	/**
+	 * Register the field for Custom Meta Boxes
+	 *
+	 * @since   0.2.0
+	 * @wp_hook filter  cmb_field_types
+	 * @link    https://github.com/humanmade/Custom-Meta-Boxes/ Custom Meta Boxes
+	 *
+	 * @param   array  $field_types Available CMB field types.
+	 *
+	 * @return array
+	 */
+	public function register_cmb_field( $field_types ) {
+		require_once "{$this->dir}/includes/fields/cmb.php";
+
+		$field_types['icon'] = 'Icon_Picker_Field_Cmb';
+
+		return $field_types;
 	}
 
 

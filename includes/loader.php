@@ -99,6 +99,8 @@ final class Icon_Picker_Loader {
 	protected function __construct() {
 		$this->register_assets();
 
+		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
+
 		/**
 		 * Fires when Icon Picker loader is ready
 		 *
@@ -205,7 +207,6 @@ final class Icon_Picker_Loader {
 			return;
 		}
 
-		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, '_enqueue_assets' ) );
 		add_action( 'print_media_templates', array( $this, '_media_templates' ) );
 	}
@@ -225,6 +226,7 @@ final class Icon_Picker_Loader {
 		$strings['iconPicker'] = array(
 			'frameTitle' => __( 'Icon Picker', 'icon-picker' ),
 			'allFilter'  => __( 'All', 'icon-picker' ),
+			'selectIcon' => __( 'Select Icon', 'icon-picker' ),
 		);
 
 		return $strings;
