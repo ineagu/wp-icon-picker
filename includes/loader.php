@@ -167,15 +167,6 @@ final class Icon_Picker_Loader {
 		);
 		$this->add_script( 'icon-picker' );
 
-		wp_register_script(
-			'icon-picker-field',
-			"{$icon_picker->url}/js/field{$suffix}.js",
-			array( 'icon-picker' ),
-			$icon_picker->VERSION,
-			true
-		);
-		$this->add_script( 'icon-picker-field' );
-
 		wp_register_style(
 			'icon-picker',
 			"{$icon_picker->url}/css/icon-picker{$suffix}.css",
