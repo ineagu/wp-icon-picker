@@ -173,6 +173,9 @@ final class Icon_Picker {
 			}
 		}
 
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'icon-picker' );
+
+		load_textdomain( 'icon-picker', WP_LANG_DIR . "/icon-picker/icon-picker-{$locale}.mo" );
 		load_plugin_textdomain( 'icon-picker', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		add_action( 'wp_loaded', array( $this, 'init' ) );
