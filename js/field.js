@@ -37,7 +37,7 @@
 			$remove.addClass( 'hidden' );
 			$select
 				.removeClass( 'has-icon' )
-				.addClass( 'button button-primary' )
+				.addClass( 'button' )
 				.text( l10n.selectIcon )
 				.attr( 'title', '' );
 
@@ -54,7 +54,7 @@
 		$select
 			.attr( 'title', l10n.selectIcon )
 			.addClass( 'has-icon' )
-			.removeClass( 'button button-primary' )
+			.removeClass( 'button' )
 			.html( template({
 				type: type,
 				icon: icon,
