@@ -1,4 +1,5 @@
 **/*.min.js
 **/node_modules/**
 **/vendor/**
-js/icon-picker.js
+js/icon-picker.js,
+js/src/media.js
