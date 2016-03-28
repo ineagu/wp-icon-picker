@@ -3,7 +3,7 @@
  */
 var IconPickerFontBrowser = wp.media.View.extend( _.extend({
 	className: function() {
-		var className = 'attachments-browser icon-picker-fonts-browser';
+		var className = 'attachments-browser iconpicker-fonts-browser';
 
 		if ( ! this.options.sidebar ) {
 			className += ' hide-sidebar';

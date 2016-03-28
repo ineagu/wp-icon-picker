@@ -393,7 +393,7 @@ module.exports = IconPickerBrowser;
  */
 var IconPickerFontBrowser = wp.media.View.extend( _.extend({
 	className: function() {
-		var className = 'attachments-browser icon-picker-fonts-browser';
+		var className = 'attachments-browser iconpicker-fonts-browser';
 
 		if ( ! this.options.sidebar ) {
 			className += ' hide-sidebar';
@@ -497,10 +497,10 @@ var Attachment = wp.media.view.Attachment.Library,
  * wp.media.view.IconPickerFontItem
  */
 IconPickerFontItem = Attachment.extend({
-	className: 'attachment icon-picker-item',
+	className: 'attachment iconpicker-item',
 
 	initialize: function() {
-		this.template = wp.media.template( 'icon-picker-' + this.options.baseType + '-item' );
+		this.template = wp.media.template( 'iconpicker-' + this.options.baseType + '-item' );
 		Attachment.prototype.initialize.apply( this, arguments );
 	},
 
@@ -530,7 +530,7 @@ var $ = jQuery,
  * wp.media.view.IconPickerFontLibrary
  */
 IconPickerFontLibrary = Attachments.extend({
-	className: 'attachments icon-picker-items clearfix',
+	className: 'attachments iconpicker-items clearfix',
 
 	initialize: function() {
 		Attachments.prototype.initialize.apply( this, arguments );
@@ -787,7 +787,7 @@ module.exports = IconPickerSidebar;
  * wp.media.view.IconPickerSvgItem
  */
 var IconPickerSvgItem = wp.media.view.Attachment.Library.extend({
-	template: wp.template( 'icon-picker-svg-item' )
+	template: wp.template( 'iconpicker-svg-item' )
 });
 
 module.exports = IconPickerSvgItem;
@@ -843,7 +843,7 @@ module.exports = IconPickerSvgItem;
 		if ( templates[ type ] ) {
 			template = templates[ type ];
 		} else {
-			template = templates[ type ] = wp.template( 'icon-picker-' + iconPicker.types[ type ].templateId + '-icon' );
+			template = templates[ type ] = wp.template( 'iconpicker-' + iconPicker.types[ type ].templateId + '-icon' );
 		}
 
 		$remove.removeClass( 'hidden' );

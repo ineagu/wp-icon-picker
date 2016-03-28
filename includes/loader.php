@@ -287,7 +287,7 @@ final class Icon_Picker_Loader {
 				continue;
 			}
 
-			$template_id_prefix = "tmpl-icon-picker-{$type->template_id}";
+			$template_id_prefix = "tmpl-iconpicker-{$type->template_id}";
 			if ( in_array( $template_id_prefix, $this->printed_templates ) ) {
 				continue;
 			}

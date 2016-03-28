@@ -47,7 +47,7 @@
 		if ( templates[ type ] ) {
 			template = templates[ type ];
 		} else {
-			template = templates[ type ] = wp.template( 'icon-picker-' + iconPicker.types[ type ].templateId + '-icon' );
+			template = templates[ type ] = wp.template( 'iconpicker-' + iconPicker.types[ type ].templateId + '-icon' );
 		}
 
 		$remove.removeClass( 'hidden' );
