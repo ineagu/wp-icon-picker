@@ -7,11 +7,11 @@ Pick an icon of your choice.
 **Tags:** [icons](https://wordpress.org/plugins/tags/icons), [image](https://wordpress.org/plugins/tags/image), [svg](https://wordpress.org/plugins/tags/svg)  
 **Requires at least:** 4.3  
 **Tested up to:** 4.4  
-**Stable tag:** 0.2.0  
+**Stable tag:** 0.3.0  
 **License:** [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)  
 **Donate Link:** http://kucrut.org/#coffee  
 
-[![Build Status](https://travis-ci.org/kucrut/wp-icon-picker.svg?branch=master)](https://travis-ci.org/kucrut/wp-icon-picker) 
+[![Build Status](https://travis-ci.org/kucrut/wp-icon-picker.svg?branch=master)](https://travis-ci.org/kucrut/wp-icon-picker) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com) 
 
 ## Description ##
 
@@ -28,6 +28,9 @@ An icon picker library plugin.
 ![Icon fields in a post meta box using [CMB](https://github.com/humanmade/Custom-Meta-Boxes/)](assets/screenshot-2.png)
 
 ## Changelog ##
+
+### 0.3.0 ###
+* Fix CSS classname conflicts.
 
 ### 0.2.0 ###
 * Introduce `icon_picker_field()`.

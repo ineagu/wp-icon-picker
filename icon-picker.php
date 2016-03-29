@@ -4,14 +4,14 @@
  * Icon Picker
  *
  * @package Icon_Picker
- * @version 0.2.0
+ * @version 0.3.0
  * @author Dzikri Aziz <kvcrvt@gmail.com>
  *
  *
  * Plugin Name: Icon Picker
  * Plugin URI:  http://kucrut.org/
  * Description: Pick an icon of your choice.
- * Version:     0.2.0
+ * Version:     0.3.0
  * Author:      Dzikri Aziz
  * Author URI:  http://kucrut.org/
  * License:     GPLv2
@@ -21,7 +21,7 @@
 
 final class Icon_Picker {
 
-	const version = '0.1.1';
+	const version = '0.3.0';
 
 	/**
 	 * Icon_Picker singleton

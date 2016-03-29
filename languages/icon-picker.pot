@@ -1,14 +1,14 @@
-# Copyright (C) 2015 Dzikri Aziz
+# Copyright (C) 2016 Dzikri Aziz
 # This file is distributed under the GPLv2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Icon Picker 0.2.0\n"
+"Project-Id-Version: Icon Picker 0.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/icon-picker\n"
-"POT-Creation-Date: 2015-11-20 17:55:23+00:00\n"
+"POT-Creation-Date: 2016-03-29 15:06:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.3\n"
@@ -17,7 +17,7 @@ msgstr ""
 msgid "404"
 msgstr ""
 
-#: includes/fields/base.php:67 includes/loader.php:229
+#: includes/fields/base.php:67 includes/loader.php:231
 msgid "Select Icon"
 msgstr ""
 
@@ -51,7 +51,7 @@ msgstr ""
 msgid "Icon Picker"
 msgstr ""
 
-#: includes/loader.php:228
+#: includes/loader.php:230
 msgid "All"
 msgstr ""
 
