@@ -6,6 +6,7 @@
 		"**/vendor/**",
 		"**/*.min.js",
 		"**/node_modules/**",
-		"js/icon-picker.js"
+		"js/icon-picker.js",
+		"js/src/media.js"
 	]
 }

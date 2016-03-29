@@ -6,7 +6,7 @@ var $ = jQuery,
  * wp.media.view.IconPickerFontLibrary
  */
 IconPickerFontLibrary = Attachments.extend({
-	className: 'attachments icon-picker-items clearfix',
+	className: 'attachments iconpicker-items clearfix',
 
 	initialize: function() {
 		Attachments.prototype.initialize.apply( this, arguments );

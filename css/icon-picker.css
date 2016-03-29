@@ -1,16 +1,16 @@
-.icon-picker-fonts-browser .media-toolbar-secondary {
+.iconpicker-fonts-browser .media-toolbar-secondary {
 	min-width: 40%;
 }
-.icon-picker-item ._icon {
+.iconpicker-item ._icon {
 	display: inline-block;
 	margin-top: 8px;
 	color: #555;
 }
-.icon-picker-items .selected ._icon {
+.iconpicker-items .selected ._icon {
 	color: #222;
 }
 
-.icon-picker-item ._icon i {
+.iconpicker-item ._icon i {
 	font-size: 100px;
 	width: 100%;
 	height: 100%;

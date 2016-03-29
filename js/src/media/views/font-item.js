@@ -5,10 +5,10 @@ var Attachment = wp.media.view.Attachment.Library,
  * wp.media.view.IconPickerFontItem
  */
 IconPickerFontItem = Attachment.extend({
-	className: 'attachment icon-picker-item',
+	className: 'attachment iconpicker-item',
 
 	initialize: function() {
-		this.template = wp.media.template( 'icon-picker-' + this.options.baseType + '-item' );
+		this.template = wp.media.template( 'iconpicker-' + this.options.baseType + '-item' );
 		Attachment.prototype.initialize.apply( this, arguments );
 	},
 
