@@ -35,7 +35,7 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 	 * @access protected
 	 * @var    string
 	 */
-	protected $version = '4.4.0';
+	protected $version = '4.6.1';
 
 	/**
 	 * Stylesheet ID
@@ -55,6 +55,10 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 	 */
 	public function get_groups() {
 		$groups = array(
+			array(
+				'id'   => 'a11y',
+				'name' => __( 'Accessibility', 'icon-picker' ),
+			),
 			array(
 				'id'   => 'brand',
 				'name' => __( 'Brand', 'icon-picker' ),
@@ -134,6 +138,56 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 	public function get_items() {
 		$items = array(
 			array(
+				'group' => 'a11y',
+				'id'    => ' fa-american-sign-language-interpreting',
+				'name'  => __( 'American Sign Language', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => ' fa-audio-description',
+				'name'  => __( 'Audio Description', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => ' fa-assistive-listening-systems',
+				'name'  => __( 'Assistive Listening Systems', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => 'fa-blind',
+				'name'  => __( 'Blind', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => 'fa-braille',
+				'name'  => __( 'Braille', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => 'fa-deaf',
+				'name'  => __( 'Deaf', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => 'fa-low-vision',
+				'name'  => __( 'Low Vision', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => 'fa-volume-control-phone',
+				'name'  => __( 'Phone Volume Control', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => 'fa-sign-language',
+				'name'  => __( 'Sign Language', 'icon-picker' ),
+			),
+			array(
+				'group' => 'a11y',
+				'id'    => 'fa-universal-access',
+				'name'  => __( 'Universal Access', 'icon-picker' ),
+			),
+			array(
 				'group' => 'brand',
 				'id'    => 'fa-500px',
 				'name'  => '500px',
@@ -185,6 +239,16 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'brand',
+				'id'    => 'fa-bluetooth',
+				'name'  => 'Bluetooth',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-bluetooth-b',
+				'name'  => 'Bluetooth',
+			),
+			array(
+				'group' => 'brand',
 				'id'    => 'fa-bitbucket-square',
 				'name'  => 'Bitbucket',
 			),
@@ -202,6 +266,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 				'group' => 'brand',
 				'id'    => 'fa-codepen',
 				'name'  => 'CodePen',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-codiepie',
+				'name'  => 'Codie Pie',
 			),
 			array(
 				'group' => 'brand',
@@ -265,6 +334,16 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'brand',
+				'id'    => 'fa-edge',
+				'name'  => 'Edge',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-envira',
+				'name'  => 'Envira',
+			),
+			array(
+				'group' => 'brand',
 				'id'    => 'fa-expeditedssl',
 				'name'  => 'ExpeditedSSL',
 			),
@@ -300,6 +379,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'brand',
+				'id'    => 'fa-fort-awesome',
+				'name'  => 'Fort Awesome',
+			),
+			array(
+				'group' => 'brand',
 				'id'    => 'fa-forumbee',
 				'name'  => 'Forumbee',
 			),
@@ -330,6 +414,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'brand',
+				'id'    => 'fa-gitlab',
+				'name'  => 'Gitlab',
+			),
+			array(
+				'group' => 'brand',
 				'id'    => 'fa-github-alt',
 				'name'  => 'GitHub',
 			),
@@ -342,6 +431,16 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 				'group' => 'brand',
 				'id'    => 'fa-gittip',
 				'name'  => 'GitTip',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-glide',
+				'name'  => 'Glide',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-glide-g',
+				'name'  => 'Glide',
 			),
 			array(
 				'group' => 'brand',
@@ -445,6 +544,16 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'brand',
+				'id'    => 'fa-mixcloud',
+				'name'  => 'Mixcloud',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-modx',
+				'name'  => 'MODX',
+			),
+			array(
+				'group' => 'brand',
 				'id'    => 'fa-odnoklassniki',
 				'name'  => 'Odnoklassniki',
 			),
@@ -505,12 +614,22 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'brand',
+				'id'    => 'fa-product-hunt',
+				'name'  => 'Product Hunt',
+			),
+			array(
+				'group' => 'brand',
 				'id'    => 'fa-qq',
 				'name'  => 'QQ',
 			),
 			array(
 				'group' => 'brand',
 				'id'    => 'fa-reddit',
+				'name'  => 'reddit',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-reddit-alien',
 				'name'  => 'reddit',
 			),
 			array(
@@ -527,6 +646,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 				'group' => 'brand',
 				'id'    => 'fa-safari',
 				'name'  => 'Safari',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-scribd',
+				'name'  => 'Scribd',
 			),
 			array(
 				'group' => 'brand',
@@ -567,6 +691,21 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 				'group' => 'brand',
 				'id'    => 'fa-soundcloud',
 				'name'  => 'SoundCloud',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-snapchat',
+				'name'  => 'Snapchat',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-snapchat-ghost',
+				'name'  => 'Snapchat',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-snapchat-square',
+				'name'  => 'Snapchat',
 			),
 			array(
 				'group' => 'brand',
@@ -645,8 +784,23 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'brand',
+				'id'    => 'fa-usb',
+				'name'  => 'USB',
+			),
+			array(
+				'group' => 'brand',
 				'id'    => 'fa-vimeo',
 				'name'  => 'Vimeo',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-viadeo',
+				'name'  => 'Viadeo',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-viadeo-square',
+				'name'  => 'Viadeo',
 			),
 			array(
 				'group' => 'brand',
@@ -697,6 +851,16 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 				'group' => 'brand',
 				'id'    => 'fa-wordpress',
 				'name'  => 'WordPress',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-wpbeginner',
+				'name'  => 'WP Beginner',
+			),
+			array(
+				'group' => 'brand',
+				'id'    => 'fa-wpforms',
+				'name'  => 'WP Forms',
 			),
 			array(
 				'group' => 'brand',
@@ -1295,6 +1459,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'payment',
+				'id'    => 'fa-credit-card-alt',
+				'name'  => __( 'Credit Card', 'icon-picker' ),
+			),
+			array(
+				'group' => 'payment',
 				'id'    => 'fa-cc-diners-club',
 				'name'  => 'Diners Club',
 			),
@@ -1431,6 +1600,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			array(
 				'group' => 'transportation',
 				'id'    => 'fa-wheelchair',
+				'name'  => __( 'Wheelchair', 'icon-picker' ),
+			),
+			array(
+				'group' => 'transportation',
+				'id'    => 'fa-wheelchair-alt',
 				'name'  => __( 'Wheelchair', 'icon-picker' ),
 			),
 			array(
@@ -1670,6 +1844,16 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'video-player',
+				'id'    => 'fa-pause-circle',
+				'name'  => __( 'Pause', 'icon-picker' ),
+			),
+			array(
+				'group' => 'video-player',
+				'id'    => 'fa-pause-circle-o',
+				'name'  => __( 'Pause', 'icon-picker' ),
+			),
+			array(
+				'group' => 'video-player',
 				'id'    => 'fa-play',
 				'name'  => __( 'Play', 'icon-picker' ),
 			),
@@ -1696,6 +1880,16 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			array(
 				'group' => 'video-player',
 				'id'    => 'fa-stop',
+				'name'  => __( 'Stop', 'icon-picker' ),
+			),
+			array(
+				'group' => 'video-player',
+				'id'    => 'fa-stop-circle',
+				'name'  => __( 'Stop', 'icon-picker' ),
+			),
+			array(
+				'group' => 'video-player',
+				'id'    => 'fa-stop-circle-o',
 				'name'  => __( 'Stop', 'icon-picker' ),
 			),
 			array(
@@ -2375,6 +2569,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'web-application',
+				'id'    => 'fa-hashtag',
+				'name'  => __( 'Hash Tag', 'icon-picker' ),
+			),
+			array(
+				'group' => 'web-application',
 				'id'    => 'fa-headphones',
 				'name'  => __( 'Headphones', 'icon-picker' ),
 			),
@@ -2660,6 +2859,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			),
 			array(
 				'group' => 'web-application',
+				'id'    => 'fa-percent',
+				'name'  => __( 'Percent', 'icon-picker' ),
+			),
+			array(
+				'group' => 'web-application',
 				'id'    => 'fa-phone-square',
 				'name'  => __( 'Phone', 'icon-picker' ),
 			),
@@ -2711,6 +2915,11 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 			array(
 				'group' => 'web-application',
 				'id'    => 'fa-question-circle',
+				'name'  => __( 'Question', 'icon-picker' ),
+			),
+			array(
+				'group' => 'web-application',
+				'id'    => 'fa-question-circle-o',
 				'name'  => __( 'Question', 'icon-picker' ),
 			),
 			array(
@@ -2827,6 +3036,16 @@ class Icon_Picker_Type_Font_Awesome extends Icon_Picker_Type_Font {
 				'group' => 'web-application',
 				'id'    => 'fa-shopping-cart',
 				'name'  => __( 'Shopping Cart', 'icon-picker' ),
+			),
+			array(
+				'group' => 'web-application',
+				'id'    => 'fa-shopping-bag',
+				'name'  => __( 'Shopping Bag', 'icon-picker' ),
+			),
+			array(
+				'group' => 'web-application',
+				'id'    => 'fa-shopping-basket',
+				'name'  => __( 'Shopping Basket', 'icon-picker' ),
 			),
 			array(
 				'group' => 'web-application',
