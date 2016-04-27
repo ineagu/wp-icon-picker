@@ -111,9 +111,29 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 			}
 		}
 
-		if ( $register ) {
-			wp_register_style( $this->stylesheet_id, $this->stylesheet_uri, $deps, $this->version );
+		if ( ! $register ) {
+			return;
 		}
+
+		/**
+		 * Filters icon type's stylesheet URI
+		 *
+		 * @since  0.4.0
+		 *
+		 * @param  string                $stylesheet_uri Icon type's stylesheet URI.
+		 * @param  string                $icon_type_id   Icon type's ID.
+		 * @param  Icon_Picker_Type_Font $icon_type      Icon type's instance.
+		 *
+		 * @return string
+		 */
+		$stylesheet_uri = apply_filters(
+			'icon_picker_icon_type_stylesheet_uri',
+			$this->stylesheet_uri,
+			$this->id,
+			$this
+		);
+
+		wp_register_style( $this->stylesheet_id, $stylesheet_uri, $deps, $this->version );
 
 		$loader->add_style( $this->stylesheet_id );
 	}
