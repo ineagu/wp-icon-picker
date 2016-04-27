@@ -95,6 +95,11 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 		$deps     = false;
 		$styles   = wp_styles();
 
+		/**
+		 * When the stylesheet ID of an icon type is already registered,
+		 * we'll compare its version with ours. If our stylesheet has greater
+		 * version number, we'll deregister the other stylesheet.
+		 */
 		if ( $styles->query( $this->stylesheet_id, 'registered' ) ) {
 			$object = $styles->registered[ $this->stylesheet_id ];
 
