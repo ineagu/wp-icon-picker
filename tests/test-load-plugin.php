@@ -1,10 +1,14 @@
 <?php
 
 class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
+
+	protected $fa_stylesheet_uri = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
+
 	function setUp() {
 		$this->icon_picker = Icon_Picker::instance();
 
 		add_filter( 'icon_picker_default_types', array( $this, '_filter_default_types' ) );
+		add_filter( 'icon_picker_icon_type_stylesheet_uri', array( $this, '_filter_font_awesome_from_stylesheet_uri' ), 10, 3 );
 
 		parent::setUp();
 	}
@@ -21,6 +25,14 @@ class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
 		$default_types[] = 'random';
 
 		return $default_types;
+	}
+
+	public function _filter_font_awesome_from_stylesheet_uri( $stylesheet_uri, $icon_type_id, $icon_type ) {
+		if ( 'fa' === $icon_type_id ) {
+			$stylesheet_uri = $this->fa_stylesheet_uri;
+		}
+
+		return $stylesheet_uri;
 	}
 
 	/**
@@ -72,5 +84,15 @@ class Icon_Picker_Test_Plugin extends WP_UnitTestCase {
 		$allowed_mime_types = get_allowed_mime_types();
 
 		$this->assertArrayhasKey( 'svg', $allowed_mime_types );
+	}
+
+	/**
+	 * @covers Icon_Picker_Type_Font::get_stylesheet_uri()
+	 */
+	public function test_font_awesome_css_from_cdn() {
+		$this->assertEquals(
+			$this->icon_picker->registry->types['fa']->stylesheet_uri,
+			$this->fa_stylesheet_uri
+		);
 	}
 }
