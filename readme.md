@@ -57,6 +57,9 @@ add_filter( 'icon_picker_icon_type_stylesheet_uri', 'myprefix_font_awesome_css_f
 
 ## Changelog ##
 
+### 0.4.1 ###
+* Improve support for CMB: Make the field usable in a repeatable field.
+
 ### 0.4.0 ###
 * Introduce `icon_picker_icon_type_stylesheet_uri` filter hook.
 * Font Awesome 4.6.1
