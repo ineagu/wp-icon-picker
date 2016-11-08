@@ -6,8 +6,8 @@ Pick an icon of your choice.
 **Contributors:** [kucrut](https://profiles.wordpress.org/kucrut)  
 **Tags:** [icons](https://wordpress.org/plugins/tags/icons), [image](https://wordpress.org/plugins/tags/image), [svg](https://wordpress.org/plugins/tags/svg)  
 **Requires at least:** 4.3  
-**Tested up to:** 4.5.1  
-**Stable tag:** 0.4.0  
+**Tested up to:** 4.6.1  
+**Stable tag:** 0.4.1  
 **License:** [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)  
 **Donate Link:** http://kucrut.org/#coffee  
 
