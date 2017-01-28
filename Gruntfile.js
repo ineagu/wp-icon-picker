@@ -10,21 +10,6 @@ module.exports = function( grunt ) {
 				}
 			}
 		},
-		jshint: {
-			grunt: {
-				src: [ 'Gruntfile.js' ]
-			},
-			media: {
-				options: {
-					browserify: true
-				},
-				src: [ 'js/src/media/**/*.js' ]
-			},
-			field: {
-				src: [ 'js/src/field.js' ]
-			},
-			options: grunt.file.readJSON( '.jshintrc' )
-		},
 		concat: {
 			options: {
 				separator: '\n'
@@ -141,25 +126,25 @@ module.exports = function( grunt ) {
 
 	grunt.renameTask( 'watch', '_watch' );
 	grunt.registerTask( 'watch', function() {
-		if ( ! this.args.length || this.args.indexOf( 'browserify' ) > -1 ) {
+		if ( ! this.args.length || this.args.indexOf( 'browserify' ) > - 1 ) {
 			grunt.config( 'browserify.options', {
 				browserifyOptions: {
 					debug: true
 				},
 				watch: true
-			} );
+			});
 
 			grunt.task.run( 'browserify' );
 		}
 
 		grunt.task.run( '_' + this.nameArgs );
-	} );
+	});
 
-	grunt.registerTask( 'css', [ 'cssmin' ] );
-	grunt.registerTask( 'js', [ 'jshint', 'browserify', 'concat', 'uglify' ] );
-	grunt.registerTask( 'i18n', [ 'makepot' ] );
-	grunt.registerTask( 'default', [ 'css', 'js' ] );
-	grunt.registerTask( 'build', [ 'default', 'clean', 'copy', 'compress' ] );
+	grunt.registerTask( 'css', ['cssmin']);
+	grunt.registerTask( 'js', [ 'browserify', 'concat', 'uglify' ] );
+	grunt.registerTask( 'i18n', ['makepot']);
+	grunt.registerTask( 'default', [ 'css', 'js' ]);
+	grunt.registerTask( 'build', [ 'default', 'clean', 'copy', 'compress' ]);
 
 	grunt.util.linefeed = '\n';
 };
