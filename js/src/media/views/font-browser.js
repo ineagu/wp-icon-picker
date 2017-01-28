@@ -50,7 +50,7 @@ var IconPickerFontBrowser = wp.media.View.extend( _.extend({
 		this.toolbar.set( 'filters', new wp.media.view.IconPickerFontFilter({
 			controller: this.controller,
 			model:      this.collection.props,
-			priority:   -80
+			priority:   - 80
 		}).render() );
 
 		// Search field
