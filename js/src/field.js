@@ -1,5 +1,3 @@
-'use strict';
-
 (function( $ ) {
 	var l10n = wp.media.view.l10n.iconPicker,
 		templates = {},
