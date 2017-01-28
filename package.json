@@ -27,8 +27,8 @@
     "grunt-wp-i18n": "^0.5.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0",
     "webpack-merge": "^2.6.0"
   },
   "keywords": [
