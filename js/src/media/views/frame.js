@@ -73,7 +73,7 @@ IconPicker = Select.extend({
 	_ipSetState: function() {
 		var stateId = this.target.get( 'type' );
 
-		if ( ! stateId || ! this.states.findWhere( { id: stateId } ) ) {
+		if ( ! stateId || ! this.states.findWhere({ id: stateId }) ) {
 			stateId = this.states.at( 0 ).id;
 		}
 

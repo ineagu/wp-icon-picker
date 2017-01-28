@@ -22,7 +22,7 @@ var IconPickerFonts = Backbone.Collection.extend({
 		    items   = this.items.toJSON();
 
 		_.each( props.toJSON(), function( value, filter ) {
-			if ( library.filters[ filter ] ) {
+			if ( library.filters[ filter ]) {
 				items = _.filter( items, _.bind( library.filters[ filter ], this ), value );
 			}
 		}, this );
@@ -59,7 +59,7 @@ var IconPickerFonts = Backbone.Collection.extend({
 			if ( '' === term ) {
 				result = true;
 			} else {
-				result = _.any( [ 'id', 'name' ], function( key ) {
+				result = _.any([ 'id', 'name' ], function( key ) {
 					var value = item[ key ];
 
 					return value && -1 !== value.search( this );

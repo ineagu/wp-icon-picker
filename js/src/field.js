@@ -1,4 +1,4 @@
-(function( $ ) {
+( function( $ ) {
 	var l10n = wp.media.view.l10n.iconPicker,
 		templates = {},
 		frame, selectIcon, removeIcon, getFrame, updateField, updatePreview, $field;
@@ -42,7 +42,7 @@
 			return;
 		}
 
-		if ( templates[ type ] ) {
+		if ( templates[ type ]) {
 			template = templates[ type ];
 		} else {
 			template = templates[ type ] = wp.template( 'iconpicker-' + iconPicker.types[ type ].templateId + '-icon' );
@@ -79,7 +79,7 @@
 			model.inputs[ key ] = $input;
 		});
 
-		frame.target.set( model, { silent: true } );
+		frame.target.set( model, { silent: true });
 		frame.open();
 	};
 

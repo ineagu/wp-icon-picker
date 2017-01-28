@@ -13,7 +13,7 @@ var Library = wp.media.controller.Library,
  * @mixes    media.selectionSync
  * @mixes    wp.media.controller.iconPickerMixin
  */
-IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.iconPickerMixin, {
+IconPickerImg = Library.extend( _.extend({}, wp.media.controller.iconPickerMixin, {
 	defaults: _.defaults({
 		id:            'image',
 		baseType:      'image',
@@ -137,7 +137,7 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.iconPickerMixi
 			size = 'thumbnail';
 		}
 
-		if ( sizes && sizes[ size ] ) {
+		if ( sizes && sizes[ size ]) {
 			url = sizes[ size ].url;
 		}
 
