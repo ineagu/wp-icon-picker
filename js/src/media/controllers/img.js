@@ -1,8 +1,8 @@
 var Library = wp.media.controller.Library,
-    l10n = wp.media.view.l10n,
-    models = wp.media.model,
-    views = wp.media.view,
-    IconPickerImg;
+	l10n = wp.media.view.l10n,
+	models = wp.media.model,
+	views = wp.media.view,
+	IconPickerImg;
 
 /**
  * wp.media.controller.IconPickerImg
@@ -13,7 +13,7 @@ var Library = wp.media.controller.Library,
  * @mixes    media.selectionSync
  * @mixes    wp.media.controller.iconPickerMixin
  */
-IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.iconPickerMixin, {
+IconPickerImg = Library.extend( _.extend({}, wp.media.controller.iconPickerMixin, {
 	defaults: _.defaults({
 		id:            'image',
 		baseType:      'image',
@@ -61,7 +61,7 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.iconPickerMixi
 	},
 
 	getContentView: function( mode ) {
-		var content = ( 'upload' === mode ) ? this.uploadContent() : this.browseContent();
+		var content = ( mode === 'upload' ) ? this.uploadContent() : this.browseContent();
 
 		this.frame.$el.removeClass( 'hide-toolbar' );
 
@@ -88,7 +88,7 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.iconPickerMixi
 			suggestedHeight:  this.get( 'suggestedHeight' )
 		}, this.ipGetSidebarOptions() );
 
-		if ( 'svg' === this.id ) {
+		if ( this.id === 'svg' ) {
 			options.AttachmentView = views.IconPickerSvgItem;
 		}
 
@@ -137,7 +137,7 @@ IconPickerImg = Library.extend( _.extend( {}, wp.media.controller.iconPickerMixi
 			size = 'thumbnail';
 		}
 
-		if ( sizes && sizes[ size ] ) {
+		if ( sizes && sizes[ size ]) {
 			url = sizes[ size ].url;
 		}
 

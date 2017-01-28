@@ -22,7 +22,7 @@ var IconPickerFonts = Backbone.Collection.extend({
 		    items   = this.items.toJSON();
 
 		_.each( props.toJSON(), function( value, filter ) {
-			if ( library.filters[ filter ] ) {
+			if ( library.filters[ filter ]) {
 				items = _.filter( items, _.bind( library.filters[ filter ], this ), value );
 			}
 		}, this );
@@ -41,7 +41,7 @@ var IconPickerFonts = Backbone.Collection.extend({
 		group: function( item ) {
 			var groupId = this.props.get( 'group' );
 
-			return ( 'all' === groupId || item.group === groupId || '' === item.group );
+			return (  groupId === 'all' || item.group === groupId || item.group === '' );
 		},
 
 		/**
@@ -56,13 +56,13 @@ var IconPickerFonts = Backbone.Collection.extend({
 			var term = this.props.get( 'search' ),
 			    result;
 
-			if ( '' === term ) {
+			if ( term === '' ) {
 				result = true;
 			} else {
-				result = _.any( [ 'id', 'name' ], function( key ) {
+				result = _.any([ 'id', 'name' ], function( key ) {
 					var value = item[ key ];
 
-					return value && -1 !== value.search( this );
+					return value && value.search( this ) >= 0;
 				}, term );
 			}
 

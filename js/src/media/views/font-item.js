@@ -1,5 +1,5 @@
 var Attachment = wp.media.view.Attachment.Library,
-    IconPickerFontItem;
+	IconPickerFontItem;
 
 /**
  * wp.media.view.IconPickerFontItem

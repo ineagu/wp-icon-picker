@@ -2,28 +2,13 @@
 module.exports = function( grunt ) {
 
 	// Project configuration
-	grunt.initConfig( {
+	grunt.initConfig({
 		browserify: {
 			admin: {
 				files: {
 					'js/src/media.js': 'js/src/media/manifest.js'
 				}
 			}
-		},
-		jshint: {
-			grunt: {
-				src: [ 'Gruntfile.js' ]
-			},
-			media: {
-				options: {
-					browserify: true
-				},
-				src: [ 'js/src/media/**/*.js' ]
-			},
-			field: {
-				src: [ 'js/src/field.js' ]
-			},
-			options: grunt.file.readJSON( '.jshintrc' )
 		},
 		concat: {
 			options: {
@@ -37,7 +22,7 @@ module.exports = function( grunt ) {
 		uglify: {
 			all: {
 				files: {
-					'js/icon-picker.min.js': [ 'js/icon-picker.js' ]
+					'js/icon-picker.min.js': ['js/icon-picker.js']
 				}
 			}
 		},
@@ -45,7 +30,7 @@ module.exports = function( grunt ) {
 			main: {
 				expand: true,
 				cwd: 'css/',
-				src: [ 'icon-picker.css' ],
+				src: ['icon-picker.css'],
 				dest: 'css/',
 				ext: '.min.css'
 			},
@@ -62,7 +47,7 @@ module.exports = function( grunt ) {
 				files: [
 					'css/icon-picker.css'
 				],
-				tasks: [ 'cssmin' ],
+				tasks: ['cssmin'],
 				options: {
 					debounceDelay: 500
 				}
@@ -72,7 +57,7 @@ module.exports = function( grunt ) {
 					'js/src/media/**/*.js',
 					'js/src/field.js'
 				],
-				tasks: [ 'js' ],
+				tasks: ['js'],
 				options: {
 					debounceDelay: 500,
 					interval: 2000
@@ -80,7 +65,7 @@ module.exports = function( grunt ) {
 			}
 		},
 		clean: {
-			main: [ 'release/<%= pkg.version %>' ]
+			main: ['release/<%= pkg.version %>']
 		},
 		copy: {
 
@@ -112,7 +97,7 @@ module.exports = function( grunt ) {
 				},
 				expand: true,
 				cwd: 'release/<%= pkg.version %>/',
-				src: [ '**/*' ],
+				src: ['**/*'],
 				dest: 'icon-picker/'
 			}
 		},
@@ -121,11 +106,11 @@ module.exports = function( grunt ) {
 				options: {
 					mainFile: 'icon-picker.php',
 					type: 'wp-plugin',
-					exclude: [ 'tests' ]
+					exclude: ['tests']
 				}
 			}
 		}
-	} );
+	});
 
 	// Load other tasks
 	grunt.loadNpmTasks( 'grunt-browserify' );
@@ -141,25 +126,25 @@ module.exports = function( grunt ) {
 
 	grunt.renameTask( 'watch', '_watch' );
 	grunt.registerTask( 'watch', function() {
-		if ( ! this.args.length || this.args.indexOf( 'browserify' ) > -1 ) {
+		if ( ! this.args.length || this.args.indexOf( 'browserify' ) > - 1 ) {
 			grunt.config( 'browserify.options', {
 				browserifyOptions: {
 					debug: true
 				},
 				watch: true
-			} );
+			});
 
 			grunt.task.run( 'browserify' );
 		}
 
 		grunt.task.run( '_' + this.nameArgs );
-	} );
+	});
 
-	grunt.registerTask( 'css', [ 'cssmin' ] );
-	grunt.registerTask( 'js', [ 'jshint', 'browserify', 'concat', 'uglify' ] );
-	grunt.registerTask( 'i18n', [ 'makepot' ] );
-	grunt.registerTask( 'default', [ 'css', 'js' ] );
-	grunt.registerTask( 'build', [ 'default', 'clean', 'copy', 'compress' ] );
+	grunt.registerTask( 'css', ['cssmin']);
+	grunt.registerTask( 'js', [ 'browserify', 'concat', 'uglify' ]);
+	grunt.registerTask( 'i18n', ['makepot']);
+	grunt.registerTask( 'default', [ 'css', 'js' ]);
+	grunt.registerTask( 'build', [ 'default', 'clean', 'copy', 'compress' ]);
 
 	grunt.util.linefeed = '\n';
 };

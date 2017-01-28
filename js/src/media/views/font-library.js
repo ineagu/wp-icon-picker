@@ -1,6 +1,6 @@
 var $ = jQuery,
-    Attachments = wp.media.view.Attachments,
-    IconPickerFontLibrary;
+	Attachments = wp.media.view.Attachments,
+	IconPickerFontLibrary;
 
 /**
  * wp.media.view.IconPickerFontLibrary
@@ -20,7 +20,7 @@ IconPickerFontLibrary = Attachments.extend({
 	_addItem: function( model ) {
 		this.views.add( this.createAttachmentView( model ), {
 			at: this.collection.indexOf( model )
-		} );
+		});
 	},
 
 	_removeItem: function( model ) {
@@ -79,7 +79,7 @@ IconPickerFontLibrary = Attachments.extend({
 	},
 
 	getView: function( model ) {
-		return _.findWhere( this._viewsByCid, { model: model } );
+		return _.findWhere( this._viewsByCid, { model: model });
 	},
 
 	isInView: function( $elem ) {
