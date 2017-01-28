@@ -45,5 +45,8 @@
   },
   "bugs": {
     "url": "https://github.com/kucrut/wp-icon-picker/issues"
+  },
+  "scripts": {
+    "lint": "eslint js/src"
   }
 }
