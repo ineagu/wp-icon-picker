@@ -31,7 +31,7 @@
 		    url     = $el.find( 'input.url' ).val(),
 		    template;
 
-		if ( '' === type || '' === icon || ! _.has( iconPicker.types, type ) ) {
+		if ( type === '' || icon === '' || ! _.has( iconPicker.types, type ) ) {
 			$remove.addClass( 'hidden' );
 			$select
 				.removeClass( 'has-icon' )

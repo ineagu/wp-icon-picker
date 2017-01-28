@@ -61,7 +61,7 @@ IconPickerImg = Library.extend( _.extend({}, wp.media.controller.iconPickerMixin
 	},
 
 	getContentView: function( mode ) {
-		var content = ( 'upload' === mode ) ? this.uploadContent() : this.browseContent();
+		var content = ( mode === 'upload' ) ? this.uploadContent() : this.browseContent();
 
 		this.frame.$el.removeClass( 'hide-toolbar' );
 
@@ -88,7 +88,7 @@ IconPickerImg = Library.extend( _.extend({}, wp.media.controller.iconPickerMixin
 			suggestedHeight:  this.get( 'suggestedHeight' )
 		}, this.ipGetSidebarOptions() );
 
-		if ( 'svg' === this.id ) {
+		if ( this.id === 'svg' ) {
 			options.AttachmentView = views.IconPickerSvgItem;
 		}
 
