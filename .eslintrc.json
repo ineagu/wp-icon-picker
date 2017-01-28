@@ -1,0 +1,17 @@
+{
+  "extends": "humanmade",
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "_": false,
+    "Backbone": false,
+    "jQuery": false,
+    "wp": false
+  },
+  "rules": {
+    "key-spacing": [ "error", { "mode": "minimum" }],
+    "no-var": 0,
+    "comma-dangle": [ "error", "never" ]
+  }
+}
