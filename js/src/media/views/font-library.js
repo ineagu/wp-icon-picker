@@ -1,6 +1,6 @@
 var $ = jQuery,
-    Attachments = wp.media.view.Attachments,
-    IconPickerFontLibrary;
+	Attachments = wp.media.view.Attachments,
+	IconPickerFontLibrary;
 
 /**
  * wp.media.view.IconPickerFontLibrary

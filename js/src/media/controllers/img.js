@@ -1,8 +1,8 @@
 var Library = wp.media.controller.Library,
-    l10n = wp.media.view.l10n,
-    models = wp.media.model,
-    views = wp.media.view,
-    IconPickerImg;
+	l10n = wp.media.view.l10n,
+	models = wp.media.model,
+	views = wp.media.view,
+	IconPickerImg;
 
 /**
  * wp.media.controller.IconPickerImg

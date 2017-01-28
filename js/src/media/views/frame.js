@@ -14,7 +14,7 @@
  */
 
 var l10n = wp.media.view.l10n,
-    Select = wp.media.view.MediaFrame.Select,
+	Select = wp.media.view.MediaFrame.Select,
 	IconPicker;
 
 IconPicker = Select.extend({
