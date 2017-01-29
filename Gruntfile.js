@@ -47,13 +47,13 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 
 	// Register tasks.
-	grunt.registerMultiTask( 'phpcs', 'Runs PHP code sniffs.', function () {
-		grunt.util.spawn( {
+	grunt.registerMultiTask( 'phpcs', 'Runs PHP code sniffs.', function() {
+		grunt.util.spawn({
 			cmd: this.data.cmd,
 			args: this.data.args,
 			opts: { stdio: 'inherit' }
 		}, this.async() );
-	} );
+	});
 
 	grunt.registerTask( 'i18n', [ 'cssmin', 'uglify', 'makepot' ]);
 	grunt.registerTask( 'default', ['i18n']);
