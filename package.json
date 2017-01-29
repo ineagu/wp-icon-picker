@@ -47,6 +47,8 @@
     "url": "https://github.com/kucrut/wp-icon-picker/issues"
   },
   "scripts": {
+    "build": "NODE_ENV=production webpack --env=production --config webpack.config.babel.js",
+    "dev": "NODE_ENV=development webpack-dev-server --env=development --config webpack.config.babel.js",
     "lint": "eslint Gruntfile.js js/src"
   }
 }
