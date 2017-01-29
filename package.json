@@ -52,6 +52,8 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --env=production --config webpack.config.babel.js && grunt",
     "dev": "NODE_ENV=development webpack-dev-server --env=development --config webpack.config.babel.js",
-    "lint": "grunt phpcs && eslint Gruntfile.js js/src"
+    "lint:php": "grunt phpcs",
+    "lint:js": "eslint Gruntfile.js js/src",
+    "lint": "npm run lint:php && npm run lint:js"
   }
 }
