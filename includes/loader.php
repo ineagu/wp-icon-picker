@@ -151,16 +151,24 @@ final class Icon_Picker_Loader {
 	 * Register scripts & styles
 	 *
 	 * @since  0.1.0
+	 * @since  0.5.0 Use webpack dev server's URL as the asset URL.
 	 * @access protected
 	 * @return void
 	 */
 	protected function register_assets() {
 		$icon_picker = Icon_Picker::instance();
-		$suffix      = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+		if ( defined( 'ICON_PICKER_SCRIPT_DEBUG' ) && ICON_PICKER_SCRIPT_DEBUG ) {
+			$assets_url = '//localhost:8080';
+			$suffix     = '';
+		} else {
+			$assets_url = $icon_picker->url;
+			$suffix     = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+		}
 
 		wp_register_script(
 			'icon-picker',
-			"{$icon_picker->url}/js/icon-picker{$suffix}.js",
+			"{$assets_url}/js/icon-picker{$suffix}.js",
 			array( 'media-views' ),
 			$icon_picker->version,
 			true
