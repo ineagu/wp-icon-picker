@@ -33,7 +33,7 @@ if ( ! function_exists( 'wp_get_attachment_image_url' ) ) {
 function icon_picker_get_icon_url( $type, $id, $size = 'thumbnail' ) {
 	$url = '';
 
-	if ( ! in_array( $type, array( 'image', 'svg' ) ) ) {
+	if ( ! in_array( $type, array( 'image', 'svg' ), true ) ) {
 		return $url;
 	}
 
