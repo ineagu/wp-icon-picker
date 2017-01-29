@@ -1,6 +1,12 @@
 module.exports = function( grunt ) {
 	// Project configuration.
 	grunt.initConfig({
+		phpcs: {
+			'default': {
+				cmd: './vendor/bin/phpcs',
+				args: [ '--standard=./phpcs.ruleset.xml', '-p', '-s', '-v', '--extensions=php', '.' ]
+			}
+		},
 		uglify: {
 			all: {
 				files: {
@@ -41,6 +47,14 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 
 	// Register tasks.
+	grunt.registerMultiTask( 'phpcs', 'Runs PHP code sniffs.', function () {
+		grunt.util.spawn( {
+			cmd: this.data.cmd,
+			args: this.data.args,
+			opts: { stdio: 'inherit' }
+		}, this.async() );
+	} );
+
 	grunt.registerTask( 'i18n', [ 'cssmin', 'uglify', 'makepot' ]);
 	grunt.registerTask( 'default', ['i18n']);
 };
