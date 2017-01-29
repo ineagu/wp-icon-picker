@@ -170,7 +170,7 @@ final class Icon_Picker_Loader {
 			'icon-picker',
 			"{$assets_url}/js/icon-picker{$suffix}.js",
 			array( 'media-views' ),
-			$icon_picker->version,
+			$icon_picker->VERSION,
 			true
 		);
 		$this->add_script( 'icon-picker' );
@@ -179,7 +179,7 @@ final class Icon_Picker_Loader {
 			'icon-picker',
 			"{$icon_picker->url}/css/icon-picker{$suffix}.css",
 			false,
-			$icon_picker->version
+			$icon_picker->VERSION
 		);
 		$this->add_style( 'icon-picker' );
 	}
@@ -198,7 +198,7 @@ final class Icon_Picker_Loader {
 			_doing_it_wrong(
 				__METHOD__,
 				'It should only be called on admin pages.',
-				esc_html( $icon_picker->version )
+				esc_html( $icon_picker->VERSION )
 			);
 
 			return;
@@ -211,7 +211,7 @@ final class Icon_Picker_Loader {
 					'It should not be called until the %s hook.',
 					'<code>icon_picker_loader_init</code>'
 				),
-				esc_html( $icon_picker->version )
+				esc_html( $icon_picker->VERSION )
 			);
 
 			return;
