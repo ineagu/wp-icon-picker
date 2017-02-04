@@ -7,10 +7,12 @@
 .travis.yml export-ignore
 assets export-ignore
 composer.json export-ignore
+composer.lock export-ignore
 Gruntfile.js export-ignore
 package.json export-ignore
+phpcs.ruleset.xml export-ignore
+phpunit.xml export-ignore
 readme.md export-ignore
-dev-lib export-ignore
+webpack.config.babel.js export-ignore
 tests export-ignore
 js/src export-ignore
-phpunit.xml export-ignore
