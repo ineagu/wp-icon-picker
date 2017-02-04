@@ -3,8 +3,8 @@ Contributors: kucrut
 Donate Link: http://kucrut.org/#coffee
 Tags: icons, image, svg
 Requires at least: 4.3
-Tested up to: 4.6.1
-Stable tag: 0.4.1
+Tested up to: 4.7.2
+Stable tag: 0.5.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ add_filter( 'icon_picker_icon_type_stylesheet_uri', 'myprefix_font_awesome_css_f
 `
 
 == Changelog ==
+= 0.5.0 =
+* Update Font Awesome to 4.7.0.
+* Switch to Webpack.
+* Various [bug fixes and enhancements](https://github.com/kucrut/wp-icon-picker/issues?q=is%3Aissue+milestone%3A0.5.0+is%3Aclosed).
+
 = 0.4.1 =
 * Improve support for CMB: Make the field usable in a repeatable field.
 

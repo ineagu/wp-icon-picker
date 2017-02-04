@@ -1,23 +1,23 @@
-# Copyright (C) 2016 Dzikri Aziz
+# Copyright (C) 2017 Dzikri Aziz
 # This file is distributed under the GPLv2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Icon Picker 0.4.0\n"
+"Project-Id-Version: Icon Picker 0.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/icon-picker\n"
-"POT-Creation-Date: 2016-04-27 17:54:08+00:00\n"
+"POT-Creation-Date: 2017-02-04 14:05:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 0.5.3\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
 
 #: includes/types/genericon.php:587
 msgid "404"
 msgstr ""
 
-#: includes/fields/base.php:67 includes/loader.php:231
+#: includes/fields/base.php:67 includes/loader.php:237
 msgid "Select Icon"
 msgstr ""
 
@@ -51,7 +51,7 @@ msgstr ""
 msgid "Icon Picker"
 msgstr ""
 
-#: includes/loader.php:230
+#: includes/loader.php:236
 msgid "All"
 msgstr ""
 
@@ -123,7 +123,7 @@ msgid "Collapse"
 msgstr ""
 
 #: includes/types/dashicons.php:170 includes/types/dashicons.php:305
-#: includes/types/fa.php:2233 includes/types/fa.php:2238
+#: includes/types/fa.php:2377 includes/types/fa.php:2382
 #: includes/types/foundation-icons.php:634
 msgid "Comments"
 msgstr ""
@@ -133,7 +133,7 @@ msgid "Customizer"
 msgstr ""
 
 #: includes/types/dashicons.php:180 includes/types/elusive.php:1295
-#: includes/types/fa.php:2298
+#: includes/types/fa.php:2442
 msgid "Dashboard"
 msgstr ""
 
@@ -142,13 +142,13 @@ msgid "Generic"
 msgstr ""
 
 #: includes/types/dashicons.php:190 includes/types/dashicons.php:340
-#: includes/types/elusive.php:865 includes/types/fa.php:2418
+#: includes/types/elusive.php:865 includes/types/fa.php:2572
 #: includes/types/foundation-icons.php:509
 msgid "Filter"
 msgstr ""
 
 #: includes/types/dashicons.php:195 includes/types/elusive.php:1300
-#: includes/types/elusive.php:1305 includes/types/fa.php:2583
+#: includes/types/elusive.php:1305 includes/types/fa.php:2742
 #: includes/types/foundation-icons.php:754 includes/types/genericon.php:602
 msgid "Home"
 msgstr ""
@@ -185,7 +185,7 @@ msgstr ""
 msgid "Tools"
 msgstr ""
 
-#: includes/types/dashicons.php:245 includes/types/fa.php:3378
+#: includes/types/dashicons.php:245 includes/types/fa.php:3587
 msgid "Users"
 msgstr ""
 
@@ -260,7 +260,7 @@ msgstr ""
 msgid "Write Blog"
 msgstr ""
 
-#: includes/types/dashicons.php:335 includes/types/fa.php:2268
+#: includes/types/dashicons.php:335 includes/types/fa.php:2412
 #: includes/types/foundation-icons.php:504
 msgid "Crop"
 msgstr ""
@@ -285,7 +285,7 @@ msgstr ""
 msgid "Flip Horizontal"
 msgstr ""
 
-#: includes/types/dashicons.php:370 includes/types/fa.php:1743
+#: includes/types/dashicons.php:370 includes/types/fa.php:1858
 msgid "Undo"
 msgstr ""
 
@@ -294,39 +294,39 @@ msgid "Redo"
 msgstr ""
 
 #: includes/types/dashicons.php:380 includes/types/elusive.php:180
-#: includes/types/fa.php:1633 includes/types/foundation-icons.php:374
+#: includes/types/fa.php:1748 includes/types/foundation-icons.php:374
 #: includes/types/genericon.php:692
 msgid "Bold"
 msgstr ""
 
 #: includes/types/dashicons.php:385 includes/types/elusive.php:185
-#: includes/types/fa.php:1693 includes/types/foundation-icons.php:379
+#: includes/types/fa.php:1808 includes/types/foundation-icons.php:379
 #: includes/types/genericon.php:697
 msgid "Italic"
 msgstr ""
 
-#: includes/types/dashicons.php:390 includes/types/fa.php:1723
+#: includes/types/dashicons.php:390 includes/types/fa.php:1838
 msgid "Unordered List"
 msgstr ""
 
-#: includes/types/dashicons.php:395 includes/types/fa.php:1718
+#: includes/types/dashicons.php:395 includes/types/fa.php:1833
 msgid "Ordered List"
 msgstr ""
 
 #: includes/types/dashicons.php:405 includes/types/dashicons.php:510
-#: includes/types/elusive.php:105 includes/types/fa.php:1613
+#: includes/types/elusive.php:105 includes/types/fa.php:1728
 #: includes/types/foundation-icons.php:414
 msgid "Align Left"
 msgstr ""
 
 #: includes/types/dashicons.php:410 includes/types/dashicons.php:520
-#: includes/types/elusive.php:110 includes/types/fa.php:1618
+#: includes/types/elusive.php:110 includes/types/fa.php:1733
 #: includes/types/foundation-icons.php:419
 msgid "Align Center"
 msgstr ""
 
 #: includes/types/dashicons.php:415 includes/types/dashicons.php:515
-#: includes/types/elusive.php:115 includes/types/fa.php:1628
+#: includes/types/elusive.php:115 includes/types/fa.php:1743
 #: includes/types/foundation-icons.php:424
 msgid "Align Right"
 msgstr ""
@@ -347,13 +347,13 @@ msgstr ""
 msgid "Kitchensink"
 msgstr ""
 
-#: includes/types/dashicons.php:440 includes/types/fa.php:1798
+#: includes/types/dashicons.php:440 includes/types/fa.php:1913
 #: includes/types/foundation-icons.php:384
 msgid "Underline"
 msgstr ""
 
 #: includes/types/dashicons.php:445 includes/types/elusive.php:120
-#: includes/types/fa.php:1623 includes/types/foundation-icons.php:429
+#: includes/types/fa.php:1738 includes/types/foundation-icons.php:429
 msgid "Justify"
 msgstr ""
 
@@ -377,12 +377,12 @@ msgstr ""
 msgid "Custom Characters"
 msgstr ""
 
-#: includes/types/dashicons.php:480 includes/types/fa.php:1683
+#: includes/types/dashicons.php:480 includes/types/fa.php:1798
 #: includes/types/foundation-icons.php:444
 msgid "Indent"
 msgstr ""
 
-#: includes/types/dashicons.php:485 includes/types/fa.php:1688
+#: includes/types/dashicons.php:485 includes/types/fa.php:1803
 #: includes/types/foundation-icons.php:449
 msgid "Outdent"
 msgstr ""
@@ -391,12 +391,12 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: includes/types/dashicons.php:495 includes/types/fa.php:1753
+#: includes/types/dashicons.php:495 includes/types/fa.php:1868
 #: includes/types/foundation-icons.php:389
 msgid "Strikethrough"
 msgstr ""
 
-#: includes/types/dashicons.php:500 includes/types/fa.php:1703
+#: includes/types/dashicons.php:500 includes/types/fa.php:1818
 #: includes/types/foundation-icons.php:539
 msgid "Unlink"
 msgstr ""
@@ -410,15 +410,15 @@ msgid "Align None"
 msgstr ""
 
 #: includes/types/dashicons.php:530 includes/types/elusive.php:335
-#: includes/types/elusive.php:340 includes/types/fa.php:2698
+#: includes/types/elusive.php:340 includes/types/fa.php:2872
 #: includes/types/foundation-icons.php:784 includes/types/genericon.php:157
 msgid "Lock"
 msgstr ""
 
 #: includes/types/dashicons.php:535 includes/types/dashicons.php:540
-#: includes/types/elusive.php:725 includes/types/fa.php:2083
-#: includes/types/fa.php:2088 includes/types/fa.php:2093
-#: includes/types/fa.php:2098 includes/types/fa.php:2103
+#: includes/types/elusive.php:725 includes/types/fa.php:2227
+#: includes/types/fa.php:2232 includes/types/fa.php:2237
+#: includes/types/fa.php:2242 includes/types/fa.php:2247
 #: includes/types/foundation-icons.php:599
 msgid "Calendar"
 msgstr ""
@@ -440,13 +440,13 @@ msgid "Post Trash"
 msgstr ""
 
 #: includes/types/dashicons.php:565 includes/types/elusive.php:275
-#: includes/types/fa.php:2323 includes/types/genericon.php:682
+#: includes/types/fa.php:2467 includes/types/genericon.php:682
 msgid "Edit"
 msgstr ""
 
 #: includes/types/dashicons.php:570 includes/types/elusive.php:570
-#: includes/types/elusive.php:575 includes/types/fa.php:3318
-#: includes/types/fa.php:3323 includes/types/foundation-icons.php:859
+#: includes/types/elusive.php:575 includes/types/fa.php:3512
+#: includes/types/fa.php:3517 includes/types/foundation-icons.php:859
 #: includes/types/genericon.php:592
 msgid "Trash"
 msgstr ""
@@ -475,7 +475,7 @@ msgstr ""
 msgid "Left-Right"
 msgstr ""
 
-#: includes/types/dashicons.php:640 includes/types/fa.php:3083
+#: includes/types/dashicons.php:640 includes/types/fa.php:3277
 msgid "Sort"
 msgstr ""
 
@@ -493,9 +493,9 @@ msgstr ""
 
 #: includes/types/dashicons.php:660 includes/types/dashicons.php:665
 #: includes/types/dashicons.php:670 includes/types/elusive.php:525
-#: includes/types/elusive.php:530 includes/types/fa.php:3008
-#: includes/types/fa.php:3013 includes/types/fa.php:3018
-#: includes/types/fa.php:3023 includes/types/fa.php:3028
+#: includes/types/elusive.php:530 includes/types/fa.php:3192
+#: includes/types/fa.php:3197 includes/types/fa.php:3202
+#: includes/types/fa.php:3207 includes/types/fa.php:3212
 #: includes/types/foundation-icons.php:839 includes/types/genericon.php:262
 msgid "Share"
 msgstr ""
@@ -504,7 +504,7 @@ msgstr ""
 msgid "Twitter"
 msgstr ""
 
-#: includes/types/dashicons.php:680 includes/types/fa.php:2978
+#: includes/types/dashicons.php:680 includes/types/fa.php:3162
 #: includes/types/foundation-icons.php:834
 msgid "RSS"
 msgstr ""
@@ -558,7 +558,7 @@ msgid "Screen Options"
 msgstr ""
 
 #: includes/types/dashicons.php:760 includes/types/elusive.php:1045
-#: includes/types/fa.php:2628 includes/types/fa.php:2633
+#: includes/types/fa.php:2802 includes/types/fa.php:2807
 #: includes/types/foundation-icons.php:1074 includes/types/genericon.php:152
 msgid "Info"
 msgstr ""
@@ -572,7 +572,7 @@ msgid "Feedback"
 msgstr ""
 
 #: includes/types/dashicons.php:775 includes/types/elusive.php:1345
-#: includes/types/elusive.php:1350 includes/types/fa.php:2188
+#: includes/types/elusive.php:1350 includes/types/fa.php:2332
 #: includes/types/foundation-icons.php:609 includes/types/genericon.php:597
 msgid "Cloud"
 msgstr ""
@@ -582,7 +582,7 @@ msgid "Translation"
 msgstr ""
 
 #: includes/types/dashicons.php:785 includes/types/elusive.php:535
-#: includes/types/fa.php:3208 includes/types/genericon.php:367
+#: includes/types/fa.php:3402 includes/types/genericon.php:367
 msgid "Tag"
 msgstr ""
 
@@ -599,15 +599,15 @@ msgid "No"
 msgstr ""
 
 #: includes/types/dashicons.php:810 includes/types/elusive.php:430
-#: includes/types/fa.php:1328 includes/types/fa.php:1333
-#: includes/types/fa.php:2883 includes/types/fa.php:2888
+#: includes/types/fa.php:1406 includes/types/fa.php:1411
+#: includes/types/fa.php:3062 includes/types/fa.php:3067
 #: includes/types/foundation-icons.php:674 includes/types/genericon.php:172
 msgid "Plus"
 msgstr ""
 
 #: includes/types/dashicons.php:815 includes/types/elusive.php:365
-#: includes/types/fa.php:1318 includes/types/fa.php:1323
-#: includes/types/fa.php:2773 includes/types/fa.php:2778
+#: includes/types/fa.php:1396 includes/types/fa.php:1401
+#: includes/types/fa.php:2952 includes/types/fa.php:2957
 #: includes/types/foundation-icons.php:679
 #: includes/types/foundation-icons.php:684 includes/types/genericon.php:177
 msgid "Minus"
@@ -634,8 +634,8 @@ msgid "Star: Empty"
 msgstr ""
 
 #: includes/types/dashicons.php:845 includes/types/elusive.php:875
-#: includes/types/elusive.php:880 includes/types/fa.php:2433
-#: includes/types/fa.php:2438 includes/types/fa.php:2443
+#: includes/types/elusive.php:880 includes/types/fa.php:2587
+#: includes/types/fa.php:2592 includes/types/fa.php:2597
 #: includes/types/foundation-icons.php:724 includes/types/genericon.php:492
 msgid "Flag"
 msgstr ""
@@ -649,22 +649,22 @@ msgid "Back"
 msgstr ""
 
 #: includes/types/dashicons.php:860 includes/types/elusive.php:400
-#: includes/types/elusive.php:405 includes/types/fa.php:1858
-#: includes/types/fa.php:1863 includes/types/fa.php:1868
+#: includes/types/elusive.php:405 includes/types/fa.php:1975
+#: includes/types/fa.php:1980 includes/types/fa.php:1985
 #: includes/types/foundation-icons.php:894
 #: includes/types/foundation-icons.php:899 includes/types/genericon.php:327
 msgid "Play"
 msgstr ""
 
 #: includes/types/dashicons.php:865 includes/types/elusive.php:410
-#: includes/types/elusive.php:415 includes/types/fa.php:1843
-#: includes/types/fa.php:1848 includes/types/fa.php:1853
+#: includes/types/elusive.php:415 includes/types/fa.php:1960
+#: includes/types/fa.php:1965 includes/types/fa.php:1970
 #: includes/types/foundation-icons.php:904 includes/types/genericon.php:332
 msgid "Pause"
 msgstr ""
 
 #: includes/types/dashicons.php:870 includes/types/elusive.php:160
-#: includes/types/elusive.php:165 includes/types/fa.php:1838
+#: includes/types/elusive.php:165 includes/types/fa.php:1955
 msgid "Forward"
 msgstr ""
 
@@ -673,7 +673,7 @@ msgid "Skip Forward"
 msgstr ""
 
 #: includes/types/dashicons.php:880 includes/types/elusive.php:470
-#: includes/types/elusive.php:475 includes/types/fa.php:1738
+#: includes/types/elusive.php:475 includes/types/fa.php:1853
 msgid "Repeat"
 msgstr ""
 
@@ -685,12 +685,12 @@ msgstr ""
 msgid "Volume: Off"
 msgstr ""
 
-#: includes/types/dashicons.php:895 includes/types/fa.php:1913
+#: includes/types/dashicons.php:895 includes/types/fa.php:2052
 #: includes/types/foundation-icons.php:589
 msgid "Archive"
 msgstr ""
 
-#: includes/types/dashicons.php:905 includes/types/fa.php:2203
+#: includes/types/dashicons.php:905 includes/types/fa.php:2347
 #: includes/types/genericon.php:687
 msgid "Code"
 msgstr ""
@@ -739,8 +739,8 @@ msgstr ""
 msgid "Backup"
 msgstr ""
 
-#: includes/types/dashicons.php:970 includes/types/fa.php:2058
-#: includes/types/fa.php:2063
+#: includes/types/dashicons.php:970 includes/types/fa.php:2202
+#: includes/types/fa.php:2207
 msgid "Building"
 msgstr ""
 
@@ -749,7 +749,7 @@ msgid "Businessman"
 msgstr ""
 
 #: includes/types/dashicons.php:980 includes/types/elusive.php:735
-#: includes/types/fa.php:2108 includes/types/foundation-icons.php:229
+#: includes/types/fa.php:2252 includes/types/foundation-icons.php:229
 msgid "Camera"
 msgstr ""
 
@@ -773,7 +773,7 @@ msgstr ""
 msgid "Chart: Area"
 msgstr ""
 
-#: includes/types/dashicons.php:1010 includes/types/fa.php:2308
+#: includes/types/dashicons.php:1010 includes/types/fa.php:2452
 msgid "Desktop"
 msgstr ""
 
@@ -815,33 +815,33 @@ msgid "Portfolio"
 msgstr ""
 
 #: includes/types/dashicons.php:1075 includes/types/dashicons.php:1080
-#: includes/types/elusive.php:690 includes/types/fa.php:2028
+#: includes/types/elusive.php:690 includes/types/fa.php:2172
 #: includes/types/foundation-icons.php:999 includes/types/genericon.php:432
 msgid "Book"
 msgstr ""
 
 #: includes/types/dashicons.php:1085 includes/types/elusive.php:265
-#: includes/types/elusive.php:270 includes/types/fa.php:2318
+#: includes/types/elusive.php:270 includes/types/fa.php:2462
 #: includes/types/foundation-icons.php:709 includes/types/genericon.php:467
 msgid "Download"
 msgstr ""
 
 #: includes/types/dashicons.php:1090 includes/types/elusive.php:580
-#: includes/types/fa.php:3368 includes/types/foundation-icons.php:714
+#: includes/types/fa.php:3562 includes/types/foundation-icons.php:714
 msgid "Upload"
 msgstr ""
 
-#: includes/types/dashicons.php:1095 includes/types/fa.php:2178
+#: includes/types/dashicons.php:1095 includes/types/fa.php:2322
 #: includes/types/foundation-icons.php:604
 msgid "Clock"
 msgstr ""
 
-#: includes/types/dashicons.php:1100 includes/types/fa.php:2688
+#: includes/types/dashicons.php:1100 includes/types/fa.php:2862
 #: includes/types/foundation-icons.php:1084
 msgid "Lightbulb"
 msgstr ""
 
-#: includes/types/dashicons.php:1105 includes/types/fa.php:958
+#: includes/types/dashicons.php:1105 includes/types/fa.php:1030
 msgid "Money"
 msgstr ""
 
@@ -850,19 +850,19 @@ msgid "Palm Tree"
 msgstr ""
 
 #: includes/types/dashicons.php:1115 includes/types/elusive.php:1120
-#: includes/types/elusive.php:1125 includes/types/fa.php:2858
-#: includes/types/fa.php:2868 includes/types/genericon.php:542
+#: includes/types/elusive.php:1125 includes/types/fa.php:3037
+#: includes/types/fa.php:3047 includes/types/genericon.php:542
 msgid "Phone"
 msgstr ""
 
 #: includes/types/dashicons.php:1120 includes/types/elusive.php:515
-#: includes/types/elusive.php:520 includes/types/fa.php:2988
+#: includes/types/elusive.php:520 includes/types/fa.php:3172
 #: includes/types/genericon.php:247
 msgid "Search"
 msgstr ""
 
 #: includes/types/dashicons.php:1125 includes/types/dashicons.php:1130
-#: includes/types/fa.php:3033 includes/types/foundation-icons.php:1144
+#: includes/types/fa.php:3217 includes/types/foundation-icons.php:1144
 msgid "Shield"
 msgstr ""
 
@@ -891,7 +891,7 @@ msgstr ""
 msgid "Store"
 msgstr ""
 
-#: includes/types/dashicons.php:1165 includes/types/fa.php:3198
+#: includes/types/dashicons.php:1165 includes/types/fa.php:3392
 #: includes/types/genericon.php:572
 msgid "Tablet"
 msgstr ""
@@ -905,18 +905,18 @@ msgid "Tickets"
 msgstr ""
 
 #: includes/types/dashicons.php:1180 includes/types/elusive.php:555
-#: includes/types/fa.php:3243 includes/types/fa.php:3253
+#: includes/types/fa.php:3437 includes/types/fa.php:3447
 msgid "Thumbs Up"
 msgstr ""
 
 #: includes/types/dashicons.php:1185 includes/types/elusive.php:560
-#: includes/types/fa.php:3238 includes/types/fa.php:3248
+#: includes/types/fa.php:3432 includes/types/fa.php:3442
 msgid "Thumbs Down"
 msgstr ""
 
 #: includes/types/dashicons.php:1190 includes/types/elusive.php:345
-#: includes/types/elusive.php:350 includes/types/fa.php:3353
-#: includes/types/fa.php:3358 includes/types/foundation-icons.php:789
+#: includes/types/elusive.php:350 includes/types/fa.php:3547
+#: includes/types/fa.php:3552 includes/types/foundation-icons.php:789
 msgid "Unlock"
 msgstr ""
 
@@ -924,7 +924,7 @@ msgstr ""
 msgid "Vault"
 msgstr ""
 
-#: includes/types/dashicons.php:1215 includes/types/fa.php:3418
+#: includes/types/dashicons.php:1215 includes/types/fa.php:3627
 #: includes/types/genericon.php:582
 msgid "Warning"
 msgstr ""
@@ -946,79 +946,79 @@ msgid "Places"
 msgstr ""
 
 #: includes/types/elusive.php:95 includes/types/elusive.php:100
-#: includes/types/fa.php:1903
+#: includes/types/fa.php:2042
 msgid "Adjust"
 msgstr ""
 
-#: includes/types/elusive.php:125 includes/types/fa.php:1083
+#: includes/types/elusive.php:125 includes/types/fa.php:1157
 #: includes/types/genericon.php:402
 msgid "Arrow Up"
 msgstr ""
 
-#: includes/types/elusive.php:130 includes/types/fa.php:1068
+#: includes/types/elusive.php:130 includes/types/fa.php:1142
 #: includes/types/genericon.php:407
 msgid "Arrow Down"
 msgstr ""
 
-#: includes/types/elusive.php:135 includes/types/fa.php:1073
+#: includes/types/elusive.php:135 includes/types/fa.php:1147
 #: includes/types/genericon.php:412
 msgid "Arrow Left"
 msgstr ""
 
-#: includes/types/elusive.php:140 includes/types/fa.php:1078
+#: includes/types/elusive.php:140 includes/types/fa.php:1152
 #: includes/types/genericon.php:417
 msgid "Arrow Right"
 msgstr ""
 
-#: includes/types/elusive.php:145 includes/types/fa.php:1828
+#: includes/types/elusive.php:145 includes/types/fa.php:1945
 msgid "Fast Backward"
 msgstr ""
 
-#: includes/types/elusive.php:150 includes/types/fa.php:1873
+#: includes/types/elusive.php:150 includes/types/fa.php:1990
 msgid "Step Backward"
 msgstr ""
 
-#: includes/types/elusive.php:155 includes/types/fa.php:1808
+#: includes/types/elusive.php:155 includes/types/fa.php:1925
 msgid "Backward"
 msgstr ""
 
-#: includes/types/elusive.php:170 includes/types/fa.php:1878
+#: includes/types/elusive.php:170 includes/types/fa.php:1995
 msgid "Step Forward"
 msgstr ""
 
-#: includes/types/elusive.php:175 includes/types/fa.php:1833
+#: includes/types/elusive.php:175 includes/types/fa.php:1950
 #: includes/types/foundation-icons.php:924 includes/types/genericon.php:342
 msgid "Fast Forward"
 msgstr ""
 
-#: includes/types/elusive.php:190 includes/types/fa.php:1698
+#: includes/types/elusive.php:190 includes/types/fa.php:1813
 #: includes/types/foundation-icons.php:534 includes/types/genericon.php:657
 msgid "Link"
 msgstr ""
 
-#: includes/types/elusive.php:195 includes/types/fa.php:1123
-#: includes/types/fa.php:1143 includes/types/fa.php:2133
+#: includes/types/elusive.php:195 includes/types/fa.php:1197
+#: includes/types/fa.php:1217 includes/types/fa.php:2277
 msgid "Caret Up"
 msgstr ""
 
-#: includes/types/elusive.php:200 includes/types/fa.php:1108
-#: includes/types/fa.php:1128 includes/types/fa.php:2118
+#: includes/types/elusive.php:200 includes/types/fa.php:1182
+#: includes/types/fa.php:1202 includes/types/fa.php:2262
 msgid "Caret Down"
 msgstr ""
 
-#: includes/types/elusive.php:205 includes/types/fa.php:1113
-#: includes/types/fa.php:1133 includes/types/fa.php:2123
+#: includes/types/elusive.php:205 includes/types/fa.php:1187
+#: includes/types/fa.php:1207 includes/types/fa.php:2267
 msgid "Caret Left"
 msgstr ""
 
-#: includes/types/elusive.php:210 includes/types/fa.php:1118
-#: includes/types/fa.php:1138 includes/types/fa.php:2128
+#: includes/types/elusive.php:210 includes/types/fa.php:1192
+#: includes/types/fa.php:1212 includes/types/fa.php:2272
 msgid "Caret Right"
 msgstr ""
 
-#: includes/types/elusive.php:215 includes/types/fa.php:1293
-#: includes/types/fa.php:1298 includes/types/fa.php:2153
-#: includes/types/fa.php:2158 includes/types/fa.php:2163
+#: includes/types/elusive.php:215 includes/types/fa.php:1371
+#: includes/types/fa.php:1376 includes/types/fa.php:2297
+#: includes/types/fa.php:2302 includes/types/fa.php:2307
 #: includes/types/foundation-icons.php:699
 #: includes/types/foundation-icons.php:704
 msgid "Check"
@@ -1028,19 +1028,19 @@ msgstr ""
 msgid "Check Empty"
 msgstr ""
 
-#: includes/types/elusive.php:225 includes/types/fa.php:1183
+#: includes/types/elusive.php:225 includes/types/fa.php:1257
 msgid "Chevron Up"
 msgstr ""
 
-#: includes/types/elusive.php:230 includes/types/fa.php:1168
+#: includes/types/elusive.php:230 includes/types/fa.php:1242
 msgid "Chevron Down"
 msgstr ""
 
-#: includes/types/elusive.php:235 includes/types/fa.php:1173
+#: includes/types/elusive.php:235 includes/types/fa.php:1247
 msgid "Chevron Left"
 msgstr ""
 
-#: includes/types/elusive.php:240 includes/types/fa.php:1178
+#: includes/types/elusive.php:240 includes/types/fa.php:1252
 msgid "Chevron Right"
 msgstr ""
 
@@ -1060,7 +1060,7 @@ msgstr ""
 msgid "Circle Arrow Right"
 msgstr ""
 
-#: includes/types/elusive.php:280 includes/types/fa.php:1818
+#: includes/types/elusive.php:280 includes/types/fa.php:1935
 #: includes/types/foundation-icons.php:959
 msgid "Eject"
 msgstr ""
@@ -1090,13 +1090,13 @@ msgid "Indent Right"
 msgstr ""
 
 #: includes/types/elusive.php:325 includes/types/elusive.php:330
-#: includes/types/fa.php:1708 includes/types/fa.php:1713
+#: includes/types/fa.php:1823 includes/types/fa.php:1828
 #: includes/types/foundation-icons.php:774
 msgid "List"
 msgstr ""
 
 #: includes/types/elusive.php:355 includes/types/elusive.php:360
-#: includes/types/fa.php:2743
+#: includes/types/fa.php:2917
 msgid "Map Marker"
 msgstr ""
 
@@ -1125,8 +1125,8 @@ msgid "OK Sign"
 msgstr ""
 
 #: includes/types/elusive.php:420 includes/types/elusive.php:425
-#: includes/types/fa.php:1883 includes/types/fa.php:1888
-#: includes/types/fa.php:1893 includes/types/foundation-icons.php:909
+#: includes/types/fa.php:2000 includes/types/fa.php:2005
+#: includes/types/fa.php:2010 includes/types/foundation-icons.php:909
 #: includes/types/genericon.php:337
 msgid "Stop"
 msgstr ""
@@ -1135,13 +1135,13 @@ msgstr ""
 msgid "Plus Sign"
 msgstr ""
 
-#: includes/types/elusive.php:440 includes/types/fa.php:2898
+#: includes/types/elusive.php:440 includes/types/fa.php:3082
 #: includes/types/foundation-icons.php:524 includes/types/genericon.php:207
 msgid "Print"
 msgstr ""
 
-#: includes/types/elusive.php:445 includes/types/fa.php:2913
-#: includes/types/fa.php:2918 includes/types/fa.php:2923
+#: includes/types/elusive.php:445 includes/types/fa.php:3097
+#: includes/types/fa.php:3102 includes/types/fa.php:3107
 msgid "Question"
 msgstr ""
 
@@ -1153,7 +1153,7 @@ msgstr ""
 msgid "Record"
 msgstr ""
 
-#: includes/types/elusive.php:460 includes/types/fa.php:1523
+#: includes/types/elusive.php:460 includes/types/fa.php:1634
 #: includes/types/foundation-icons.php:804 includes/types/genericon.php:227
 msgid "Refresh"
 msgstr ""
@@ -1178,7 +1178,7 @@ msgstr ""
 msgid "Return"
 msgstr ""
 
-#: includes/types/elusive.php:505 includes/types/fa.php:2968
+#: includes/types/elusive.php:505 includes/types/fa.php:3152
 msgid "Retweet"
 msgstr ""
 
@@ -1186,19 +1186,19 @@ msgstr ""
 msgid "Reverse"
 msgstr ""
 
-#: includes/types/elusive.php:540 includes/types/fa.php:3218
+#: includes/types/elusive.php:540 includes/types/fa.php:3412
 msgid "Tasks"
 msgstr ""
 
-#: includes/types/elusive.php:545 includes/types/fa.php:1773
+#: includes/types/elusive.php:545 includes/types/fa.php:1888
 msgid "Text Height"
 msgstr ""
 
-#: includes/types/elusive.php:550 includes/types/fa.php:1778
+#: includes/types/elusive.php:550 includes/types/fa.php:1893
 msgid "Text Width"
 msgstr ""
 
-#: includes/types/elusive.php:565 includes/types/fa.php:3278
+#: includes/types/elusive.php:565 includes/types/fa.php:3472
 msgid "Tint"
 msgstr ""
 
@@ -1206,11 +1206,11 @@ msgstr ""
 msgid "View Mode"
 msgstr ""
 
-#: includes/types/elusive.php:590 includes/types/fa.php:3413
+#: includes/types/elusive.php:590 includes/types/fa.php:3622
 msgid "Volume Up"
 msgstr ""
 
-#: includes/types/elusive.php:595 includes/types/fa.php:3403
+#: includes/types/elusive.php:595 includes/types/fa.php:3612
 msgid "Volume Down"
 msgstr ""
 
@@ -1235,6 +1235,7 @@ msgid "Adult"
 msgstr ""
 
 #: includes/types/elusive.php:650 includes/types/elusive.php:655
+#: includes/types/fa.php:2022 includes/types/fa.php:2027
 msgid "Address Book"
 msgstr ""
 
@@ -1242,7 +1243,7 @@ msgstr ""
 msgid "ASL"
 msgstr ""
 
-#: includes/types/elusive.php:665 includes/types/fa.php:1933
+#: includes/types/elusive.php:665 includes/types/fa.php:2072
 #: includes/types/foundation-icons.php:974
 msgid "Asterisk"
 msgstr ""
@@ -1251,27 +1252,27 @@ msgstr ""
 msgid "Ban Circle"
 msgstr ""
 
-#: includes/types/elusive.php:675 includes/types/fa.php:1953
+#: includes/types/elusive.php:675 includes/types/fa.php:2092
 msgid "Barcode"
 msgstr ""
 
-#: includes/types/elusive.php:680 includes/types/fa.php:1993
-#: includes/types/fa.php:1998 includes/types/fa.php:2003
-#: includes/types/fa.php:2008
+#: includes/types/elusive.php:680 includes/types/fa.php:2137
+#: includes/types/fa.php:2142 includes/types/fa.php:2147
+#: includes/types/fa.php:2152
 msgid "Bell"
 msgstr ""
 
-#: includes/types/elusive.php:685 includes/types/fa.php:158
+#: includes/types/elusive.php:685 includes/types/fa.php:159
 #: includes/types/foundation-icons.php:119
 msgid "Blind"
 msgstr ""
 
-#: includes/types/elusive.php:695 includes/types/fa.php:163
+#: includes/types/elusive.php:695 includes/types/fa.php:164
 #: includes/types/foundation-icons.php:124
 msgid "Braille"
 msgstr ""
 
-#: includes/types/elusive.php:700 includes/types/fa.php:2048
+#: includes/types/elusive.php:700 includes/types/fa.php:2192
 msgid "Briefcase"
 msgstr ""
 
@@ -1287,7 +1288,7 @@ msgstr ""
 msgid "Bulb"
 msgstr ""
 
-#: includes/types/elusive.php:720 includes/types/fa.php:2068
+#: includes/types/elusive.php:720 includes/types/fa.php:2212
 msgid "Bullhorn"
 msgstr ""
 
@@ -1295,7 +1296,7 @@ msgstr ""
 msgid "Calendar Sign"
 msgstr ""
 
-#: includes/types/elusive.php:740 includes/types/fa.php:1548
+#: includes/types/elusive.php:740 includes/types/fa.php:1661
 msgid "Car"
 msgstr ""
 
@@ -1303,43 +1304,44 @@ msgstr ""
 msgid "CC"
 msgstr ""
 
-#: includes/types/elusive.php:750 includes/types/fa.php:2148
+#: includes/types/elusive.php:750 includes/types/fa.php:2292
 msgid "Certificate"
 msgstr ""
 
-#: includes/types/elusive.php:755 includes/types/fa.php:2168
+#: includes/types/elusive.php:755 includes/types/fa.php:2312
 msgid "Child"
 msgstr ""
 
 #: includes/types/elusive.php:760 includes/types/elusive.php:765
-#: includes/types/fa.php:1518 includes/types/genericon.php:452
+#: includes/types/fa.php:1629 includes/types/genericon.php:452
 msgid "Cog"
 msgstr ""
 
-#: includes/types/elusive.php:770 includes/types/fa.php:2218
+#: includes/types/elusive.php:770 includes/types/fa.php:2362
 msgid "Cogs"
 msgstr ""
 
 #: includes/types/elusive.php:775 includes/types/elusive.php:780
-#: includes/types/fa.php:2223 includes/types/fa.php:2228
+#: includes/types/fa.php:2367 includes/types/fa.php:2372
 #: includes/types/foundation-icons.php:614 includes/types/genericon.php:352
 msgid "Comment"
 msgstr ""
 
 #: includes/types/elusive.php:785 includes/types/elusive.php:790
-#: includes/types/fa.php:2253 includes/types/foundation-icons.php:234
+#: includes/types/fa.php:2397 includes/types/foundation-icons.php:234
 msgid "Compass"
 msgstr ""
 
-#: includes/types/elusive.php:795 includes/types/fa.php:1458
-#: includes/types/fa.php:1463 includes/types/fa.php:2263
+#: includes/types/elusive.php:795 includes/types/fa.php:1567
+#: includes/types/fa.php:1572 includes/types/fa.php:2407
 #: includes/types/foundation-icons.php:339
 msgid "Credit Card"
 msgstr ""
 
 #: includes/types/elusive.php:805 includes/types/elusive.php:810
-#: includes/types/fa.php:2338 includes/types/fa.php:2343
-#: includes/types/fa.php:2348
+#: includes/types/fa.php:2482 includes/types/fa.php:2487
+#: includes/types/fa.php:2492 includes/types/fa.php:2497
+#: includes/types/fa.php:2502
 msgid "Envelope"
 msgstr ""
 
@@ -1359,37 +1361,37 @@ msgstr ""
 msgid "Eye Open"
 msgstr ""
 
-#: includes/types/elusive.php:840 includes/types/fa.php:2728
+#: includes/types/elusive.php:840 includes/types/fa.php:2902
 #: includes/types/foundation-icons.php:154
 msgid "Male"
 msgstr ""
 
-#: includes/types/elusive.php:845 includes/types/fa.php:2408
+#: includes/types/elusive.php:845 includes/types/fa.php:2562
 #: includes/types/foundation-icons.php:159
 msgid "Female"
 msgstr ""
 
 #: includes/types/elusive.php:850 includes/types/elusive.php:855
-#: includes/types/fa.php:1228 includes/types/fa.php:1233
+#: includes/types/fa.php:1304 includes/types/fa.php:1309
 #: includes/types/foundation-icons.php:554
 msgid "File"
 msgstr ""
 
-#: includes/types/elusive.php:860 includes/types/fa.php:2413
+#: includes/types/elusive.php:860 includes/types/fa.php:2567
 msgid "Film"
 msgstr ""
 
-#: includes/types/elusive.php:870 includes/types/fa.php:2423
+#: includes/types/elusive.php:870 includes/types/fa.php:2577
 msgid "Fire"
 msgstr ""
 
-#: includes/types/elusive.php:885 includes/types/fa.php:2458
-#: includes/types/fa.php:2468 includes/types/foundation-icons.php:649
+#: includes/types/elusive.php:885 includes/types/fa.php:2612
+#: includes/types/fa.php:2622 includes/types/foundation-icons.php:649
 msgid "Folder"
 msgstr ""
 
-#: includes/types/elusive.php:890 includes/types/fa.php:2463
-#: includes/types/fa.php:2473
+#: includes/types/elusive.php:890 includes/types/fa.php:2617
+#: includes/types/fa.php:2627
 msgid "Folder Open"
 msgstr ""
 
@@ -1401,7 +1403,7 @@ msgstr ""
 msgid "Folder Sign"
 msgstr ""
 
-#: includes/types/elusive.php:905 includes/types/fa.php:1673
+#: includes/types/elusive.php:905 includes/types/fa.php:1788
 msgid "Font"
 msgstr ""
 
@@ -1409,11 +1411,11 @@ msgstr ""
 msgid "Font Size"
 msgstr ""
 
-#: includes/types/elusive.php:915 includes/types/fa.php:2508
+#: includes/types/elusive.php:915 includes/types/fa.php:2662
 msgid "Gift"
 msgstr ""
 
-#: includes/types/elusive.php:920 includes/types/fa.php:2513
+#: includes/types/elusive.php:920 includes/types/fa.php:2667
 msgid "Glass"
 msgstr ""
 
@@ -1422,7 +1424,7 @@ msgid "Glasses"
 msgstr ""
 
 #: includes/types/elusive.php:930 includes/types/elusive.php:935
-#: includes/types/fa.php:2518
+#: includes/types/fa.php:2672
 msgid "Globe"
 msgstr ""
 
@@ -1431,7 +1433,7 @@ msgid "Graph"
 msgstr ""
 
 #: includes/types/elusive.php:950 includes/types/elusive.php:955
-#: includes/types/fa.php:2528
+#: includes/types/fa.php:2682
 msgid "Group"
 msgstr ""
 
@@ -1439,27 +1441,27 @@ msgstr ""
 msgid "Guide Dog"
 msgstr ""
 
-#: includes/types/elusive.php:965 includes/types/fa.php:1203
+#: includes/types/elusive.php:965 includes/types/fa.php:1277
 msgid "Hand Up"
 msgstr ""
 
-#: includes/types/elusive.php:970 includes/types/fa.php:1188
+#: includes/types/elusive.php:970 includes/types/fa.php:1262
 msgid "Hand Down"
 msgstr ""
 
-#: includes/types/elusive.php:975 includes/types/fa.php:1193
+#: includes/types/elusive.php:975 includes/types/fa.php:1267
 msgid "Hand Left"
 msgstr ""
 
-#: includes/types/elusive.php:980 includes/types/fa.php:1198
+#: includes/types/elusive.php:980 includes/types/fa.php:1272
 msgid "Hand Right"
 msgstr ""
 
-#: includes/types/elusive.php:985 includes/types/fa.php:2568
+#: includes/types/elusive.php:985 includes/types/fa.php:2727
 msgid "HDD"
 msgstr ""
 
-#: includes/types/elusive.php:990 includes/types/fa.php:2578
+#: includes/types/elusive.php:990 includes/types/fa.php:2737
 msgid "Headphones"
 msgstr ""
 
@@ -1468,7 +1470,7 @@ msgid "Hearing Impaired"
 msgstr ""
 
 #: includes/types/elusive.php:1000 includes/types/elusive.php:1005
-#: includes/types/fa.php:1413 includes/types/fa.php:1418
+#: includes/types/fa.php:1495 includes/types/fa.php:1500
 #: includes/types/foundation-icons.php:669 includes/types/genericon.php:507
 msgid "Heart"
 msgstr ""
@@ -1477,9 +1479,9 @@ msgstr ""
 msgid "Heart Empty"
 msgstr ""
 
-#: includes/types/elusive.php:1015 includes/types/fa.php:2588
-#: includes/types/fa.php:2593 includes/types/fa.php:2598
-#: includes/types/fa.php:2603 includes/types/fa.php:2608
+#: includes/types/elusive.php:1015 includes/types/fa.php:2747
+#: includes/types/fa.php:2752 includes/types/fa.php:2757
+#: includes/types/fa.php:2762 includes/types/fa.php:2767
 msgid "Hourglass"
 msgstr ""
 
@@ -1488,21 +1490,21 @@ msgid "Idea"
 msgstr ""
 
 #: includes/types/elusive.php:1030 includes/types/elusive.php:1035
-#: includes/types/elusive.php:1040 includes/types/fa.php:2618
+#: includes/types/elusive.php:1040 includes/types/fa.php:2777
 msgid "Inbox"
 msgstr ""
 
-#: includes/types/elusive.php:1050 includes/types/fa.php:2638
+#: includes/types/elusive.php:1050 includes/types/fa.php:2812
 #: includes/types/foundation-icons.php:1079 includes/types/genericon.php:512
 msgid "Key"
 msgstr ""
 
 #: includes/types/elusive.php:1055 includes/types/elusive.php:1060
-#: includes/types/fa.php:2653 includes/types/foundation-icons.php:239
+#: includes/types/fa.php:2827 includes/types/foundation-icons.php:239
 msgid "Laptop"
 msgstr ""
 
-#: includes/types/elusive.php:1065 includes/types/fa.php:2658
+#: includes/types/elusive.php:1065 includes/types/fa.php:2832
 msgid "Leaf"
 msgstr ""
 
@@ -1510,11 +1512,11 @@ msgstr ""
 msgid "Lines"
 msgstr ""
 
-#: includes/types/elusive.php:1075 includes/types/fa.php:2703
+#: includes/types/elusive.php:1075 includes/types/fa.php:2877
 msgid "Magic"
 msgstr ""
 
-#: includes/types/elusive.php:1080 includes/types/fa.php:2708
+#: includes/types/elusive.php:1080 includes/types/fa.php:2882
 msgid "Magnet"
 msgstr ""
 
@@ -1522,7 +1524,7 @@ msgstr ""
 msgid "Mic"
 msgstr ""
 
-#: includes/types/elusive.php:1090 includes/types/fa.php:2803
+#: includes/types/elusive.php:1090 includes/types/fa.php:2982
 #: includes/types/foundation-icons.php:1099
 msgid "Music"
 msgstr ""
@@ -1532,8 +1534,8 @@ msgid "Paper Clip"
 msgstr ""
 
 #: includes/types/elusive.php:1105 includes/types/elusive.php:1110
-#: includes/types/fa.php:2843 includes/types/fa.php:2848
-#: includes/types/fa.php:2853 includes/types/foundation-icons.php:814
+#: includes/types/fa.php:3022 includes/types/fa.php:3027
+#: includes/types/fa.php:3032 includes/types/foundation-icons.php:814
 msgid "Pencil"
 msgstr ""
 
@@ -1546,16 +1548,16 @@ msgstr ""
 msgid "Photo"
 msgstr ""
 
-#: includes/types/elusive.php:1140 includes/types/fa.php:2873
+#: includes/types/elusive.php:1140 includes/types/fa.php:3052
 #: includes/types/genericon.php:547
 msgid "Picture"
 msgstr ""
 
-#: includes/types/elusive.php:1145 includes/types/fa.php:1563
+#: includes/types/elusive.php:1145 includes/types/fa.php:1676
 msgid "Plane"
 msgstr ""
 
-#: includes/types/elusive.php:1150
+#: includes/types/elusive.php:1150 includes/types/fa.php:3077
 msgid "Podcast"
 msgstr ""
 
@@ -1563,7 +1565,7 @@ msgstr ""
 msgid "Puzzle"
 msgstr ""
 
-#: includes/types/elusive.php:1160 includes/types/fa.php:2908
+#: includes/types/elusive.php:1160 includes/types/fa.php:3092
 msgid "QR Code"
 msgstr ""
 
@@ -1571,7 +1573,7 @@ msgstr ""
 msgid "Quotes"
 msgstr ""
 
-#: includes/types/elusive.php:1175 includes/types/fa.php:2938
+#: includes/types/elusive.php:1175 includes/types/fa.php:3122
 msgid "Random"
 msgstr ""
 
@@ -1587,7 +1589,7 @@ msgstr ""
 msgid "Screenshot"
 msgstr ""
 
-#: includes/types/elusive.php:1200 includes/types/fa.php:3038
+#: includes/types/elusive.php:1200 includes/types/fa.php:3222
 #: includes/types/foundation-icons.php:369
 msgid "Shopping Cart"
 msgstr ""
@@ -1596,7 +1598,7 @@ msgstr ""
 msgid "Shopping Cart Sign"
 msgstr ""
 
-#: includes/types/elusive.php:1210 includes/types/fa.php:3063
+#: includes/types/elusive.php:1210 includes/types/fa.php:3252
 msgid "Signal"
 msgstr ""
 
@@ -1604,8 +1606,9 @@ msgstr ""
 msgid "Speaker"
 msgstr ""
 
-#: includes/types/elusive.php:1230 includes/types/fa.php:3373
-#: includes/types/genericon.php:377
+#: includes/types/elusive.php:1230 includes/types/fa.php:3567
+#: includes/types/fa.php:3572 includes/types/fa.php:3577
+#: includes/types/fa.php:3582 includes/types/genericon.php:377
 msgid "User"
 msgstr ""
 
@@ -1630,23 +1633,23 @@ msgstr ""
 msgid "Torso"
 msgstr ""
 
-#: includes/types/elusive.php:1265 includes/types/fa.php:1603
-#: includes/types/fa.php:1608 includes/types/foundation-icons.php:179
+#: includes/types/elusive.php:1265 includes/types/fa.php:1716
+#: includes/types/fa.php:1721 includes/types/foundation-icons.php:179
 msgid "Wheelchair"
 msgstr ""
 
 #: includes/types/elusive.php:1270 includes/types/elusive.php:1275
-#: includes/types/fa.php:3428 includes/types/foundation-icons.php:874
+#: includes/types/fa.php:3662 includes/types/foundation-icons.php:874
 msgid "Wrench"
 msgstr ""
 
-#: includes/types/elusive.php:1280 includes/types/fa.php:188
+#: includes/types/elusive.php:1280 includes/types/fa.php:189
 #: includes/types/foundation-icons.php:149
 msgid "Universal Access"
 msgstr ""
 
-#: includes/types/elusive.php:1285 includes/types/fa.php:2033
-#: includes/types/fa.php:2038 includes/types/foundation-icons.php:594
+#: includes/types/elusive.php:1285 includes/types/fa.php:2177
+#: includes/types/fa.php:2182 includes/types/foundation-icons.php:594
 #: includes/types/foundation-icons.php:1004
 msgid "Bookmark"
 msgstr ""
@@ -1659,7 +1662,7 @@ msgstr ""
 msgid "Home (iPhone)"
 msgstr ""
 
-#: includes/types/elusive.php:1320 includes/types/fa.php:3213
+#: includes/types/elusive.php:1320 includes/types/fa.php:3407
 msgid "Tags"
 msgstr ""
 
@@ -1724,1012 +1727,1066 @@ msgstr ""
 msgid "Web Application"
 msgstr ""
 
-#: includes/types/fa.php:143
+#: includes/types/fa.php:144
 msgid "American Sign Language"
 msgstr ""
 
-#: includes/types/fa.php:148
+#: includes/types/fa.php:149
 msgid "Audio Description"
 msgstr ""
 
-#: includes/types/fa.php:153
+#: includes/types/fa.php:154
 msgid "Assistive Listening Systems"
 msgstr ""
 
-#: includes/types/fa.php:168
+#: includes/types/fa.php:169
 msgid "Deaf"
 msgstr ""
 
-#: includes/types/fa.php:173
+#: includes/types/fa.php:174
 msgid "Low Vision"
 msgstr ""
 
-#: includes/types/fa.php:178
+#: includes/types/fa.php:179
 msgid "Phone Volume Control"
 msgstr ""
 
-#: includes/types/fa.php:183
+#: includes/types/fa.php:184
 msgid "Sign Language"
 msgstr ""
 
-#: includes/types/fa.php:903
+#: includes/types/fa.php:973
 msgid "Area Chart"
 msgstr ""
 
-#: includes/types/fa.php:908
+#: includes/types/fa.php:978
 msgid "Bar Chart"
 msgstr ""
 
-#: includes/types/fa.php:913
+#: includes/types/fa.php:983
 msgid "Line Chart"
 msgstr ""
 
-#: includes/types/fa.php:918
+#: includes/types/fa.php:988
 msgid "Pie Chart"
 msgstr ""
 
-#: includes/types/fa.php:923 includes/types/foundation-icons.php:294
+#: includes/types/fa.php:995 includes/types/foundation-icons.php:294
 #: includes/types/foundation-icons.php:299
 msgid "Bitcoin"
 msgstr ""
 
-#: includes/types/fa.php:928 includes/types/foundation-icons.php:304
+#: includes/types/fa.php:1000 includes/types/foundation-icons.php:304
 msgid "Dollar"
 msgstr ""
 
-#: includes/types/fa.php:933
+#: includes/types/fa.php:1005
 msgid "Euro"
 msgstr ""
 
-#: includes/types/fa.php:938 includes/types/fa.php:943
+#: includes/types/fa.php:1010 includes/types/fa.php:1015
 msgid "GBP"
 msgstr ""
 
-#: includes/types/fa.php:948
+#: includes/types/fa.php:1020
 msgid "GG"
 msgstr ""
 
-#: includes/types/fa.php:953
+#: includes/types/fa.php:1025
 msgid "Israeli Sheqel"
 msgstr ""
 
-#: includes/types/fa.php:963
+#: includes/types/fa.php:1035
 msgid "Rouble"
 msgstr ""
 
-#: includes/types/fa.php:968
+#: includes/types/fa.php:1040
 msgid "Rupee"
 msgstr ""
 
-#: includes/types/fa.php:973
+#: includes/types/fa.php:1045
 msgid "Turkish Lira"
 msgstr ""
 
-#: includes/types/fa.php:978
+#: includes/types/fa.php:1050
 msgid "Won"
 msgstr ""
 
-#: includes/types/fa.php:983 includes/types/foundation-icons.php:319
+#: includes/types/fa.php:1055 includes/types/foundation-icons.php:319
 msgid "Yen"
 msgstr ""
 
-#: includes/types/fa.php:988
+#: includes/types/fa.php:1062
 msgid "Angle Down"
 msgstr ""
 
-#: includes/types/fa.php:993
+#: includes/types/fa.php:1067
 msgid "Angle Left"
 msgstr ""
 
-#: includes/types/fa.php:998
+#: includes/types/fa.php:1072
 msgid "Angle Right"
 msgstr ""
 
-#: includes/types/fa.php:1003
+#: includes/types/fa.php:1077
 msgid "Angle Up"
 msgstr ""
 
-#: includes/types/fa.php:1008
+#: includes/types/fa.php:1082
 msgid "Angle Double Down"
 msgstr ""
 
-#: includes/types/fa.php:1013
+#: includes/types/fa.php:1087
 msgid "Angle Double Left"
 msgstr ""
 
-#: includes/types/fa.php:1018
+#: includes/types/fa.php:1092
 msgid "Angle Double Right"
 msgstr ""
 
-#: includes/types/fa.php:1023
+#: includes/types/fa.php:1097
 msgid "Angle Double Up"
 msgstr ""
 
-#: includes/types/fa.php:1028 includes/types/fa.php:1048
+#: includes/types/fa.php:1102 includes/types/fa.php:1122
 msgid "Arrow Circle Down"
 msgstr ""
 
-#: includes/types/fa.php:1033 includes/types/fa.php:1053
+#: includes/types/fa.php:1107 includes/types/fa.php:1127
 msgid "Arrow Circle Left"
 msgstr ""
 
-#: includes/types/fa.php:1038 includes/types/fa.php:1058
+#: includes/types/fa.php:1112 includes/types/fa.php:1132
 msgid "Arrow Circle Right"
 msgstr ""
 
-#: includes/types/fa.php:1043 includes/types/fa.php:1063
+#: includes/types/fa.php:1117 includes/types/fa.php:1137
 msgid "Arrow Circle Up"
 msgstr ""
 
-#: includes/types/fa.php:1088 includes/types/fa.php:1093
-#: includes/types/fa.php:1098 includes/types/fa.php:1103
-#: includes/types/fa.php:1803 includes/types/fa.php:1918
-#: includes/types/fa.php:1923 includes/types/fa.php:1928
+#: includes/types/fa.php:1162 includes/types/fa.php:1167
+#: includes/types/fa.php:1172 includes/types/fa.php:1177
+#: includes/types/fa.php:1920 includes/types/fa.php:2057
+#: includes/types/fa.php:2062 includes/types/fa.php:2067
 #: includes/types/foundation-icons.php:52
 msgid "Arrows"
 msgstr ""
 
-#: includes/types/fa.php:1148
+#: includes/types/fa.php:1222
 msgid "Chevron Circle Down"
 msgstr ""
 
-#: includes/types/fa.php:1153
+#: includes/types/fa.php:1227
 msgid "Chevron Circle Left"
 msgstr ""
 
-#: includes/types/fa.php:1158
+#: includes/types/fa.php:1232
 msgid "Chevron Circle Right"
 msgstr ""
 
-#: includes/types/fa.php:1163
+#: includes/types/fa.php:1237
 msgid "Chevron Circle Up"
 msgstr ""
 
-#: includes/types/fa.php:1208
+#: includes/types/fa.php:1282
 msgid "Long Arrow Down"
 msgstr ""
 
-#: includes/types/fa.php:1213
+#: includes/types/fa.php:1287
 msgid "Long Arrow Left"
 msgstr ""
 
-#: includes/types/fa.php:1218
+#: includes/types/fa.php:1292
 msgid "Long Arrow Right"
 msgstr ""
 
-#: includes/types/fa.php:1223
+#: includes/types/fa.php:1297
 msgid "Long Arrow Up"
 msgstr ""
 
-#: includes/types/fa.php:1238 includes/types/fa.php:1243
+#: includes/types/fa.php:1314 includes/types/fa.php:1319
 msgid "File: Text"
 msgstr ""
 
-#: includes/types/fa.php:1248
+#: includes/types/fa.php:1324
 msgid "File: Archive"
 msgstr ""
 
-#: includes/types/fa.php:1253
+#: includes/types/fa.php:1329
 msgid "File: Audio"
 msgstr ""
 
-#: includes/types/fa.php:1258
+#: includes/types/fa.php:1334
 msgid "File: Code"
 msgstr ""
 
-#: includes/types/fa.php:1263
+#: includes/types/fa.php:1339
 msgid "File: Excel"
 msgstr ""
 
-#: includes/types/fa.php:1268
+#: includes/types/fa.php:1344
 msgid "File: Image"
 msgstr ""
 
-#: includes/types/fa.php:1273
+#: includes/types/fa.php:1349
 msgid "File: PDF"
 msgstr ""
 
-#: includes/types/fa.php:1278
+#: includes/types/fa.php:1354
 msgid "File: Powerpoint"
 msgstr ""
 
-#: includes/types/fa.php:1283
+#: includes/types/fa.php:1359
 msgid "File: Video"
 msgstr ""
 
-#: includes/types/fa.php:1288
+#: includes/types/fa.php:1364
 msgid "File: Word"
 msgstr ""
 
-#: includes/types/fa.php:1303 includes/types/fa.php:1308
-#: includes/types/fa.php:1513 includes/types/fa.php:2173
+#: includes/types/fa.php:1381 includes/types/fa.php:1386
+#: includes/types/fa.php:1624 includes/types/fa.php:2317
 msgid "Circle"
 msgstr ""
 
-#: includes/types/fa.php:1313 includes/types/genericon.php:462
+#: includes/types/fa.php:1391 includes/types/genericon.php:462
 msgid "Dot"
 msgstr ""
 
-#: includes/types/fa.php:1338 includes/types/fa.php:1343
+#: includes/types/fa.php:1416 includes/types/fa.php:1421
 msgid "Square"
 msgstr ""
 
-#: includes/types/fa.php:1348
+#: includes/types/fa.php:1428
 msgid "Genderless"
 msgstr ""
 
-#: includes/types/fa.php:1353 includes/types/fa.php:1358
-#: includes/types/fa.php:1363 includes/types/fa.php:1368
-#: includes/types/fa.php:1373
+#: includes/types/fa.php:1433 includes/types/fa.php:1438
+#: includes/types/fa.php:1443 includes/types/fa.php:1448
+#: includes/types/fa.php:1453
 msgid "Mars"
 msgstr ""
 
-#: includes/types/fa.php:1378
+#: includes/types/fa.php:1458
 msgid "Mercury"
 msgstr ""
 
-#: includes/types/fa.php:1383
+#: includes/types/fa.php:1463
 msgid "Neuter"
 msgstr ""
 
-#: includes/types/fa.php:1388 includes/types/fa.php:1393
+#: includes/types/fa.php:1468 includes/types/fa.php:1473
 msgid "Transgender"
 msgstr ""
 
-#: includes/types/fa.php:1398 includes/types/fa.php:1403
+#: includes/types/fa.php:1478 includes/types/fa.php:1483
 msgid "Venus"
 msgstr ""
 
-#: includes/types/fa.php:1408
+#: includes/types/fa.php:1488
 msgid "Venus + Mars"
 msgstr ""
 
-#: includes/types/fa.php:1423
+#: includes/types/fa.php:1505
 msgid "Heartbeat"
 msgstr ""
 
-#: includes/types/fa.php:1428 includes/types/fa.php:1433
+#: includes/types/fa.php:1510 includes/types/fa.php:1515
 msgid "Hospital"
 msgstr ""
 
-#: includes/types/fa.php:1438
+#: includes/types/fa.php:1520
 msgid "Medkit"
 msgstr ""
 
-#: includes/types/fa.php:1443
+#: includes/types/fa.php:1525
 msgid "Stethoscope"
 msgstr ""
 
-#: includes/types/fa.php:1448
+#: includes/types/fa.php:1530 includes/types/fa.php:1535
+#: includes/types/fa.php:1540 includes/types/fa.php:1545
+#: includes/types/fa.php:1550
+msgid "Thermometer"
+msgstr ""
+
+#: includes/types/fa.php:1555
 msgid "User MD"
 msgstr ""
 
-#: includes/types/fa.php:1528
+#: includes/types/fa.php:1639
 msgid "Spinner"
 msgstr ""
 
-#: includes/types/fa.php:1533
+#: includes/types/fa.php:1646
 msgid "Ambulance"
 msgstr ""
 
-#: includes/types/fa.php:1538
+#: includes/types/fa.php:1651
 msgid "Bicycle"
 msgstr ""
 
-#: includes/types/fa.php:1543
+#: includes/types/fa.php:1656
 msgid "Bus"
 msgstr ""
 
-#: includes/types/fa.php:1553
+#: includes/types/fa.php:1666
 msgid "Fighter Jet"
 msgstr ""
 
-#: includes/types/fa.php:1558
+#: includes/types/fa.php:1671
 msgid "Motorcycle"
 msgstr ""
 
-#: includes/types/fa.php:1568
+#: includes/types/fa.php:1681
 msgid "Rocket"
 msgstr ""
 
-#: includes/types/fa.php:1573
+#: includes/types/fa.php:1686
 msgid "Ship"
 msgstr ""
 
-#: includes/types/fa.php:1578
+#: includes/types/fa.php:1691
 msgid "Space Shuttle"
 msgstr ""
 
-#: includes/types/fa.php:1583
+#: includes/types/fa.php:1696
 msgid "Subway"
 msgstr ""
 
-#: includes/types/fa.php:1588
+#: includes/types/fa.php:1701
 msgid "Taxi"
 msgstr ""
 
-#: includes/types/fa.php:1593
+#: includes/types/fa.php:1706
 msgid "Train"
 msgstr ""
 
-#: includes/types/fa.php:1598
+#: includes/types/fa.php:1711
 msgid "Truck"
 msgstr ""
 
-#: includes/types/fa.php:1638 includes/types/foundation-icons.php:1009
+#: includes/types/fa.php:1753 includes/types/foundation-icons.php:1009
 msgid "Clipboard"
 msgstr ""
 
-#: includes/types/fa.php:1643
+#: includes/types/fa.php:1758
 msgid "Columns"
 msgstr ""
 
-#: includes/types/fa.php:1648
+#: includes/types/fa.php:1763
 msgid "Copy"
 msgstr ""
 
-#: includes/types/fa.php:1653
+#: includes/types/fa.php:1768
 msgid "Cut"
 msgstr ""
 
-#: includes/types/fa.php:1658
+#: includes/types/fa.php:1773
 msgid "Paste"
 msgstr ""
 
-#: includes/types/fa.php:1663 includes/types/fa.php:2353
+#: includes/types/fa.php:1778 includes/types/fa.php:2507
 msgid "Eraser"
 msgstr ""
 
-#: includes/types/fa.php:1668
+#: includes/types/fa.php:1783
 msgid "Files"
 msgstr ""
 
-#: includes/types/fa.php:1678
+#: includes/types/fa.php:1793
 msgid "Header"
 msgstr ""
 
-#: includes/types/fa.php:1728 includes/types/foundation-icons.php:809
+#: includes/types/fa.php:1843 includes/types/foundation-icons.php:809
 msgid "Paperclip"
 msgstr ""
 
-#: includes/types/fa.php:1733
+#: includes/types/fa.php:1848
 msgid "Paragraph"
 msgstr ""
 
-#: includes/types/fa.php:1748 includes/types/foundation-icons.php:529
+#: includes/types/fa.php:1863 includes/types/foundation-icons.php:529
 msgid "Save"
 msgstr ""
 
-#: includes/types/fa.php:1758 includes/types/foundation-icons.php:409
+#: includes/types/fa.php:1873 includes/types/foundation-icons.php:409
 msgid "Subscript"
 msgstr ""
 
-#: includes/types/fa.php:1763 includes/types/foundation-icons.php:404
+#: includes/types/fa.php:1878 includes/types/foundation-icons.php:404
 msgid "Superscript"
 msgstr ""
 
-#: includes/types/fa.php:1768
+#: includes/types/fa.php:1883
 msgid "Table"
 msgstr ""
 
-#: includes/types/fa.php:1783
+#: includes/types/fa.php:1898
 msgid "Table Header"
 msgstr ""
 
-#: includes/types/fa.php:1788
+#: includes/types/fa.php:1903
 msgid "TH Large"
 msgstr ""
 
-#: includes/types/fa.php:1793
+#: includes/types/fa.php:1908
 msgid "TH List"
 msgstr ""
 
-#: includes/types/fa.php:1813
+#: includes/types/fa.php:1930
 msgid "Compress"
 msgstr ""
 
-#: includes/types/fa.php:1823 includes/types/genericon.php:142
+#: includes/types/fa.php:1940 includes/types/genericon.php:142
 msgid "Expand"
 msgstr ""
 
-#: includes/types/fa.php:1898
+#: includes/types/fa.php:2015
 msgid "YouTube Play"
 msgstr ""
 
-#: includes/types/fa.php:1908 includes/types/foundation-icons.php:969
+#: includes/types/fa.php:2032 includes/types/fa.php:2037
+msgid "Address Card"
+msgstr ""
+
+#: includes/types/fa.php:2047 includes/types/foundation-icons.php:969
 #: includes/types/genericon.php:672
 msgid "Anchor"
 msgstr ""
 
-#: includes/types/fa.php:1938
+#: includes/types/fa.php:2077
 msgid "At"
 msgstr ""
 
-#: includes/types/fa.php:1943
+#: includes/types/fa.php:2082
 msgid "Balance"
 msgstr ""
 
-#: includes/types/fa.php:1948
+#: includes/types/fa.php:2087
 msgid "Ban"
 msgstr ""
 
-#: includes/types/fa.php:1958
+#: includes/types/fa.php:2097
 msgid "Bars"
 msgstr ""
 
-#: includes/types/fa.php:1963 includes/types/fa.php:1968
-#: includes/types/fa.php:1973 includes/types/fa.php:1978
+#: includes/types/fa.php:2102
+msgid "Bathtub"
+msgstr ""
+
+#: includes/types/fa.php:2107 includes/types/fa.php:2112
+#: includes/types/fa.php:2117 includes/types/fa.php:2122
 msgid "Battery"
 msgstr ""
 
-#: includes/types/fa.php:1983
+#: includes/types/fa.php:2127
 msgid "Bed"
 msgstr ""
 
-#: includes/types/fa.php:1988
+#: includes/types/fa.php:2132
 msgid "Beer"
 msgstr ""
 
-#: includes/types/fa.php:2013
+#: includes/types/fa.php:2157
 msgid "Binoculars"
 msgstr ""
 
-#: includes/types/fa.php:2018
+#: includes/types/fa.php:2162
 msgid "Birthday Cake"
 msgstr ""
 
-#: includes/types/fa.php:2023
+#: includes/types/fa.php:2167
 msgid "Bolt"
 msgstr ""
 
-#: includes/types/fa.php:2043
+#: includes/types/fa.php:2187
 msgid "Bomb"
 msgstr ""
 
-#: includes/types/fa.php:2053 includes/types/genericon.php:427
+#: includes/types/fa.php:2197 includes/types/genericon.php:427
 msgid "Bug"
 msgstr ""
 
-#: includes/types/fa.php:2073
+#: includes/types/fa.php:2217
 msgid "Bullseye"
 msgstr ""
 
-#: includes/types/fa.php:2078
+#: includes/types/fa.php:2222
 msgid "Calculator"
 msgstr ""
 
-#: includes/types/fa.php:2113
+#: includes/types/fa.php:2257
 msgid "Camera Retro"
 msgstr ""
 
-#: includes/types/fa.php:2138
+#: includes/types/fa.php:2282
 msgid "Cart Arrow Down"
 msgstr ""
 
-#: includes/types/fa.php:2143
+#: includes/types/fa.php:2287
 msgid "Cart Plus"
 msgstr ""
 
-#: includes/types/fa.php:2183
+#: includes/types/fa.php:2327
 msgid "Clone"
 msgstr ""
 
-#: includes/types/fa.php:2193 includes/types/genericon.php:442
+#: includes/types/fa.php:2337 includes/types/genericon.php:442
 msgid "Cloud Download"
 msgstr ""
 
-#: includes/types/fa.php:2198 includes/types/genericon.php:447
+#: includes/types/fa.php:2342 includes/types/genericon.php:447
 msgid "Cloud Upload"
 msgstr ""
 
-#: includes/types/fa.php:2208
+#: includes/types/fa.php:2352
 msgid "Code Fork"
 msgstr ""
 
-#: includes/types/fa.php:2213
+#: includes/types/fa.php:2357
 msgid "Coffee"
 msgstr ""
 
-#: includes/types/fa.php:2243 includes/types/fa.php:2248
+#: includes/types/fa.php:2387 includes/types/fa.php:2392
 msgid "Commenting"
 msgstr ""
 
-#: includes/types/fa.php:2258
+#: includes/types/fa.php:2402
 msgid "Copyright"
 msgstr ""
 
-#: includes/types/fa.php:2273
+#: includes/types/fa.php:2417
 msgid "Crosshairs"
 msgstr ""
 
-#: includes/types/fa.php:2278
+#: includes/types/fa.php:2422
 msgid "Cube"
 msgstr ""
 
-#: includes/types/fa.php:2283
+#: includes/types/fa.php:2427
 msgid "Cubes"
 msgstr ""
 
-#: includes/types/fa.php:2288
+#: includes/types/fa.php:2432
 msgid "Cursor"
 msgstr ""
 
-#: includes/types/fa.php:2293
+#: includes/types/fa.php:2437
 msgid "Cutlery"
 msgstr ""
 
-#: includes/types/fa.php:2303 includes/types/foundation-icons.php:644
+#: includes/types/fa.php:2447 includes/types/foundation-icons.php:644
 msgid "Database"
 msgstr ""
 
-#: includes/types/fa.php:2313
+#: includes/types/fa.php:2457
 msgid "Diamond"
 msgstr ""
 
-#: includes/types/fa.php:2328 includes/types/fa.php:2333
+#: includes/types/fa.php:2472 includes/types/fa.php:2477
 #: includes/types/genericon.php:477
 msgid "Ellipsis"
 msgstr ""
 
-#: includes/types/fa.php:2358
+#: includes/types/fa.php:2512
 msgid "Exchange"
 msgstr ""
 
-#: includes/types/fa.php:2363 includes/types/fa.php:2368
-#: includes/types/fa.php:2373
+#: includes/types/fa.php:2517 includes/types/fa.php:2522
+#: includes/types/fa.php:2527
 msgid "Exclamation"
 msgstr ""
 
-#: includes/types/fa.php:2378 includes/types/fa.php:2383
+#: includes/types/fa.php:2532 includes/types/fa.php:2537
 msgid "External Link"
 msgstr ""
 
-#: includes/types/fa.php:2388 includes/types/fa.php:2393
+#: includes/types/fa.php:2542 includes/types/fa.php:2547
 #: includes/types/foundation-icons.php:664
 msgid "Eye"
 msgstr ""
 
-#: includes/types/fa.php:2398
+#: includes/types/fa.php:2552
 msgid "Eye Dropper"
 msgstr ""
 
-#: includes/types/fa.php:2403
+#: includes/types/fa.php:2557
 msgid "Fax"
 msgstr ""
 
-#: includes/types/fa.php:2428
+#: includes/types/fa.php:2582
 msgid "Fire Extinguisher"
 msgstr ""
 
-#: includes/types/fa.php:2448
+#: includes/types/fa.php:2602
 msgid "Flash"
 msgstr ""
 
-#: includes/types/fa.php:2453
+#: includes/types/fa.php:2607
 msgid "Flask"
 msgstr ""
 
-#: includes/types/fa.php:2478
+#: includes/types/fa.php:2632
 msgid "Foot Ball"
 msgstr ""
 
-#: includes/types/fa.php:2483
+#: includes/types/fa.php:2637
 msgid "Frown"
 msgstr ""
 
-#: includes/types/fa.php:2488
+#: includes/types/fa.php:2642
 msgid "Gamepad"
 msgstr ""
 
-#: includes/types/fa.php:2493
+#: includes/types/fa.php:2647
 msgid "Gavel"
 msgstr ""
 
-#: includes/types/fa.php:2498
+#: includes/types/fa.php:2652
 msgid "Gear"
 msgstr ""
 
-#: includes/types/fa.php:2503
+#: includes/types/fa.php:2657
 msgid "Gears"
 msgstr ""
 
-#: includes/types/fa.php:2523
+#: includes/types/fa.php:2677
 msgid "Graduation Cap"
 msgstr ""
 
-#: includes/types/fa.php:2533 includes/types/fa.php:2538
-#: includes/types/fa.php:2543 includes/types/fa.php:2548
-#: includes/types/fa.php:2553 includes/types/fa.php:2558
-#: includes/types/fa.php:2563
+#: includes/types/fa.php:2687 includes/types/fa.php:2697
+#: includes/types/fa.php:2702 includes/types/fa.php:2707
+#: includes/types/fa.php:2712 includes/types/fa.php:2717
+#: includes/types/fa.php:2722
 msgid "Hand"
 msgstr ""
 
-#: includes/types/fa.php:2573
+#: includes/types/fa.php:2692
+msgid "Handshake"
+msgstr ""
+
+#: includes/types/fa.php:2732
 msgid "Hash Tag"
 msgstr ""
 
-#: includes/types/fa.php:2613
+#: includes/types/fa.php:2772
 msgid "History"
 msgstr ""
 
-#: includes/types/fa.php:2623
+#: includes/types/fa.php:2782
+msgid "ID Badge"
+msgstr ""
+
+#: includes/types/fa.php:2787 includes/types/fa.php:2792
+msgid "ID Card"
+msgstr ""
+
+#: includes/types/fa.php:2797
 msgid "Industry"
 msgstr ""
 
-#: includes/types/fa.php:2643
+#: includes/types/fa.php:2817
 msgid "Keyboard"
 msgstr ""
 
-#: includes/types/fa.php:2648
+#: includes/types/fa.php:2822
 msgid "Language"
 msgstr ""
 
-#: includes/types/fa.php:2663
+#: includes/types/fa.php:2837
 msgid "Legal"
 msgstr ""
 
-#: includes/types/fa.php:2668
+#: includes/types/fa.php:2842
 msgid "Lemon"
 msgstr ""
 
-#: includes/types/fa.php:2673
+#: includes/types/fa.php:2847
 msgid "Level Down"
 msgstr ""
 
-#: includes/types/fa.php:2678
+#: includes/types/fa.php:2852
 msgid "Level Up"
 msgstr ""
 
-#: includes/types/fa.php:2683
+#: includes/types/fa.php:2857
 msgid "Life Buoy"
 msgstr ""
 
-#: includes/types/fa.php:2693
+#: includes/types/fa.php:2867
 msgid "Location Arrow"
 msgstr ""
 
-#: includes/types/fa.php:2713
+#: includes/types/fa.php:2887
 msgid "Mail Forward"
 msgstr ""
 
-#: includes/types/fa.php:2718
+#: includes/types/fa.php:2892
 msgid "Mail Reply"
 msgstr ""
 
-#: includes/types/fa.php:2723
+#: includes/types/fa.php:2897
 msgid "Mail Reply All"
 msgstr ""
 
-#: includes/types/fa.php:2733 includes/types/fa.php:2738
+#: includes/types/fa.php:2907 includes/types/fa.php:2912
 #: includes/types/foundation-icons.php:1089
 msgid "Map"
 msgstr ""
 
-#: includes/types/fa.php:2748
+#: includes/types/fa.php:2922
 msgid "Map Pin"
 msgstr ""
 
-#: includes/types/fa.php:2753
+#: includes/types/fa.php:2927
 msgid "Map Signs"
 msgstr ""
 
-#: includes/types/fa.php:2758
+#: includes/types/fa.php:2932
 msgid "Meh"
 msgstr ""
 
-#: includes/types/fa.php:2763 includes/types/fa.php:2768
+#: includes/types/fa.php:2937
+msgid "Microchip"
+msgstr ""
+
+#: includes/types/fa.php:2942 includes/types/fa.php:2947
 #: includes/types/foundation-icons.php:249 includes/types/genericon.php:527
 msgid "Microphone"
 msgstr ""
 
-#: includes/types/fa.php:2783 includes/types/foundation-icons.php:254
+#: includes/types/fa.php:2962 includes/types/foundation-icons.php:254
 msgid "Mobile"
 msgstr ""
 
-#: includes/types/fa.php:2788
+#: includes/types/fa.php:2967
 msgid "Mobile Phone"
 msgstr ""
 
-#: includes/types/fa.php:2793
+#: includes/types/fa.php:2972
 msgid "Moon"
 msgstr ""
 
-#: includes/types/fa.php:2798
+#: includes/types/fa.php:2977
 msgid "Mouse Pointer"
 msgstr ""
 
-#: includes/types/fa.php:2808
+#: includes/types/fa.php:2987
 msgid "Newspaper"
 msgstr ""
 
-#: includes/types/fa.php:2813
+#: includes/types/fa.php:2992
 msgid "Object Group"
 msgstr ""
 
-#: includes/types/fa.php:2818
+#: includes/types/fa.php:2997
 msgid "Object Ungroup"
 msgstr ""
 
-#: includes/types/fa.php:2823 includes/types/genericon.php:537
+#: includes/types/fa.php:3002 includes/types/genericon.php:537
 msgid "Paint Brush"
 msgstr ""
 
-#: includes/types/fa.php:2828 includes/types/fa.php:2833
+#: includes/types/fa.php:3007 includes/types/fa.php:3012
 msgid "Paper Plane"
 msgstr ""
 
-#: includes/types/fa.php:2838 includes/types/foundation-icons.php:1114
+#: includes/types/fa.php:3017 includes/types/foundation-icons.php:1114
 msgid "Paw"
 msgstr ""
 
-#: includes/types/fa.php:2863
+#: includes/types/fa.php:3042
 msgid "Percent"
 msgstr ""
 
-#: includes/types/fa.php:2878
+#: includes/types/fa.php:3057
 msgid "Plug"
 msgstr ""
 
-#: includes/types/fa.php:2893
+#: includes/types/fa.php:3072
 msgid "Power Off"
 msgstr ""
 
-#: includes/types/fa.php:2903
+#: includes/types/fa.php:3087
 msgid "Puzzle Piece"
 msgstr ""
 
-#: includes/types/fa.php:2928
+#: includes/types/fa.php:3112
 msgid "Quote Left"
 msgstr ""
 
-#: includes/types/fa.php:2933
+#: includes/types/fa.php:3117
 msgid "Quote Right"
 msgstr ""
 
-#: includes/types/fa.php:2943
+#: includes/types/fa.php:3127
 msgid "Rebel"
 msgstr ""
 
-#: includes/types/fa.php:2948
+#: includes/types/fa.php:3132
 msgid "Recycle"
 msgstr ""
 
-#: includes/types/fa.php:2953
+#: includes/types/fa.php:3137
 msgid "Registered"
 msgstr ""
 
-#: includes/types/fa.php:2958 includes/types/genericon.php:232
+#: includes/types/fa.php:3142 includes/types/genericon.php:232
 msgid "Reply"
 msgstr ""
 
-#: includes/types/fa.php:2963
+#: includes/types/fa.php:3147
 msgid "Reply All"
 msgstr ""
 
-#: includes/types/fa.php:2973
+#: includes/types/fa.php:3157
 msgid "Road"
 msgstr ""
 
-#: includes/types/fa.php:2983
+#: includes/types/fa.php:3167
 msgid "RSS Square"
 msgstr ""
 
-#: includes/types/fa.php:2993
+#: includes/types/fa.php:3177
 msgid "Search Minus"
 msgstr ""
 
-#: includes/types/fa.php:2998
+#: includes/types/fa.php:3182
 msgid "Search Plus"
 msgstr ""
 
-#: includes/types/fa.php:3003
+#: includes/types/fa.php:3187
 msgid "Server"
 msgstr ""
 
-#: includes/types/fa.php:3043 includes/types/foundation-icons.php:364
+#: includes/types/fa.php:3227 includes/types/foundation-icons.php:364
 msgid "Shopping Bag"
 msgstr ""
 
-#: includes/types/fa.php:3048
+#: includes/types/fa.php:3232
 msgid "Shopping Basket"
 msgstr ""
 
-#: includes/types/fa.php:3053
+#: includes/types/fa.php:3237
+msgid "Shower"
+msgstr ""
+
+#: includes/types/fa.php:3242
 msgid "Sign In"
 msgstr ""
 
-#: includes/types/fa.php:3058
+#: includes/types/fa.php:3247
 msgid "Sign Out"
 msgstr ""
 
-#: includes/types/fa.php:3068 includes/types/genericon.php:612
+#: includes/types/fa.php:3257 includes/types/genericon.php:612
 msgid "Sitemap"
 msgstr ""
 
-#: includes/types/fa.php:3073
+#: includes/types/fa.php:3262
 msgid "Sliders"
 msgstr ""
 
-#: includes/types/fa.php:3078
+#: includes/types/fa.php:3267
 msgid "Smile"
 msgstr ""
 
-#: includes/types/fa.php:3088
+#: includes/types/fa.php:3272
+msgid "Snowflake"
+msgstr ""
+
+#: includes/types/fa.php:3282
 msgid "Sort ASC"
 msgstr ""
 
-#: includes/types/fa.php:3093
+#: includes/types/fa.php:3287
 msgid "Sort DESC"
 msgstr ""
 
-#: includes/types/fa.php:3098
+#: includes/types/fa.php:3292
 msgid "Sort Down"
 msgstr ""
 
-#: includes/types/fa.php:3103
+#: includes/types/fa.php:3297
 msgid "Sort Up"
 msgstr ""
 
-#: includes/types/fa.php:3108
+#: includes/types/fa.php:3302
 msgid "Sort Alpha ASC"
 msgstr ""
 
-#: includes/types/fa.php:3113
+#: includes/types/fa.php:3307
 msgid "Sort Alpha DESC"
 msgstr ""
 
-#: includes/types/fa.php:3118
+#: includes/types/fa.php:3312
 msgid "Sort Amount ASC"
 msgstr ""
 
-#: includes/types/fa.php:3123
+#: includes/types/fa.php:3317
 msgid "Sort Amount DESC"
 msgstr ""
 
-#: includes/types/fa.php:3128
+#: includes/types/fa.php:3322
 msgid "Sort Numeric ASC"
 msgstr ""
 
-#: includes/types/fa.php:3133
+#: includes/types/fa.php:3327
 msgid "Sort Numeric DESC"
 msgstr ""
 
-#: includes/types/fa.php:3138
+#: includes/types/fa.php:3332
 msgid "Spoon"
 msgstr ""
 
-#: includes/types/fa.php:3143 includes/types/fa.php:3168
+#: includes/types/fa.php:3337 includes/types/fa.php:3362
 #: includes/types/foundation-icons.php:849 includes/types/genericon.php:562
 msgid "Star"
 msgstr ""
 
-#: includes/types/fa.php:3148 includes/types/fa.php:3153
+#: includes/types/fa.php:3342 includes/types/fa.php:3347
 msgid "Star Half"
 msgstr ""
 
-#: includes/types/fa.php:3158
+#: includes/types/fa.php:3352
 msgid "Star Half Empty"
 msgstr ""
 
-#: includes/types/fa.php:3163
+#: includes/types/fa.php:3357
 msgid "Star Half Full"
 msgstr ""
 
-#: includes/types/fa.php:3173 includes/types/fa.php:3178
+#: includes/types/fa.php:3367 includes/types/fa.php:3372
 msgid "Sticky Note"
 msgstr ""
 
-#: includes/types/fa.php:3183
+#: includes/types/fa.php:3377
 msgid "Street View"
 msgstr ""
 
-#: includes/types/fa.php:3188
+#: includes/types/fa.php:3382
 msgid "Suitcase"
 msgstr ""
 
-#: includes/types/fa.php:3193
+#: includes/types/fa.php:3387
 msgid "Sun"
 msgstr ""
 
-#: includes/types/fa.php:3203
+#: includes/types/fa.php:3397
 msgid "Tachometer"
 msgstr ""
 
-#: includes/types/fa.php:3223
+#: includes/types/fa.php:3417
 msgid "Television"
 msgstr ""
 
-#: includes/types/fa.php:3228
+#: includes/types/fa.php:3422
 msgid "Terminal"
 msgstr ""
 
-#: includes/types/fa.php:3233
+#: includes/types/fa.php:3427
 msgid "Thumb Tack"
 msgstr ""
 
-#: includes/types/fa.php:3258 includes/types/foundation-icons.php:1164
+#: includes/types/fa.php:3452 includes/types/foundation-icons.php:1164
 msgid "Ticket"
 msgstr ""
 
-#: includes/types/fa.php:3263 includes/types/fa.php:3268
-#: includes/types/fa.php:3273
+#: includes/types/fa.php:3457 includes/types/fa.php:3462
+#: includes/types/fa.php:3467
 msgid "Times"
 msgstr ""
 
-#: includes/types/fa.php:3283
+#: includes/types/fa.php:3477
 msgid "Toggle Down"
 msgstr ""
 
-#: includes/types/fa.php:3288
+#: includes/types/fa.php:3482
 msgid "Toggle Left"
 msgstr ""
 
-#: includes/types/fa.php:3293
+#: includes/types/fa.php:3487
 msgid "Toggle Right"
 msgstr ""
 
-#: includes/types/fa.php:3298
+#: includes/types/fa.php:3492
 msgid "Toggle Up"
 msgstr ""
 
-#: includes/types/fa.php:3303
+#: includes/types/fa.php:3497
 msgid "Toggle Off"
 msgstr ""
 
-#: includes/types/fa.php:3308
+#: includes/types/fa.php:3502
 msgid "Toggle On"
 msgstr ""
 
-#: includes/types/fa.php:3313
+#: includes/types/fa.php:3507
 msgid "Trademark"
 msgstr ""
 
-#: includes/types/fa.php:3328
+#: includes/types/fa.php:3522
 msgid "Tree"
 msgstr ""
 
-#: includes/types/fa.php:3333 includes/types/foundation-icons.php:1174
+#: includes/types/fa.php:3527 includes/types/foundation-icons.php:1174
 msgid "Trophy"
 msgstr ""
 
-#: includes/types/fa.php:3338
+#: includes/types/fa.php:3532
 msgid "TTY"
 msgstr ""
 
-#: includes/types/fa.php:3343
+#: includes/types/fa.php:3537
 msgid "Umbrella"
 msgstr ""
 
-#: includes/types/fa.php:3348
+#: includes/types/fa.php:3542
 msgid "University"
 msgstr ""
 
-#: includes/types/fa.php:3363
+#: includes/types/fa.php:3557
 msgid "Unsorted"
 msgstr ""
 
-#: includes/types/fa.php:3383
+#: includes/types/fa.php:3592
 msgid "User: Add"
 msgstr ""
 
-#: includes/types/fa.php:3388
+#: includes/types/fa.php:3597
 msgid "User: Remove"
 msgstr ""
 
-#: includes/types/fa.php:3393
+#: includes/types/fa.php:3602
 msgid "User: Password"
 msgstr ""
 
-#: includes/types/fa.php:3398 includes/types/genericon.php:577
+#: includes/types/fa.php:3607 includes/types/genericon.php:577
 msgid "Video Camera"
 msgstr ""
 
-#: includes/types/fa.php:3408
+#: includes/types/fa.php:3617
 msgid "Volume Of"
 msgstr ""
 
-#: includes/types/fa.php:3423
+#: includes/types/fa.php:3632
 msgid "WiFi"
+msgstr ""
+
+#: includes/types/fa.php:3637 includes/types/fa.php:3642
+msgid "Window Close"
+msgstr ""
+
+#: includes/types/fa.php:3647
+msgid "Window Maximize"
+msgstr ""
+
+#: includes/types/fa.php:3652
+msgid "Window Minimize"
+msgstr ""
+
+#: includes/types/fa.php:3657
+msgid "Window Restore"
 msgstr ""
 
 #: includes/types/font.php:191 includes/types/svg.php:110
