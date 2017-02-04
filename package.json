@@ -50,6 +50,8 @@
     "url": "https://github.com/kucrut/wp-icon-picker/issues"
   },
   "scripts": {
+    "grunt:compress": "grunt compress",
+    "grunt:i18n": "grunt i18n",
     "build": "NODE_ENV=production webpack --env=production --config webpack.config.babel.js && grunt",
     "dev": "NODE_ENV=development webpack-dev-server --env=development --config webpack.config.babel.js",
     "lint:php": "grunt phpcs",
