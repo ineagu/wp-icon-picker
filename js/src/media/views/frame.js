@@ -14,7 +14,7 @@
  */
 
 var l10n = wp.media.view.l10n,
-    Select = wp.media.view.MediaFrame.Select,
+	Select = wp.media.view.MediaFrame.Select,
 	IconPicker;
 
 IconPicker = Select.extend({
@@ -73,7 +73,7 @@ IconPicker = Select.extend({
 	_ipSetState: function() {
 		var stateId = this.target.get( 'type' );
 
-		if ( ! stateId || ! this.states.findWhere( { id: stateId } ) ) {
+		if ( ! stateId || ! this.states.findWhere({ id: stateId }) ) {
 			stateId = this.states.at( 0 ).id;
 		}
 

@@ -6,12 +6,12 @@ Pick an icon of your choice.
 **Contributors:** [kucrut](https://profiles.wordpress.org/kucrut)  
 **Tags:** [icons](https://wordpress.org/plugins/tags/icons), [image](https://wordpress.org/plugins/tags/image), [svg](https://wordpress.org/plugins/tags/svg)  
 **Requires at least:** 4.3  
-**Tested up to:** 4.6.1  
-**Stable tag:** 0.4.1  
+**Tested up to:** 4.7.2  
+**Stable tag:** 0.5.0  
 **License:** [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)  
 **Donate Link:** http://kucrut.org/#coffee  
 
-[![Build Status](https://travis-ci.org/kucrut/wp-icon-picker.svg?branch=master)](https://travis-ci.org/kucrut/wp-icon-picker) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com) 
+[![Build Status](https://travis-ci.org/kucrut/wp-icon-picker.svg?branch=master)](https://travis-ci.org/kucrut/wp-icon-picker) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com) 
 
 ## Description ##
 
@@ -56,6 +56,11 @@ add_filter( 'icon_picker_icon_type_stylesheet_uri', 'myprefix_font_awesome_css_f
 
 
 ## Changelog ##
+
+### 0.5.0 ###
+* Update Font Awesome to 4.7.0.
+* Switch to Webpack.
+* Various [bug fixes and enhancements](https://github.com/kucrut/wp-icon-picker/issues?q=is%3Aissue+milestone%3A0.5.0+is%3Aclosed).
 
 ### 0.4.1 ###
 * Improve support for CMB: Make the field usable in a repeatable field.

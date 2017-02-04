@@ -2,8 +2,10 @@
  * wp.media.model.IconPickerFonts
  */
 var IconPickerFonts = Backbone.Collection.extend({
-	initialize: function( models ) {
-		this.items = new Backbone.Collection( models );
+	constructor: function() {
+		Backbone.Collection.prototype.constructor.apply( this, arguments );
+
+		this.items = new Backbone.Collection( this.models );
 		this.props = new Backbone.Model({
 			group:  'all',
 			search: ''
@@ -18,51 +20,52 @@ var IconPickerFonts = Backbone.Collection.extend({
 	 * @param {Backbone.Model} props
 	 */
 	refresh: function( props ) {
-		var library = this,
-		    items   = this.items.toJSON();
+		let items = _.clone( this.items.models );
 
-		_.each( props.toJSON(), function( value, filter ) {
-			if ( library.filters[ filter ] ) {
-				items = _.filter( items, _.bind( library.filters[ filter ], this ), value );
+		_.each( props.toJSON(), ( value, filter ) => {
+			const method = this.filters[ filter ];
+
+			if ( method ) {
+				items = items.filter( item => {
+					return method( item, value );
+				});
 			}
-		}, this );
+		});
 
 		this.reset( items );
 	},
+
 	filters: {
 		/**
 		 * @static
-		 * @param {object} item
 		 *
-		 * @this wp.media.model.IconPickerFonts
+		 * @param {Backbone.Model} item  Item model.
+		 * @param {string}         group Group ID.
 		 *
 		 * @returns {Boolean}
 		 */
-		group: function( item ) {
-			var groupId = this.props.get( 'group' );
-
-			return ( 'all' === groupId || item.group === groupId || '' === item.group );
+		group: function( item, group ) {
+			return (  group === 'all' || item.get( 'group' ) === group || item.get( 'group' ) === '' );
 		},
 
 		/**
 		 * @static
-		 * @param {object} item
 		 *
-		 * @this wp.media.model.IconPickerFonts
+		 * @param {Backbone.Model} item Item model.
+		 * @param {string}         term Search term.
 		 *
 		 * @returns {Boolean}
 		 */
-		search: function( item ) {
-			var term = this.props.get( 'search' ),
-			    result;
+		search: function( item, term ) {
+			let result;
 
-			if ( '' === term ) {
+			if ( term === '' ) {
 				result = true;
 			} else {
-				result = _.any( [ 'id', 'name' ], function( key ) {
-					var value = item[ key ];
+				result = _.any([ 'id', 'name' ], attribute => {
+					const value = item.get( attribute );
 
-					return value && -1 !== value.search( this );
+					return value && value.search( term ) >= 0;
 				}, term );
 			}
 

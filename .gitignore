@@ -1,1 +1,6 @@
+vendor
 /node_modules
+*.sublime-*
+npm-debug.log
+*.css*.map
+*.js*.map

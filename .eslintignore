@@ -1,0 +1,6 @@
+**/*.min.js
+**/node_modules/**
+**/vendor/**
+**/plugins/brightcove-video-connect/**
+**/dist/*
+js/src/media.js
