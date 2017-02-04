@@ -55,6 +55,7 @@ module.exports = function( grunt ) {
 		}, this.async() );
 	});
 
-	grunt.registerTask( 'i18n', [ 'cssmin', 'uglify', 'makepot' ]);
-	grunt.registerTask( 'default', ['i18n']);
+	grunt.registerTask( 'i18n', ['makepot']);
+	grunt.registerTask( 'compress', [ 'cssmin', 'uglify' ]);
+	grunt.registerTask( 'default', [ 'i18n', 'compress' ]);
 };
